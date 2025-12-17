@@ -141,15 +141,15 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
-        .badge-published { background-color: #10b981; color: white; }
-        .badge-completed { background-color: #10b981; color: white; }
+        .badge-published { background-color: #4E6AFF; color: white; }
+        .badge-completed { background-color: #4E6AFF; color: white; }
         .badge-progress { background-color: #3b82f6; color: white; }
     </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" role="navigation" aria-label="Main Navigation">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div>
@@ -195,45 +195,42 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-12 sm:pt-32 sm:pb-16">
+    <main id="home" class="pt-24 pb-12 sm:pt-32 sm:pb-16" itemscope itemtype="https://schema.org/Person">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64">
-                    <img src="photos/rsz_rafi_img_01.jpg" alt="Md Golam Mubasshir Rafi" 
+                    <img src="photos/rsz_rafi_img_01.jpg" alt="Md Golam Mubasshir Rafi portrait" itemprop="image"
                          class="w-full h-full rounded-full object-cover profile-glow border-4 border-[#4E6AFF]">
                 </div>
-                
                 <div class="flex-1 text-center md:text-left">
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                        Md Golam Mubasshir Rafi
-                    </h1>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4" itemprop="name">Md Golam Mubasshir Rafi</h1>
                     <p class="text-lg sm:text-xl text-gray-700 mb-3">
-                        Undergraduate Student, <span class="font-bold text-[#10b981]">Army Institute of Business Administration (AIBA), Sylhet</span>
+                        <span itemprop="jobTitle">Undergraduate Student</span>, <span class="font-bold text-[#4E6AFF]" itemprop="alumniOf">Army Institute of Business Administration (AIBA), Sylhet</span>
                     </p>
                     <p class="text-base sm:text-lg text-gray-700 mb-4">
-                        Web Developer & Tech Associate, <span class="font-bold text-[#4E6AFF]">Sylhet Sustainable Development Research Firm (SSDRF)</span>
+                        <span itemprop="jobTitle">Web Developer & Tech Associate</span>, <span class="font-bold text-[#4E6AFF]" itemprop="worksFor">Sylhet Sustainable Development Research Firm (SSDRF)</span>
                     </p>
                     <p class="text-lg sm:text-xl mb-6">
-                        <span class="text-[#4E6AFF] font-semibold">Undergrad Researcher</span> <span class="text-gray-400">|</span> 
-                        <span class="text-[#4E6AFF] font-semibold">Web Developer</span> <span class="text-gray-400">|</span> 
-                        <span class="text-[#4E6AFF] font-semibold">Business Strategist</span>
+                        <span class="text-[#4E6AFF] font-semibold" itemprop="knowsAbout">Undergrad Researcher</span> <span class="text-gray-400">|</span> 
+                        <span class="text-[#4E6AFF] font-semibold" itemprop="knowsAbout">Web Developer</span> <span class="text-gray-400">|</span> 
+                        <span class="text-[#4E6AFF] font-semibold" itemprop="knowsAbout">Business Strategist</span>
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#projects" class="btn-primary px-8 py-3 rounded-lg font-semibold text-center">
+                        <a href="#projects" class="btn-primary px-8 py-3 rounded-lg font-semibold text-center" aria-label="View Projects">
                             <i class="fas fa-briefcase mr-2"></i>View Work
                         </a>
-                        <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" class="btn-secondary px-8 py-3 rounded-lg font-semibold text-center">
+                        <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" class="btn-secondary px-8 py-3 rounded-lg font-semibold text-center" aria-label="Download CV PDF">
                             <i class="fas fa-download mr-2"></i>Download CV
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- About Section -->
-    <section id="about" class="py-12 bg-gray-50">
+    <section id="about" class="py-12 bg-gray-50" itemscope itemtype="https://schema.org/AboutPage">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">About Me</h2>
             <div class="max-w-4xl mx-auto">
@@ -251,7 +248,7 @@
     </section>
 
     <!-- Research Interests -->
-    <section id="research-interests" class="py-12">
+    <section id="research-interests" class="py-12" itemscope itemtype="https://schema.org/CreativeWork">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">Research Interests</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -293,78 +290,119 @@
     </section>
 
     <!-- Publications & Research -->
-    <section id="research" class="py-12 bg-gray-50">
+    <section id="research" class="py-12 bg-gray-50" itemscope itemtype="https://schema.org/ScholarlyArticle">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">Publications & Research</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 text-center section-heading">Research & Publications</h2>
             
             <div class="max-w-5xl mx-auto space-y-6">
-                
-                <!-- Publication 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
-                    <div class="flex items-start gap-4 mb-3">
-                        <div class="text-2xl text-[#4E6AFF]">
-                            <i class="fas fa-file-alt"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Publication 1 (Newest) -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Microfinance-Enabled Solar Home Systems in Rural Bangladesh: Assessing Socio-Economic Impact for Sustainable Energy Policy</h3>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <a href="https://orcid.org/0009-0007-8265-775X"><span class="text-[#4E6AFF]">Fariha Fairuz Proma <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
+                                    <span class="font-bold text-[#4E6AFF]">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-university mr-2"></i>International Conference on Challenges and Trends in Arts and Social Sciences (ICCTASS 2025), American International University-Bangladesh (AIUB), Dhaka
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Sustainable Energy</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
-                            <p class="text-sm text-gray-600 mb-2">
-                                <i class="fas fa-users mr-2"></i>Mashrura Meshkat Punno, Md Golam Mubasshir Rafi
-                            </p>
-                            <p class="text-sm text-gray-600 mb-3">
-                                <i class="fas fa-book mr-2"></i>International Journal of Sustainability and Multidisciplinary Research (IJSMR), 2025
-                            </p>
-                            <span class="badge badge-published">Published</span>
-                            <a href="https://doi.org/10.71214/e35q5f27" target="_blank" class="ml-3 text-[#4E6AFF] hover:underline text-sm font-semibold">
-                                <i class="fas fa-external-link-alt mr-1"></i>View Paper
-                            </a>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-presentation"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Exploring Mobile Financial Services (MFS) Adoption and Basic Financial Literacy Among Market Merchants in Sylhet</h3>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="font-bold text-[#4E6AFF]">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span>,
+                                    <span class="text-[#4E6AFF]">Israt Zarin Ruponty <a href="https://orcid.org/0009-0007-4844-1154"><img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></a></span>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-university mr-2"></i>International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025, BRAC University
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Financial Literacy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                        <div class="flex items-start gap-4 mb-3">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="text-[#4E6AFF]">Mashrura Meshkat Punno <a href="https://orcid.org/0009-0002-1022-7324"><img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></a></span>,
+                                    <span class="font-bold text-[#4E6AFF]">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-book mr-2"></i>International Journal of Sustainability and Multidisciplinary Research (IJSMR), 2025
+                                </p>
+                                <span class="badge badge-published">Published</span>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Journal Article</span>
+                                    <span class="badge" style="background-color:#f59e42;color:white;">Inflation & Monetary Policy</span>
+                                </div>
+                                <a href="https://doi.org/10.71214/e35q5f27" target="_blank" class="ml-3 text-[#4E6AFF] hover:underline text-sm font-semibold">
+                                    <i class="fas fa-external-link-alt mr-1"></i>View Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Chapter 2: Demand and Supply</h3>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <span class="font-bold text-[#4E6AFF]">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span>,
+                                    <span class="text-[#4E6AFF]">Md Tanjimul Islam <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span>,
+                                    <span class="text-[#4E6AFF]">Motasim Billah Sadi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span>, et al.
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-book-open mr-2"></i>Basic Microeconomics: Application to Bangladesh Economy, Nova Books And Publishers, 2024, pp. 21-41
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="badge" style="background-color:#f59e42;color:white;">Book Chapter</span>
+                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Microeconomics</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Publication 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="flex items-start gap-4">
-                        <div class="text-2xl text-[#4E6AFF]">
-                            <i class="fas fa-presentation"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Exploring Mobile Financial Services (MFS) Adoption and Basic Financial Literacy Among Market Merchants in Sylhet</h3>
-                            <p class="text-sm text-gray-600 mb-2">
-                                <i class="fas fa-users mr-2"></i>Md Golam Mubasshir Rafi, Israt Zarin Ruponty
-                            </p>
-                            <p class="text-sm text-gray-600 mb-3">
-                                <i class="fas fa-university mr-2"></i>International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025, BRAC University
-                            </p>
-                            <span class="badge badge-published">Conference Paper</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Publication 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="flex items-start gap-4">
-                        <div class="text-2xl text-[#4E6AFF]">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Chapter 2: Demand and Supply</h3>
-                            <p class="text-sm text-gray-600 mb-2">
-                                <i class="fas fa-users mr-2"></i>Md Golam Mubasshir Rafi, Md Tanjimul Islam, Motasim Billah Sadi, et al.
-                            </p>
-                            <p class="text-sm text-gray-600 mb-3">
-                                <i class="fas fa-book-open mr-2"></i>Basic Microeconomics: Application to Bangladesh Economy, Nova Books And Publishers, 2024, pp. 21-41
-                            </p>
-                            <span class="badge badge-published">Book Chapter</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="py-12">
+    <section id="skills" class="py-12" itemscope itemtype="https://schema.org/ItemList">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">Skills & Expertise</h2>
             
@@ -1037,7 +1075,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-12 bg-gray-50">
+    <section id="contact" class="py-12 bg-gray-50" itemscope itemtype="https://schema.org/ContactPoint">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">Get In Touch</h2>
             <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">

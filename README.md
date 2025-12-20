@@ -49,6 +49,45 @@ To update your information:
 4. Update the values with your information
 5. Save and refresh your browser
 
+## 🔍 SEO & Google Scholar Integration
+
+### Google Indexing Setup
+
+Your website is optimized for Google indexing with:
+
+- **Sitemap**: `sitemap.xml` - Submit this to Google Search Console
+- **Robots.txt**: `robots.txt` - Allows all crawlers
+- **Structured Data**: Schema.org markup for all publications
+- **Meta Tags**: Complete SEO meta tags including Open Graph and Twitter Cards
+
+### Steps to Get Indexed by Google:
+
+1. **Submit to Google Search Console**:
+   - Go to [Google Search Console](https://search.google.com/search-console)
+   - Add your property: `https://gmrafi.github.io/`
+   - Submit your sitemap: `https://gmrafi.github.io/sitemap.xml`
+
+2. **Submit to Google Scholar**:
+   - Go to [Google Scholar](https://scholar.google.com/)
+   - Click "My Profile" → "Create new profile"
+   - Add your publications manually or import from ORCID
+   - Link your website in your profile
+
+### Google Scholar Citation Links
+
+Each publication includes:
+- Direct "Cite" buttons linking to Google Scholar searches
+- Proper DOI links for published works
+- ORCID integration for author verification
+- Structured data for automatic indexing
+
+### Eco-Friendly Optimizations
+
+- **Performance**: DNS prefetching and preconnect for faster loading
+- **Accessibility**: Proper semantic HTML and ARIA labels
+- **Mobile-First**: Responsive design reduces data usage on mobile
+- **CDN Resources**: Efficient loading of fonts and icons
+
 ## 📁 Project Structure
 
 ```

@@ -13,6 +13,15 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://gmrafi.github.io/">
     
+    <!-- Performance and SEO optimizations -->
+    <meta name="theme-color" content="#4E6AFF">
+    <meta name="msapplication-TileColor" content="#4E6AFF">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gmrafi.github.io/">
@@ -65,7 +74,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
         * { font-family: 'Inter', sans-serif; }
@@ -171,8 +180,8 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
-        .badge-published { background-color: #4E6AFF; color: white; }
-        .badge-completed { background-color: #4E6AFF; color: white; }
+        .badge-published { background-color: #6b7280; color: white; }
+        .badge-completed { background-color: #6b7280; color: white; }
         .badge-progress { background-color: #3b82f6; color: white; }
     </style>
 </head>
@@ -224,23 +233,15 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <main id="home" class="pt-24 pb-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden" itemscope itemtype="https://schema.org/Person">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-10 left-10 w-32 h-32 bg-[#4E6AFF] rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-400 rounded-full blur-3xl"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-300 rounded-full blur-3xl"></div>
-        </div>
-
+    <main id="home" class="pt-24 pb-20 bg-white relative overflow-hidden" itemscope itemtype="https://schema.org/Person">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-7xl">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 items-start">
                 <!-- Left Column: Basic Information (2/3 width) -->
                 <div class="lg:col-span-2 space-y-6 pt-8">
                     <!-- Name -->
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in" style="font-family: 'Oswald', sans-serif; font-weight: 700;" itemprop="name">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in" style="font-family: 'Roboto', sans-serif; font-weight: 900;" itemprop="name">
                         Md Golam Mubasshir
-                        <span class="block text-[#4E6AFF]">Rafi</span>
+                        <span class="block text-gray-900">Rafi</span>
                     </h1>
 
                     <!-- Roles -->
@@ -434,26 +435,44 @@
     </section>
 
     <!-- Publications & Research -->
-    <section id="research" class="py-12 bg-gray-50" itemscope itemtype="https://schema.org/ScholarlyArticle">
+    <section id="research" class="py-12 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 text-center section-heading">Research & Publications</h2>
-            
+
             <div class="max-w-5xl mx-auto space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Publication 1 (Newest) -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-12" />
+                        <meta itemprop="dateModified" content="2025-12-20" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="isPartOf" content="2nd International Case Conference on Business and Management (ICCBM) 2025" />
+                        <meta itemprop="publisher" content="BRAC Business School, BRAC University" />
+                        <meta itemprop="genre" content="Conference Paper" />
+                        <meta itemprop="keywords" content="AI, Nano Loans, Microfinance, Bangladesh, Sustainable Finance" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Afshara Tasneem Zoa" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0004-9322-8465" />
+                        </div>
                         <div class="flex items-start gap-4">
                             <div class="text-2xl text-[#4E6AFF]">
                                 <i class="fas fa-presentation"></i>
                             </div>
                             <div class="flex-1">
                                 <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
                                     <span class="badge" style="background-color:#f59e42;color:white;">Case Study</span>
                                 </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2">
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
                                     bKash's AI-Driven Nano Loans: Advancing Sustainable Microfinance in Bangladesh
                                 </h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This paper examines the implementation and impact of AI-driven nano loans by bKash in Bangladesh, focusing on sustainable microfinance practices and their socio-economic implications.
+                                </div>
                                 <p class="text-sm text-gray-600 mb-2">
                                     <i class="fas fa-users mr-2"></i>
                                     <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-[#4E6AFF]">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
@@ -474,19 +493,37 @@
                     </div>
 
                     <!-- Publication 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-01" />
+                        <meta itemprop="dateModified" content="2025-01-15" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="isPartOf" content="International Conference on Challenges and Trends in Arts and Social Sciences (ICCTASS 2025)" />
+                        <meta itemprop="publisher" content="American International University-Bangladesh (AIUB)" />
+                        <meta itemprop="genre" content="Conference Paper" />
+                        <meta itemprop="keywords" content="Microfinance, Solar Home Systems, Sustainable Energy, Rural Bangladesh, Socio-Economic Impact" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Fariha Fairuz Proma" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-8265-775X" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
                         <div class="flex items-start gap-4">
                             <div class="text-2xl text-[#4E6AFF]">
                                 <i class="fas fa-solar-panel"></i>
                             </div>
                             <div class="flex-1">
                                 <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Conference Paper</span>
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Sustainable Energy</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Sustainable Energy</span>
                                 </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2">
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
                                     Microfinance-Enabled Solar Home Systems in Rural Bangladesh: Assessing Socio-Economic Impact for Sustainable Energy Policy
                                 </h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This research investigates the socio-economic impacts of microfinance-enabled solar home systems in rural Bangladesh, providing insights for sustainable energy policy development.
+                                </div>
                                 <p class="text-sm text-gray-600 mb-2">
                                     <i class="fas fa-users mr-2"></i>
                                     <a href="https://orcid.org/0009-0007-8265-775X"><span class="text-[#4E6AFF]">Fariha Fairuz Proma <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
@@ -507,19 +544,37 @@
                     </div>
 
                     <!-- Publication 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-02" />
+                        <meta itemprop="dateModified" content="2025-02-10" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="isPartOf" content="International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025" />
+                        <meta itemprop="publisher" content="BRAC University" />
+                        <meta itemprop="genre" content="Conference Paper" />
+                        <meta itemprop="keywords" content="Mobile Financial Services, Financial Literacy, MFS Adoption, Market Merchants, Sylhet" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Israt Zarin Ruponty" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4844-1154" />
+                        </div>
                         <div class="flex items-start gap-4">
                             <div class="text-2xl text-[#4E6AFF]">
                                 <i class="fas fa-presentation"></i>
                             </div>
                             <div class="flex-1">
                                 <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Conference Paper</span>
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Financial Literacy</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Financial Literacy</span>
                                 </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2">
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
                                     Exploring Mobile Financial Services (MFS) Adoption and Basic Financial Literacy Among Market Merchants in Sylhet
                                 </h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This study explores the adoption of Mobile Financial Services and financial literacy levels among market merchants in Sylhet, Bangladesh.
+                                </div>
                                 <p class="text-sm text-gray-600 mb-2">
                                     <i class="fas fa-users mr-2"></i>
                                     <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-[#4E6AFF]">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
@@ -539,28 +594,52 @@
                         </div>
                     </div>
 
-                    <!-- Publication 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                    <!-- Publication 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2024-11" />
+                        <meta itemprop="dateModified" content="2024-11-15" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="identifier" content="https://doi.org/10.71214/e35q5f27" />
+                        <meta itemprop="url" content="https://doi.org/10.71214/e35q5f27" />
+                        <meta itemprop="genre" content="Journal Article" />
+                        <meta itemprop="keywords" content="Repo Rate, Inflation Control, Monetary Policy, Proportional Relationship" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
                         <div class="flex items-start gap-4 mb-3">
                             <div class="text-2xl text-[#4E6AFF]">
                                 <i class="fas fa-file-alt"></i>
                             </div>
                             <div class="flex-1">
                                 <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Published</span>
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Journal Article</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Published</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Journal Article</span>
                                     <span class="badge" style="background-color:#f59e42;color:white;">Inflation & Monetary Policy</span>
                                 </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2">Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
-                                <a href="https://doi.org/10.71214/e35q5f27" target="_blank" class="ml-3 text-[#4E6AFF] hover:underline text-sm font-semibold">
-                                    <i class="fas fa-external-link-alt mr-1"></i>View Paper
-                                </a>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This journal article examines the relationship between repo rate adjustments and inflation control, analyzing the proportional dynamics in monetary policy implementation.
+                                </div>
+                                <div class="flex gap-2 mt-2">
+                                    <a href="https://doi.org/10.71214/e35q5f27" target="_blank" class="text-[#4E6AFF] hover:underline text-sm font-semibold">
+                                        <i class="fas fa-external-link-alt mr-1"></i>View Paper (DOI: 10.71214/e35q5f27)
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Publication 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                    <!-- Publication 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/Chapter">
+                        <meta itemprop="datePublished" content="2024" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="genre" content="Book Chapter" />
+                        <meta itemprop="keywords" content="Microeconomics, Demand and Supply, Economic Principles" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
                         <div class="flex items-start gap-4">
                             <div class="text-2xl text-[#4E6AFF]">
                                 <i class="fas fa-book"></i>
@@ -568,9 +647,12 @@
                             <div class="flex-1">
                                 <div class="flex flex-wrap gap-1 mb-2">
                                     <span class="badge" style="background-color:#f59e42;color:white;">Book Chapter</span>
-                                    <span class="badge" style="background-color:#4E6AFF;color:white;">Microeconomics</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Microeconomics</span>
                                 </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2">Chapter 2: Demand and Supply</h3>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">Chapter 2: Demand and Supply</h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    Comprehensive coverage of demand and supply principles in microeconomics, including analysis of market equilibrium and price determination.
+                                </div>
                             </div>
                         </div>
                     </div>

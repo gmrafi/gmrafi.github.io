@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemaps
 Sitemap: https://gmrafi.github.io/sitemap.xml
+Sitemap: https://gmrafi.github.io/image-sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

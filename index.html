@@ -13,6 +13,17 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://gmrafi.github.io/">
     
+    <!-- Image SEO Meta Tags -->
+    <meta name="image" content="https://gmrafi.github.io/photos/rsz_rafi_img_01.jpg">
+    <meta name="image:alt" content="Md Golam Mubasshir Rafi - Academic Portfolio Professional Headshot">
+    <meta name="image:width" content="400">
+    <meta name="image:height" content="400">
+    <link rel="image_src" href="https://gmrafi.github.io/photos/rsz_rafi_img_01.jpg">
+    
+    <!-- Sitemaps -->
+    <link rel="sitemap" type="application/xml" href="https://gmrafi.github.io/sitemap.xml">
+    <link rel="sitemap" type="application/xml" href="https://gmrafi.github.io/image-sitemap.xml">
+    
     <!-- Performance and SEO optimizations -->
     <meta name="theme-color" content="#4E6AFF">
     <meta name="msapplication-TileColor" content="#4E6AFF">
@@ -66,7 +77,105 @@
       "knowsAbout": ["FinTech", "Business Analytics", "Web Development", "WordPress", "Information Systems", "Strategic Intelligence", "Social Psychology"]
     }
     </script>
-    
+
+    <!-- Image Gallery Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Md Golam Mubasshir Rafi - Academic Event Photo Gallery",
+      "description": "Professional photo gallery showcasing participation in ICCBM 2025, NASA Space Apps Challenge 2025, and ICFLEW 2025 conferences and competitions",
+      "url": "https://gmrafi.github.io/#gallery",
+      "author": {
+        "@type": "Person",
+        "name": "Md Golam Mubasshir Rafi",
+        "sameAs": "https://gmrafi.github.io/"
+      },
+      "about": [
+        {
+          "@type": "Event",
+          "name": "2nd International Case Conference on Business and Management (ICCBM) 2025",
+          "location": {
+            "@type": "Place",
+            "name": "BRAC Business School, BRAC University"
+          }
+        },
+        {
+          "@type": "Event",
+          "name": "NASA Space Apps Challenge 2025",
+          "location": {
+            "@type": "Place",
+            "name": "Global NASA Space Apps Challenge"
+          }
+        },
+        {
+          "@type": "Event",
+          "name": "International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025",
+          "location": {
+            "@type": "Place",
+            "name": "BRAC University"
+          }
+        }
+      ],
+      "associatedMedia": [
+        {
+          "@type": "ImageObject",
+          "name": "ICCBM 2025 Conference Event Photo 1",
+          "description": "Md Golam Mubasshir Rafi participating in ICCBM 2025 at BRAC Business School, BRAC University",
+          "url": "https://gmrafi.github.io/photos/ICCBM2025/ICCBM2025-01.jpg",
+          "contentUrl": "https://gmrafi.github.io/photos/ICCBM2025/ICCBM2025-01.jpg",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "acquireLicensePage": "https://gmrafi.github.io/",
+          "creditText": "Md Golam Mubasshir Rafi",
+          "creator": {
+            "@type": "Person",
+            "name": "Md Golam Mubasshir Rafi"
+          },
+          "about": {
+            "@type": "Event",
+            "name": "ICCBM 2025"
+          }
+        },
+        {
+          "@type": "ImageObject",
+          "name": "NASA Space Apps Challenge 2025 Competition Photo 1",
+          "description": "Md Golam Mubasshir Rafi during NASA Space Apps Challenge 2025 - Regional 1st Runner-Up with OrbitBiZ project",
+          "url": "https://gmrafi.github.io/photos/NSAC2025/NSAC2025-01.jpeg",
+          "contentUrl": "https://gmrafi.github.io/photos/NSAC2025/NSAC2025-01.jpeg",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "acquireLicensePage": "https://gmrafi.github.io/",
+          "creditText": "Md Golam Mubasshir Rafi",
+          "creator": {
+            "@type": "Person",
+            "name": "Md Golam Mubasshir Rafi"
+          },
+          "about": {
+            "@type": "Event",
+            "name": "NASA Space Apps Challenge 2025"
+          }
+        },
+        {
+          "@type": "ImageObject",
+          "name": "ICFLEW 2025 Conference Event Photo 1",
+          "description": "Md Golam Mubasshir Rafi at International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025 at BRAC University",
+          "url": "https://gmrafi.github.io/photos/ICFLEW2025/ICFLEW2025-01.jpg",
+          "contentUrl": "https://gmrafi.github.io/photos/ICFLEW2025/ICFLEW2025-01.jpg",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "acquireLicensePage": "https://gmrafi.github.io/",
+          "creditText": "Md Golam Mubasshir Rafi",
+          "creator": {
+            "@type": "Person",
+            "name": "Md Golam Mubasshir Rafi"
+          },
+          "about": {
+            "@type": "Event",
+            "name": "ICFLEW 2025"
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -183,6 +292,31 @@
         .badge-published { background-color: #6b7280; color: white; }
         .badge-completed { background-color: #6b7280; color: white; }
         .badge-progress { background-color: #3b82f6; color: white; }
+
+        /* Gallery Scrolling Animations */
+        @keyframes scroll-clockwise {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes scroll-anticlockwise {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .animate-scroll-clockwise {
+            animation: scroll-clockwise 20s linear infinite;
+        }
+
+        .animate-scroll-anticlockwise {
+            animation: scroll-anticlockwise 20s linear infinite;
+        }
+
+        /* Pause animation on hover */
+        .animate-scroll-clockwise:hover,
+        .animate-scroll-anticlockwise:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body>
@@ -200,6 +334,7 @@
                     <a href="#about" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">About</a>
                     <a href="#research" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Research</a>
                     <a href="#skills" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Skills</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Gallery</a>
                     <a href="#projects" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Projects</a>
                     <a href="#achievements" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Achievements</a>
                     <a href="#coursework" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Coursework</a>
@@ -221,6 +356,7 @@
                     <a href="#about" class="block text-gray-700 hover:text-[#4E6AFF]">About</a>
                     <a href="#research" class="block text-gray-700 hover:text-[#4E6AFF]">Research</a>
                     <a href="#skills" class="block text-gray-700 hover:text-[#4E6AFF]">Skills</a>
+                    <a href="#gallery" class="block text-gray-700 hover:text-[#4E6AFF]">Gallery</a>
                     <a href="#projects" class="block text-gray-700 hover:text-[#4E6AFF]">Projects</a>
                     <a href="#achievements" class="block text-gray-700 hover:text-[#4E6AFF]">Achievements</a>
                     <a href="#coursework" class="block text-gray-700 hover:text-[#4E6AFF]">Coursework</a>
@@ -763,6 +899,199 @@
             </div>
         </div>
     </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">Photo Gallery</h2>
+            
+            <!-- ICCBM 2025 - Clockwise Movement -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">ICCBM 2025 - BRAC University</h3>
+                <div class="relative overflow-hidden">
+                    <div class="flex animate-scroll-clockwise">
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-01.jpg" data-alt="ICCBM 2025 Event Photo 1">
+                                <img src="photos/ICCBM2025/ICCBM2025-01.jpg" alt="Md Golam Mubasshir Rafi presenting research at ICCBM 2025 Conference, BRAC Business School, BRAC University - Academic Event Photography" title="ICCBM 2025 Conference Presentation - Md Golam Mubasshir Rafi" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-02.jpg" data-alt="ICCBM 2025 Event Photo 2">
+                                <img src="photos/ICCBM2025/ICCBM2025-02.jpg" alt="ICCBM 2025 Event Photo 2" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-03.jpg.jpeg" data-alt="ICCBM 2025 Event Photo 3">
+                                <img src="photos/ICCBM2025/ICCBM2025-03.jpg.jpeg" alt="ICCBM 2025 Event Photo 3" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-04.jpg" data-alt="ICCBM 2025 Event Photo 4">
+                                <img src="photos/ICCBM2025/ICCBM2025-04.jpg" alt="ICCBM 2025 Event Photo 4" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-01.jpg" data-alt="ICCBM 2025 Event Photo 1">
+                                <img src="photos/ICCBM2025/ICCBM2025-01.jpg" alt="ICCBM 2025 Event Photo 1" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-02.jpg" data-alt="ICCBM 2025 Event Photo 2">
+                                <img src="photos/ICCBM2025/ICCBM2025-02.jpg" alt="ICCBM 2025 Event Photo 2" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-03.jpg.jpeg" data-alt="ICCBM 2025 Event Photo 3">
+                                <img src="photos/ICCBM2025/ICCBM2025-03.jpg.jpeg" alt="ICCBM 2025 Event Photo 3" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-04.jpg" data-alt="ICCBM 2025 Event Photo 4">
+                                <img src="photos/ICCBM2025/ICCBM2025-04.jpg" alt="ICCBM 2025 Event Photo 4" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NASA Space Apps Challenge 2025 - Anticlockwise Movement -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">NASA Space Apps Challenge 2025</h3>
+                <div class="relative overflow-hidden">
+                    <div class="flex animate-scroll-anticlockwise">
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-04.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 4">
+                                <img src="photos/NSAC2025/NSAC2025-04.jpeg" alt="NASA Space Apps Challenge 2025 Photo 4" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-03.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 3">
+                                <img src="photos/NSAC2025/NSAC2025-03.jpeg" alt="NASA Space Apps Challenge 2025 Photo 3" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-02.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 2">
+                                <img src="photos/NSAC2025/NSAC2025-02.jpeg" alt="NASA Space Apps Challenge 2025 Photo 2" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-01.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 1">
+                                <img src="photos/NSAC2025/NSAC2025-01.jpeg" alt="NASA Space Apps Challenge 2025 Photo 1" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-04.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 4">
+                                <img src="photos/NSAC2025/NSAC2025-04.jpeg" alt="NASA Space Apps Challenge 2025 Photo 4" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-03.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 3">
+                                <img src="photos/NSAC2025/NSAC2025-03.jpeg" alt="NASA Space Apps Challenge 2025 Photo 3" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-02.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 2">
+                                <img src="photos/NSAC2025/NSAC2025-02.jpeg" alt="NASA Space Apps Challenge 2025 Photo 2" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-64 mx-2">
+                            <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/NSAC2025/NSAC2025-01.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 1">
+                                <img src="photos/NSAC2025/NSAC2025-01.jpeg" alt="NASA Space Apps Challenge 2025 Photo 1" class="w-full h-40 object-contain rounded-lg mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <img id="modal-image" src="" alt="" class="max-w-full max-h-full object-contain">
+            <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <button id="prev-image" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next-image" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ICFLEW 2025 - Clockwise Movement -->
+    <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">ICFLEW 2025 - BRAC University</h3>
+        <div class="relative overflow-hidden">
+            <div class="flex animate-scroll-clockwise">
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-01.jpg" data-alt="ICFLEW 2025 Conference Photo 1">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-01.jpg" alt="ICFLEW 2025 Conference Photo 1" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-02.jpg" data-alt="ICFLEW 2025 Conference Photo 2">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-02.jpg" alt="ICFLEW 2025 Conference Photo 2" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-03.jpg" data-alt="ICFLEW 2025 Conference Photo 3">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-03.jpg" alt="ICFLEW 2025 Conference Photo 3" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-04.jpg" data-alt="ICFLEW 2025 Conference Photo 4">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-04.jpg" alt="ICFLEW 2025 Conference Photo 4" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-05.jpg" data-alt="ICFLEW 2025 Conference Photo 5">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-05.jpg" alt="ICFLEW 2025 Conference Photo 5" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-06.jpg" data-alt="ICFLEW 2025 Conference Photo 6">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-06.jpg" alt="ICFLEW 2025 Conference Photo 6" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-01.jpg" data-alt="ICFLEW 2025 Conference Photo 1">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-01.jpg" alt="ICFLEW 2025 Conference Photo 1" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-02.jpg" data-alt="ICFLEW 2025 Conference Photo 2">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-02.jpg" alt="ICFLEW 2025 Conference Photo 2" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-03.jpg" data-alt="ICFLEW 2025 Conference Photo 3">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-03.jpg" alt="ICFLEW 2025 Conference Photo 3" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-04.jpg" data-alt="ICFLEW 2025 Conference Photo 4">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-04.jpg" alt="ICFLEW 2025 Conference Photo 4" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-05.jpg" data-alt="ICFLEW 2025 Conference Photo 5">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-05.jpg" alt="ICFLEW 2025 Conference Photo 5" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-64 mx-2">
+                    <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICFLEW2025/ICFLEW2025-06.jpg" data-alt="ICFLEW 2025 Conference Photo 6">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-06.jpg" alt="ICFLEW 2025 Conference Photo 6" class="w-full h-40 object-contain rounded-lg mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Projects -->
     <section id="projects" class="py-12 bg-gray-50">
@@ -1491,6 +1820,85 @@
                 icon.classList.add('fa-bars');
                 icon.classList.remove('fa-times');
             });
+        });
+
+        // Gallery Modal Functionality
+        const galleryModal = document.getElementById('gallery-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.getElementById('close-modal');
+        const prevImage = document.getElementById('prev-image');
+        const nextImage = document.getElementById('next-image');
+        
+        let currentImageIndex = 0;
+        let galleryImages = [];
+
+        // Collect unique gallery images (avoid duplicates from scrolling animation)
+        const seenImages = new Set();
+        document.querySelectorAll('.gallery-item').forEach((item) => {
+            const src = item.dataset.src;
+            if (!seenImages.has(src)) {
+                seenImages.add(src);
+                galleryImages.push({
+                    src: src,
+                    alt: item.dataset.alt
+                });
+            }
+        });
+
+        // Add click handlers to all gallery items
+        document.querySelectorAll('.gallery-item').forEach((item) => {
+            item.addEventListener('click', () => {
+                const src = item.dataset.src;
+                currentImageIndex = galleryImages.findIndex(img => img.src === src);
+                openModal(galleryImages[currentImageIndex]);
+            });
+        });
+
+        function openModal(imageData) {
+            modalImage.src = imageData.src;
+            modalImage.alt = imageData.alt;
+            galleryModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModalFunc() {
+            galleryModal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            openModal(galleryImages[currentImageIndex]);
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            openModal(galleryImages[currentImageIndex]);
+        }
+
+        // Event listeners
+        closeModal.addEventListener('click', closeModalFunc);
+        prevImage.addEventListener('click', showPrevImage);
+        nextImage.addEventListener('click', showNextImage);
+
+        // Close modal when clicking outside the image
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeModalFunc();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!galleryModal.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeModalFunc();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrevImage();
+                } else if (e.key === 'ArrowRight') {
+                    showNextImage();
+                }
+            }
         });
     </script>
 </body>

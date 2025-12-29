@@ -341,11 +341,11 @@
         }
 
         .animate-scroll-clockwise {
-            animation: scroll-clockwise 20s linear infinite;
+            animation: scroll-clockwise 40s linear infinite;
         }
 
         .animate-scroll-anticlockwise {
-            animation: scroll-anticlockwise 20s linear infinite;
+            animation: scroll-anticlockwise 40s linear infinite;
         }
 
         /* Pause animation on hover */
@@ -1796,7 +1796,8 @@
     <section id="education" class="py-12">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center section-heading">Education</h2>
-            <div class="max-w-4xl mx-auto space-y-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
                     <div class="flex items-start gap-4">
@@ -1856,6 +1857,7 @@
                 </div>
 
             </div>
+        </div>
         </div>
     </section>
 
@@ -2044,9 +2046,10 @@
         function pauseAutoScroll(galleryId) {
             const gallery = document.getElementById(`${galleryId}-gallery`);
             if (gallery) {
-                gallery.style.animationPlayState = 'paused';
+                // Instead of pausing animation, we'll let it continue
+                // and handle user interaction through manual scrolling
                 isUserInteracting[galleryId] = true;
-                
+
                 // Clear existing timeout
                 if (autoScrollTimeouts[galleryId]) {
                     clearTimeout(autoScrollTimeouts[galleryId]);
@@ -2059,14 +2062,10 @@
             if (autoScrollTimeouts[galleryId]) {
                 clearTimeout(autoScrollTimeouts[galleryId]);
             }
-            
-            // Resume after 3 seconds
+
+            // Resume after 3 seconds - but animation continues running
             autoScrollTimeouts[galleryId] = setTimeout(() => {
-                const gallery = document.getElementById(`${galleryId}-gallery`);
-                if (gallery) {
-                    gallery.style.animationPlayState = 'running';
-                    isUserInteracting[galleryId] = false;
-                }
+                isUserInteracting[galleryId] = false;
             }, 3000);
         }
 

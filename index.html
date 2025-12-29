@@ -447,26 +447,52 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" role="navigation" aria-label="Main Navigation">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Mobile/Tablet Portrait: 3-row layout -->
-            <div class="md:hidden flex flex-col items-center py-3 space-y-2">
-                <a href="#home" class="text-lg font-bold brand-text text-center">Md Golam Mubasshir Rafi</a>
-                <p class="text-xs text-gray-500 text-center">Personal & Academic Research Portfolio</p>
-                <div class="flex flex-wrap justify-center gap-3 text-sm">
-                    <a href="#about" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">About</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Gallery</a>
-                    <a href="#research" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Research</a>
-                    <a href="#projects" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Projects</a>
-                    <a href="#achievements" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Achievements</a>
-                    <a href="#coursework" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Coursework</a>
-                    <a href="#activities" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Activities</a>
-                    <a href="#awards" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Awards</a>
-                    <a href="#contact" class="text-gray-700 hover:text-[#4E6AFF] transition-colors">Contact</a>
-                    <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="text-[#4E6AFF] hover:text-blue-700 font-medium">CV</a>
+            <!-- Mobile: Hamburger menu -->
+            <div class="md:hidden flex justify-between items-center py-3">
+                <div>
+                    <a href="#home" class="text-lg font-bold brand-text">Md Golam Mubasshir Rafi</a>
+                    <p class="text-xs text-gray-500 mt-1">Personal & Academic Research Portfolio</p>
+                </div>
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-[#4E6AFF]">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="py-4 space-y-4">
+                    <a href="#about" class="block text-gray-700 hover:text-[#4E6AFF]">About</a>
+                    <a href="#gallery" class="block text-gray-700 hover:text-[#4E6AFF]">Gallery</a>
+                    <a href="#research" class="block text-gray-700 hover:text-[#4E6AFF]">Research</a>
+                    <a href="#projects" class="block text-gray-700 hover:text-[#4E6AFF]">Projects</a>
+                    <a href="#achievements" class="block text-gray-700 hover:text-[#4E6AFF]">Achievements</a>
+                    <a href="#coursework" class="block text-gray-700 hover:text-[#4E6AFF]">Coursework</a>
+                    <a href="#activities" class="block text-gray-700 hover:text-[#4E6AFF]">Activities</a>
+                    <a href="#awards" class="block text-gray-700 hover:text-[#4E6AFF]">Awards</a>
+                    <a href="#contact" class="block text-gray-700 hover:text-[#4E6AFF]">Contact</a>
+                    <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="block text-gray-700 hover:text-[#4E6AFF]">Download CV</a>
                 </div>
             </div>
 
-            <!-- Desktop/Tablet Landscape: Horizontal layout -->
-            <div class="hidden md:flex justify-between items-center py-4">
+            <!-- Tablet Portrait: 3-row centered layout -->
+            <div class="hidden md:flex lg:hidden flex-col items-center py-3 space-y-2">
+                <a href="#home" class="text-lg font-bold brand-text text-center">Md Golam Mubasshir Rafi</a>
+                <p class="text-xs text-gray-500 text-center">Personal & Academic Research Portfolio</p>
+                <div class="flex flex-wrap justify-center gap-3 text-sm">
+                    <a href="#about" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">About</a>
+                    <a href="#gallery" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Gallery</a>
+                    <a href="#research" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Research</a>
+                    <a href="#projects" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Projects</a>
+                    <a href="#achievements" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Achievements</a>
+                    <a href="#coursework" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Coursework</a>
+                    <a href="#activities" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Activities</a>
+                    <a href="#awards" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Awards</a>
+                    <a href="#contact" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Contact</a>
+                    <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="px-3 py-2 bg-[#4E6AFF] text-white hover:bg-blue-700 rounded-lg transition-colors font-medium">CV</a>
+                </div>
+            </div>
+
+            <!-- Desktop: Horizontal layout -->
+            <div class="hidden lg:flex justify-between items-center py-4">
                 <div>
                     <a href="#home" class="text-lg sm:text-xl font-bold brand-text block">Md Golam Mubasshir Rafi</a>
                     <p class="text-xs text-gray-500 mt-1">Personal & Academic Research Portfolio</p>

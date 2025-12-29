@@ -517,9 +517,9 @@
 
     <main id="home" class="pt-36 sm:pt-32 md:pt-40 lg:pt-24 pb-20 bg-white relative overflow-hidden" itemscope itemtype="https://schema.org/Person">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-7xl">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 items-start">
-                <!-- Left Column: Basic Information (2/3 width) -->
-                <div class="lg:col-span-2 space-y-6 pt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 items-start">
+                <!-- Left Column: Basic Information (2/3 width on lg, 1/2 on md) -->
+                <div class="md:col-span-1 lg:col-span-2 space-y-6 pt-8">
                     <!-- Name -->
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in" style="font-family: 'Roboto', sans-serif; font-weight: 900;" itemprop="name">
                         Md Golam Mubasshir
@@ -588,15 +588,15 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Profile & Achievements (1/3 width) -->
-                <div class="space-y-6 flex flex-col justify-center pt-8">
+                <!-- Right Column: Profile Image & Achievements (1/2 width on md, 1/3 on lg) -->
+                <div class="md:col-span-1 space-y-6 flex flex-col justify-center pt-8">
                     <!-- Profile Image -->
                     <div class="relative mb-8">
-                        <div class="w-64 h-64 mx-auto relative">
+                        <div class="w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 mx-auto relative">
                             <img src="photos/rsz_rafi_img_01.jpg" alt="Md Golam Mubasshir Rafi portrait" itemprop="image"
                                  class="w-full h-full rounded-2xl object-cover profile-glow border-4 border-[#4E6AFF] shadow-2xl">
-                            <div class="absolute -bottom-4 -right-4 bg-[#4E6AFF] text-white rounded-full w-20 h-20 flex items-center justify-center shadow-xl">
-                                <i class="fas fa-graduation-cap text-2xl"></i>
+                            <div class="absolute -bottom-4 -right-4 bg-[#4E6AFF] text-white rounded-full w-16 md:w-20 lg:w-20 h-16 md:h-20 lg:h-20 flex items-center justify-center shadow-xl">
+                                <i class="fas fa-graduation-cap text-xl md:text-2xl lg:text-2xl"></i>
                             </div>
                         </div>
                     </div>

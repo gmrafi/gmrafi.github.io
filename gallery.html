@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Photo Gallery | Md Golam Mubasshir Rafi</title>
+    <meta name="title" content="Photo Gallery | Md Golam Mubasshir Rafi">
+    <meta name="description" content="Complete photo gallery showcasing Md Golam Mubasshir Rafi's academic journey, conference presentations, and achievements including ICCBM 2025, NASA Space Apps Challenge 2025, and ICFLEW 2025.">
+    <meta name="keywords" content="Md Golam Mubasshir Rafi, Photo Gallery, ICCBM 2025, NASA Space Apps Challenge, ICFLEW 2025, Academic Photos, Conference Photography">
+    <meta name="author" content="Md Golam Mubasshir Rafi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gmrafi.github.io/gallery.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gmrafi.github.io/gallery.html">
+    <meta property="og:title" content="Photo Gallery | Md Golam Mubasshir Rafi">
+    <meta property="og:description" content="Complete photo gallery showcasing academic journey and achievements">
+    <meta property="og:image" content="https://gmrafi.github.io/photos/rsz_rafi_img_01.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gmrafi.github.io/gallery.html">
+    <meta property="twitter:title" content="Photo Gallery | Md Golam Mubasshir Rafi">
+    <meta property="twitter:description" content="Complete photo gallery showcasing academic journey and achievements">
+    <meta property="twitter:image" content="https://gmrafi.github.io/photos/rsz_rafi_img_01.jpg">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background-color: #4E6AFF;
+            color: white;
+        }
+
+        .filter-btn:hover {
+            background-color: #4E6AFF;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="text-lg sm:text-xl font-bold brand-text">← Back to Portfolio</a>
+                <h1 class="text-xl sm:text-2xl font-bold text-[#4E6AFF]">Photo Gallery</h1>
+                <div class="w-32"></div> <!-- Spacer for centering -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#4E6AFF] to-[#7c3aed] text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4">Complete Photo Gallery</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">Showcasing my academic journey, conference presentations, and achievements</p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn px-6 py-3 rounded-lg border border-gray-300 text-gray-700 active" data-filter="all">All Photos</button>
+                <button class="filter-btn px-6 py-3 rounded-lg border border-gray-300 text-gray-700" data-filter="iccbm">ICCBM 2025</button>
+                <button class="filter-btn px-6 py-3 rounded-lg border border-gray-300 text-gray-700" data-filter="nasa">NASA Space Apps 2025</button>
+                <button class="filter-btn px-6 py-3 rounded-lg border border-gray-300 text-gray-700" data-filter="icflew">ICFLEW 2025</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- ICCBM 2025 Gallery -->
+            <div class="gallery-section iccbm-section mb-12">
+                <h2 class="text-3xl font-bold text-[#4E6AFF] mb-8 text-center">ICCBM 2025 - BRAC University</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="iccbm" data-src="photos/ICCBM2025/ICCBM2025-01.jpg" data-alt="ICCBM 2025 Event Photo 1">
+                        <img src="photos/ICCBM2025/ICCBM2025-01.jpg" alt="Md Golam Mubasshir Rafi presenting research at ICCBM 2025 Conference, BRAC Business School, BRAC University - Academic Event Photography" title="ICCBM 2025 Conference Presentation - Md Golam Mubasshir Rafi" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Conference Presentation</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="iccbm" data-src="photos/ICCBM2025/ICCBM2025-02.jpg" data-alt="ICCBM 2025 Event Photo 2">
+                        <img src="photos/ICCBM2025/ICCBM2025-02.jpg" alt="ICCBM 2025 Event Photo 2" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Event Highlights</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="iccbm" data-src="photos/ICCBM2025/ICCBM2025-03.jpg.jpeg" data-alt="ICCBM 2025 Event Photo 3">
+                        <img src="photos/ICCBM2025/ICCBM2025-03.jpg.jpeg" alt="ICCBM 2025 Event Photo 3" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Academic Networking</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="iccbm" data-src="photos/ICCBM2025/ICCBM2025-04.jpg" data-alt="ICCBM 2025 Event Photo 4">
+                        <img src="photos/ICCBM2025/ICCBM2025-04.jpg" alt="ICCBM 2025 Event Photo 4" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Conference Venue</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NASA Space Apps Challenge 2025 Gallery -->
+            <div class="gallery-section nasa-section mb-12">
+                <h2 class="text-3xl font-bold text-[#4E6AFF] mb-8 text-center">NASA Space Apps Challenge 2025</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="nasa" data-src="photos/NSAC2025/NSAC2025-01.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 1">
+                        <img src="photos/NSAC2025/NSAC2025-01.jpeg" alt="NASA Space Apps Challenge 2025 Photo 1" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Team Collaboration</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="nasa" data-src="photos/NSAC2025/NSAC2025-02.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 2">
+                        <img src="photos/NSAC2025/NSAC2025-02.jpeg" alt="NASA Space Apps Challenge 2025 Photo 2" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Problem Solving</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="nasa" data-src="photos/NSAC2025/NSAC2025-03.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 3">
+                        <img src="photos/NSAC2025/NSAC2025-03.jpeg" alt="NASA Space Apps Challenge 2025 Photo 3" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Innovation Session</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="nasa" data-src="photos/NSAC2025/NSAC2025-04.jpeg" data-alt="NASA Space Apps Challenge 2025 Photo 4">
+                        <img src="photos/NSAC2025/NSAC2025-04.jpeg" alt="NASA Space Apps Challenge 2025 Photo 4" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Final Presentation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ICFLEW 2025 Gallery -->
+            <div class="gallery-section icflew-section mb-12">
+                <h2 class="text-3xl font-bold text-[#4E6AFF] mb-8 text-center">ICFLEW 2025 - BRAC University</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="icflew" data-src="photos/ICFLEW2025/ICFLEW2025-01.jpg" data-alt="ICFLEW 2025 Conference Photo 1">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-01.jpg" alt="ICFLEW 2025 Conference Photo 1" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Opening Ceremony</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="icflew" data-src="photos/ICFLEW2025/ICFLEW2025-02.jpg" data-alt="ICFLEW 2025 Conference Photo 2">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-02.jpg" alt="ICFLEW 2025 Conference Photo 2" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Panel Discussion</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="icflew" data-src="photos/ICFLEW2025/ICFLEW2025-03.jpg" data-alt="ICFLEW 2025 Conference Photo 3">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-03.jpg" alt="ICFLEW 2025 Conference Photo 3" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Keynote Speech</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="icflew" data-src="photos/ICFLEW2025/ICFLEW2025-04.jpg" data-alt="ICFLEW 2025 Conference Photo 4">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-04.jpg" alt="ICFLEW 2025 Conference Photo 4" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Networking Session</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="icflew" data-src="photos/ICFLEW2025/ICFLEW2025-05.jpg" data-alt="ICFLEW 2025 Conference Photo 5">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-05.jpg" alt="ICFLEW 2025 Conference Photo 5" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Workshop Activity</p>
+                    </div>
+                    <div class="gallery-item bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover" data-category="icflew" data-src="photos/ICFLEW2025/ICFLEW2025-06.jpg" data-alt="ICFLEW 2025 Conference Photo 6">
+                        <img src="photos/ICFLEW2025/ICFLEW2025-06.jpg" alt="ICFLEW 2025 Conference Photo 6" class="w-full h-48 object-contain rounded-lg mx-auto">
+                        <p class="text-center text-sm text-gray-600 mt-2">Closing Ceremony</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-5xl max-h-full">
+            <img id="modal-image" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+            <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+            <button id="prev-image" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next-image" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gray-300 transition-colors bg-black bg-opacity-50 rounded-full w-12 h-12 flex items-center justify-center">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="image-caption" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+                <p class="text-sm"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Md Golam Mubasshir Rafi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery functionality
+        let currentImageIndex = 0;
+        let galleryImages = [];
+        let currentFilter = 'all';
+
+        const galleryModal = document.getElementById('gallery-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.getElementById('close-modal');
+        const prevImage = document.getElementById('prev-image');
+        const nextImage = document.getElementById('next-image');
+        const imageCaption = document.getElementById('image-caption');
+
+        // Initialize gallery
+        function initializeGallery() {
+            galleryImages = [];
+            document.querySelectorAll('.gallery-item').forEach((item, index) => {
+                const category = item.dataset.category;
+                if (currentFilter === 'all' || category === currentFilter) {
+                    galleryImages.push({
+                        src: item.dataset.src,
+                        alt: item.dataset.alt,
+                        caption: item.querySelector('p').textContent,
+                        index: index
+                    });
+                }
+            });
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                currentFilter = btn.dataset.filter;
+
+                // Show/hide sections based on filter
+                document.querySelectorAll('.gallery-section').forEach(section => {
+                    if (currentFilter === 'all') {
+                        section.style.display = 'block';
+                    } else {
+                        const sectionClass = currentFilter + '-section';
+                        if (section.classList.contains(sectionClass)) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    }
+                });
+
+                initializeGallery();
+            });
+        });
+
+        // Gallery item click handlers
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.gallery-item')) {
+                const item = e.target.closest('.gallery-item');
+                const src = item.dataset.src;
+                initializeGallery();
+                currentImageIndex = galleryImages.findIndex(img => img.src === src);
+                openModal(galleryImages[currentImageIndex]);
+            }
+        });
+
+        function openModal(imageData) {
+            modalImage.src = imageData.src;
+            modalImage.alt = imageData.alt;
+            imageCaption.querySelector('p').textContent = imageData.caption;
+            galleryModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModalFunc() {
+            galleryModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            openModal(galleryImages[currentImageIndex]);
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            openModal(galleryImages[currentImageIndex]);
+        }
+
+        // Event listeners
+        closeModal.addEventListener('click', closeModalFunc);
+        prevImage.addEventListener('click', showPrevImage);
+        nextImage.addEventListener('click', showNextImage);
+
+        // Close modal when clicking outside the image
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeModalFunc();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!galleryModal.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeModalFunc();
+                } else if (e.key === 'ArrowLeft') {
+                    showPrevImage();
+                } else if (e.key === 'ArrowRight') {
+                    showNextImage();
+                }
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeGallery();
+        });
+    </script>
+</body>
+</html>

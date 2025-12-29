@@ -353,9 +353,96 @@
         .animate-scroll-anticlockwise:hover {
             animation-play-state: paused;
         }
+
+        /* Welcome Screen Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes welcomeFadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .animate-fade-in-delay {
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .animate-fade-in-delay-2 {
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        .animate-spin-slow {
+            animation: spinSlow 8s linear infinite;
+        }
+
+        .animation-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        .welcome-fade-out {
+            animation: welcomeFadeOut 1s ease-out forwards;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 z-50 flex items-center justify-center overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-40 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
+        </div>
+
+        <div class="text-center text-white relative z-10 px-6">
+            <!-- Elegant Circular Element -->
+            <div class="relative mx-auto mb-12">
+                <!-- Outer Ring -->
+                <div class="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl flex items-center justify-center animate-spin-slow">
+                    <!-- Inner Ring -->
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-purple-400/30 to-blue-400/30 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-inner">
+                        <!-- Center Element -->
+                        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-white/95 to-white/80 shadow-xl flex items-center justify-center relative overflow-hidden">
+                            <!-- Elegant inner design -->
+                            <div class="absolute inset-2 rounded-full bg-gradient-to-br from-purple-400/20 to-blue-400/20"></div>
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 shadow-lg relative z-10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome Text -->
+            <div class="space-y-4">
+                <h1 class="text-2xl md:text-4xl font-light tracking-wider animate-fade-in opacity-90">
+                    Welcome to the World of
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent animate-fade-in-delay leading-tight">
+                    Md Golam Mubasshir Rafi
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full animate-fade-in-delay-2 mt-6"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" role="navigation" aria-label="Main Navigation">
@@ -1829,6 +1916,21 @@
 
     <!-- Simple JavaScript -->
     <script>
+        // Welcome Screen Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            
+            // Hide welcome screen after 3 seconds
+            setTimeout(function() {
+                welcomeScreen.classList.add('welcome-fade-out');
+                
+                // Remove from DOM after animation completes
+                setTimeout(function() {
+                    welcomeScreen.style.display = 'none';
+                }, 1000);
+            }, 3000);
+        });
+
         // Current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         

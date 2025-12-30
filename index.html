@@ -2699,28 +2699,114 @@
                 allPosts = [];
                 currentPostIndex = 0;
 
-                // Using RSS2JSON API to convert Medium RSS to JSON
+                // Using multiple RSS-to-JSON services with fallbacks for reliability
                 // Add timestamp to bypass caching and ensure fresh posts
                 const timestamp = Date.now();
-                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gmrafi&_=${timestamp}`);
+                const rssUrl = 'https://medium.com/feed/@gmrafi';
+                let data = null;
+                let apiError = null;
 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                // Using JSONP to bypass CORS issues
+                // Try RSS2JSON with JSONP
+                await new Promise((resolve, reject) => {
+                    const callbackName = 'myCallback';
+                    window[callbackName] = function(result) {
+                        console.log('RSS2JSON callback received:', result);
+                        console.log('Result status:', result.status);
+                        console.log('Result items:', result.items);
+                        if (result.status === 'ok' && result.items && result.items.length > 0) {
+                            console.log('Setting data from RSS2JSON');
+                            data = result;
+                        } else {
+                            console.warn('RSS2JSON returned invalid data');
+                        }
+                        // Clean up
+                        const scripts = document.querySelectorAll('script[src*="api.rss2json.com"]');
+                        scripts.forEach(script => script.remove());
+                        delete window[callbackName];
+                        resolve();
+                    };
+                    const script = document.createElement('script');
+                    script.src = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&callback=${callbackName}&_=${timestamp}`;
+                    script.onerror = function() {
+                        console.error('RSS2JSON script failed to load');
+                        const scripts = document.querySelectorAll('script[src*="api.rss2json.com"]');
+                        scripts.forEach(script => script.remove());
+                        delete window[callbackName];
+                        reject(new Error('RSS2JSON JSONP failed'));
+                    };
+                    document.head.appendChild(script);
+                }).catch(error => {
+                    console.warn('RSS2JSON JSONP failed:', error);
+                    apiError = error;
+                });
+
+                // Fallback to rss2json.com with JSONP
+                if (!data) {
+                    await new Promise((resolve, reject) => {
+                        const callbackName = 'myCallback2';
+                        window[callbackName] = function(result) {
+                            console.log('rss2json.com callback received:', result);
+                            if (result.status === 'ok' && result.feed && result.items && result.items.length > 0) {
+                                data = result;
+                            }
+                            // Clean up
+                            const scripts = document.querySelectorAll('script[src*="rss2json.com"]');
+                            scripts.forEach(script => script.remove());
+                            delete window[callbackName];
+                            resolve();
+                        };
+                        const script = document.createElement('script');
+                        script.src = `https://rss2json.com/api.json?rss_url=${encodeURIComponent(rssUrl)}&api_key=demo&callback=${callbackName}&_=${timestamp}`;
+                        script.onerror = function() {
+                            console.error('rss2json.com script failed to load');
+                            const scripts = document.querySelectorAll('script[src*="rss2json.com"]');
+                            scripts.forEach(script => script.remove());
+                            delete window[callbackName];
+                            reject(new Error('rss2json.com JSONP failed'));
+                        };
+                        document.head.appendChild(script);
+                    }).catch(error => {
+                        console.warn('rss2json.com JSONP failed:', error);
+                        if (!apiError) apiError = error;
+                    });
                 }
 
-                const data = await response.json();
-
-                if (data.status !== 'ok') {
-                    throw new Error(`API error: ${data.message || 'Unknown error'}`);
+                // Final fallback - try direct fetch (might work in some browsers)
+                if (!data) {
+                    try {
+                        const response = await fetch(`https://api.feed2json.org/convert?url=${encodeURIComponent(rssUrl)}&_=${timestamp}`);
+                        if (response.ok) {
+                            const result = await response.json();
+                            if (result.items && result.items.length > 0) {
+                                data = result;
+                            }
+                        }
+                    } catch (error) {
+                        console.warn('feed2json fetch failed:', error);
+                        if (!apiError) apiError = error;
+                    }
                 }
+
+                // If all services failed, throw the last error
+                if (!data) {
+                    console.error('No data received from any service');
+                    throw apiError || new Error('All RSS services failed');
+                }
+
+                console.log('Final data received:', data);
+                console.log('Data items count:', data.items ? data.items.length : 'no items');
 
                 if (!data.items || data.items.length === 0) {
+                    console.error('No items in data');
                     throw new Error('No posts found in RSS feed');
                 }
 
                 // Store all posts
                 allPosts = data.items;
                 currentPostIndex = 0;
+
+                console.log('Stored', allPosts.length, 'posts, loading initial batch');
 
                 // Hide loading
                 loadingElement.style.display = 'none';

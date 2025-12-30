@@ -416,6 +416,12 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        /* Mobile More dropdown rotation */
+        .rotate-180 {
+            transform: rotate(180deg);
+            transition: transform 0.2s ease;
+        }
     </style>
 </head>
 <body>
@@ -476,15 +482,29 @@
             <div id="mobile-menu" class="mobile-menu md:hidden">
                 <div class="py-4 space-y-4">
                     <a href="#about" class="block text-gray-700 hover:text-[#4E6AFF]">About</a>
-                    <a href="#gallery" class="block text-gray-700 hover:text-[#4E6AFF]">Gallery</a>
                     <a href="#research" class="block text-gray-700 hover:text-[#4E6AFF]">Research</a>
-                    <a href="#blog" class="block text-gray-700 hover:text-[#4E6AFF]">Blog</a>
                     <a href="#projects" class="block text-gray-700 hover:text-[#4E6AFF]">Projects</a>
-                    <a href="#achievements" class="block text-gray-700 hover:text-[#4E6AFF]">Achievements</a>
-                    <a href="#coursework" class="block text-gray-700 hover:text-[#4E6AFF]">Coursework</a>
-                    <a href="#awards" class="block text-gray-700 hover:text-[#4E6AFF]">Awards</a>
+                    <a href="#blog" class="block text-gray-700 hover:text-[#4E6AFF]">Blog</a>
+                    <a href="#gallery" class="block text-gray-700 hover:text-[#4E6AFF]">Gallery</a>
+                    
+                    <!-- More Section -->
+                    <div class="space-y-2">
+                        <button id="mobile-more-btn" class="flex items-center justify-between w-full text-gray-700 hover:text-[#4E6AFF] font-medium">
+                            <span>More</span>
+                            <i id="mobile-more-icon" class="fas fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                        <div id="mobile-more-dropdown" class="hidden space-y-2 pl-4 border-l-2 border-gray-200">
+                            <a href="#institutional" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Institutional</a>
+                            <a href="#achievements" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Achievements</a>
+                            <a href="#coursework" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Coursework</a>
+                            <a href="#certifications" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Certifications</a>
+                            <a href="#activities" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Activities</a>
+                            <a href="#awards" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Awards</a>
+                            <a href="#education" class="block text-gray-600 hover:text-[#4E6AFF] text-sm">Education</a>
+                        </div>
+                    </div>
+                    
                     <a href="#contact" class="block text-gray-700 hover:text-[#4E6AFF]">Contact</a>
-                    <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="block text-gray-700 hover:text-[#4E6AFF]">Download CV</a>
                 </div>
             </div>
 
@@ -494,15 +514,30 @@
                 <p class="text-xs text-gray-500 text-center">Personal & Academic Research Portfolio</p>
                 <div class="flex flex-wrap justify-center gap-3 text-sm">
                     <a href="#about" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">About</a>
-                    <a href="#gallery" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Gallery</a>
                     <a href="#research" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Research</a>
-                    <a href="#blog" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Blog</a>
                     <a href="#projects" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Projects</a>
-                    <a href="#achievements" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Achievements</a>
-                    <a href="#coursework" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Coursework</a>
-                    <a href="#awards" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Awards</a>
+                    <a href="#blog" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Blog</a>
+                    <a href="#gallery" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Gallery</a>
+                    
+                    <!-- More Dropdown -->
+                    <div class="relative">
+                        <button id="tablet-more-btn" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium flex items-center">
+                            More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="tablet-more-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 hidden">
+                            <div class="py-1">
+                                <a href="#institutional" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Institutional</a>
+                                <a href="#achievements" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Achievements</a>
+                                <a href="#coursework" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Coursework</a>
+                                <a href="#certifications" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Certifications</a>
+                                <a href="#activities" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Activities</a>
+                                <a href="#awards" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Awards</a>
+                                <a href="#education" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Education</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <a href="#contact" class="px-3 py-2 bg-gray-100 hover:bg-[#4E6AFF] hover:text-white rounded-lg transition-colors font-medium">Contact</a>
-                    <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="px-3 py-2 bg-[#4E6AFF] text-white hover:bg-blue-700 rounded-lg transition-colors font-medium">CV</a>
                 </div>
             </div>
 
@@ -515,13 +550,29 @@
 
                 <div class="flex items-center space-x-6">
                     <a href="#about" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">About</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Gallery</a>
                     <a href="#research" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Research</a>
-                    <a href="#blog" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Blog</a>
                     <a href="#projects" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Projects</a>
-                    <a href="#achievements" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Achievements</a>
-                    <a href="#coursework" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Coursework</a>
-                    <a href="#awards" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Awards</a>
+                    <a href="#blog" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Blog</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Gallery</a>
+                    
+                    <!-- More Dropdown -->
+                    <div class="relative">
+                        <button id="more-btn" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium flex items-center">
+                            More <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="more-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 hidden">
+                            <div class="py-1">
+                                <a href="#institutional" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Institutional</a>
+                                <a href="#achievements" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Achievements</a>
+                                <a href="#coursework" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Coursework</a>
+                                <a href="#certifications" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Certifications</a>
+                                <a href="#activities" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Activities</a>
+                                <a href="#awards" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Awards</a>
+                                <a href="#education" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#4E6AFF]">Education</a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <a href="#contact" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Contact</a>
                     <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="btn-primary px-4 py-2 rounded-lg font-semibold text-sm">
                         <i class="fas fa-download mr-1"></i>CV
@@ -788,6 +839,428 @@
         </div>
     </section>
 
+    <!-- Publications & Research -->
+    <section id="research" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] text-center section-heading">Research & Publications</h2>
+
+            <div class="max-w-7xl mx-auto space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Publication 1 (Newest) -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-12" />
+                        <meta itemprop="dateModified" content="2025-12-20" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="isPartOf" content="2nd International Case Conference on Business and Management (ICCBM) 2025" />
+                        <meta itemprop="publisher" content="BRAC Business School, BRAC University" />
+                        <meta itemprop="genre" content="Conference Paper" />
+                        <meta itemprop="keywords" content="AI, Nano Loans, Microfinance, Bangladesh, Sustainable Finance" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Afshara Tasneem Zoa" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0004-9322-8465" />
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-presentation"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap gap-1 mb-2">
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#f59e42;color:white;">Case Study</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
+                                    bKash's AI-Driven Nano Loans: Advancing Sustainable Microfinance in Bangladesh
+                                </h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This paper examines the implementation and impact of AI-driven nano loans by bKash in Bangladesh, focusing on sustainable microfinance practices and their socio-economic implications.
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
+                                    <a href="https://orcid.org/0009-0004-9322-8465"><span class="text-gray-900">Afshara Tasneem Zoa <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-1">
+                                    <i class="fas fa-university mr-2"></i>2nd International Case Conference on Business and Management (ICCBM) 2025
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    📍 BRAC Business School, BRAC University
+                                </p>
+                                <div class="flex gap-2 mt-3">
+                                    <a href="#" class="border border-[#4E6AFF] text-[#4E6AFF] bg-transparent px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4E6AFF] hover:text-white transition-all duration-200 shadow-md">View Proceeding</a>
+                                    <a href="#" class="bg-[#4E6AFF] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#3b4ba8] transition-all duration-200 shadow-md">View Conference Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-01" />
+                        <meta itemprop="dateModified" content="2025-01-15" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="isPartOf" content="International Conference on Challenges and Trends in Arts and Social Sciences (ICCTASS 2025)" />
+                        <meta itemprop="publisher" content="American International University-Bangladesh (AIUB)" />
+                        <meta itemprop="genre" content="Conference Paper" />
+                        <meta itemprop="keywords" content="Microfinance, Solar Home Systems, Sustainable Energy, Rural Bangladesh, Socio-Economic Impact" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Fariha Fairuz Proma" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-8265-775X" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap gap-1 mb-2">
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Sustainable Energy</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
+                                    Microfinance-Enabled Solar Home Systems in Rural Bangladesh: Assessing Socio-Economic Impact for Sustainable Energy Policy
+                                </h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This research investigates the socio-economic impacts of microfinance-enabled solar home systems in rural Bangladesh, providing insights for sustainable energy policy development.
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <a href="https://orcid.org/0009-0007-8265-775X"><span class="text-gray-900">Fariha Fairuz Proma <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
+                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-1">
+                                    <i class="fas fa-university mr-2"></i>International Conference on Challenges and Trends in Arts and Social Sciences (ICCTASS 2025)
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    📍 American International University-Bangladesh (AIUB), Dhaka
+                                </p>
+                                <div class="flex gap-2 mt-3">
+                                    <a href="#" class="border border-[#4E6AFF] text-[#4E6AFF] bg-transparent px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4E6AFF] hover:text-white transition-all duration-200 shadow-md">View Proceeding</a>
+                                    <a href="#" class="bg-[#4E6AFF] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#3b4ba8] transition-all duration-200 shadow-md">View Conference Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-02" />
+                        <meta itemprop="dateModified" content="2025-02-10" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="isPartOf" content="International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025" />
+                        <meta itemprop="publisher" content="BRAC University" />
+                        <meta itemprop="genre" content="Conference Paper" />
+                        <meta itemprop="keywords" content="Mobile Financial Services, Financial Literacy, MFS Adoption, Market Merchants, Sylhet" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Israt Zarin Ruponty" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4844-1154" />
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-presentation"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap gap-1 mb-2">
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Financial Literacy</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
+                                    Exploring Mobile Financial Services (MFS) Adoption and Basic Financial Literacy Among Market Merchants in Sylhet
+                                </h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    This study explores the adoption of Mobile Financial Services and financial literacy levels among market merchants in Sylhet, Bangladesh.
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
+                                    <a href="https://orcid.org/0009-0007-4844-1154"><span class="text-gray-900">Israt Zarin Ruponty <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-1">
+                                    <i class="fas fa-university mr-2"></i>International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    📍 BRAC University
+                                </p>
+                                <div class="flex gap-2 mt-3">
+                                    <a href="#" class="border border-[#4E6AFF] text-[#4E6AFF] bg-transparent px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4E6AFF] hover:text-white transition-all duration-200 shadow-md">View Proceeding</a>
+                                    <a href="#" class="bg-[#4E6AFF] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#3b4ba8] transition-all duration-200 shadow-md">View Conference Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                        <meta itemprop="datePublished" content="2025-02-21" />
+                        <meta itemprop="dateModified" content="2025-02-21" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="identifier" content="https://doi.org/10.71214/e35q5f27" />
+                        <meta itemprop="url" content="https://doi.org/10.71214/e35q5f27" />
+                        <meta itemprop="genre" content="Journal Article" />
+                        <meta itemprop="isPartOf" content="International Journal of Sustainability and Multidisciplinary Research (IJSMR)" />
+                        <meta itemprop="keywords" content="Repo Rate, Inflation Control, Monetary Policy, Proportional Relationship" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Mashrura Meshkat Punno" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0002-1022-7324" />
+                        </div>
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div class="flex items-start gap-4 mb-3">
+                            <div class="text-2xl text-gray-600">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap gap-1 mb-2">
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Published</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Journal Article</span>
+                                    <span class="badge" style="background-color:#f59e42;color:white;">Inflation & Monetary Policy</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-users mr-2"></i>
+                                    <a href="https://orcid.org/0009-0002-1022-7324"><span class="text-gray-900">Mashrura Meshkat Punno <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
+                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
+                                </p>
+                                <p class="text-sm text-gray-600 mb-1">
+                                    <i class="fas fa-calendar mr-2"></i>Published: February 21, 2025
+                                </p>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-book mr-2"></i>International Journal of Sustainability and Multidisciplinary Research (IJSMR)
+                                </p>
+                                <div class="flex gap-2 mt-2">
+                                    <a href="https://doi.org/10.71214/e35q5f27" target="_blank" class="text-gray-600 hover:text-gray-900 hover:underline text-sm font-semibold">
+                                        <i class="fas fa-external-link-alt mr-1"></i>View Paper (DOI: 10.71214/e35q5f27)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publication 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/Chapter">
+                        <meta itemprop="datePublished" content="2024" />
+                        <meta itemprop="inLanguage" content="en" />
+                        <meta itemprop="genre" content="Book Chapter" />
+                        <meta itemprop="keywords" content="Microeconomics, Demand and Supply, Economic Principles" />
+                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
+                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="text-2xl text-[#4E6AFF]">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap gap-1 mb-2">
+                                    <span class="badge" style="background-color:#f59e42;color:white;">Book Chapter</span>
+                                    <span class="badge" style="background-color:#6b7280;color:white;">Microeconomics</span>
+                                </div>
+                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">Chapter 2: Demand and Supply</h3>
+                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
+                                    Comprehensive coverage of demand and supply principles in microeconomics, including analysis of market equilibrium and price determination.
+                                </div>
+                                <p class="text-sm text-gray-600 mb-2">
+                                    <i class="fas fa-user mr-2"></i>
+                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-8 text-center section-heading">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Project 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">OrbitBiZ - LEO Commerce Platform</h3>
+                    <p class="text-gray-600 mb-4">Satellite Inspection-as-a-Service (SIaaS) platform for NASA Space Apps Challenge 2025. Real-time tracking of 64,000+ space objects with AI collision prediction and interactive Mapbox visualization.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">NASA TLE Data</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Mapbox GL JS</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">AI/ML</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Business Analytics</span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="badge badge-completed">Regional 1st Runner-Up</span>
+                        <span class="badge badge-progress">Global Nominee</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://orbitbiz.gmrafi.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                        </a>
+                        <a href="https://github.com/gmrafi/OrbitEdge" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">SSDRF Website</h3>
+                    <p class="text-gray-600 mb-4">Official website for Sylhet Sustainable Development Research Firm using WordPress and Elementor. Responsive, user-friendly platform showcasing research initiatives.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Elementor</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">SEO</span>
+                    </div>
+                    <a href="https://ssdrf.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                        <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Justice Half Marathon 2025</h3>
+                    <p class="text-gray-600 mb-4">Official website for first-ever national marathon hosted by Army IBA. Features online registration, event schedules, sponsor showcases, and participant resources.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Event Management</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Payment Gateway</span>
+                    </div>
+                    <a href="https://justicehalfmarathon.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                        <i class="fas fa-external-link-alt mr-2"></i>Visit Website
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Certificate Verification System</h3>
+                    <p class="text-gray-600 mb-4">Web-based system using HTML, CSS, and JavaScript, hosted on GitHub Pages. Enables students to verify certificates by entering Certificate Number or Student ID.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">HTML5</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">CSS3</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                    </div>
+                    <a href="https://cvms-sportsaiba.gmrafi.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                        <i class="fas fa-external-link-alt mr-2"></i>View System
+                    </a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">SSDRF Academy</h3>
+                    <p class="text-gray-600 mb-4">Educational platform for SSDRF's learning initiatives. Features course listings, user registration, and interactive content delivery systems built with WordPress and WooCommerce.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WooCommerce</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">LMS</span>
+                    </div>
+                    <a href="https://academy.ssdrf.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                        <i class="fas fa-external-link-alt mr-2"></i>Visit Platform
+                    </a>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Reach Out (Film Project)</h3>
+                    <p class="text-gray-600 mb-4">90-second TVC addressing mental health awareness among university students. Writer and Project Coordinator. Submitted to film festivals addressing psychological wellbeing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Script Writing</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">TVC Production</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Mental Health</span>
+                    </div>
+                    <a href="https://filmfreeway.com/Reach-out" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                        <i class="fas fa-external-link-alt mr-2"></i>View on FilmFreeway
+                    </a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                    <div class="text-3xl text-[#4E6AFF] mb-4">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Personal Portfolio</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive personal website showcasing academic achievements, professional projects, and creative works using WordPress for dynamic content management.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Custom Theme</span>
+                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Portfolio Design</span>
+                    </div>
+                    <a href="https://gmrafi.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
+                        <i class="fas fa-external-link-alt mr-2"></i>Visit Portfolio
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="blog" class="py-12 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-8 text-center section-heading">Latest Articles</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+                Insights on FinTech, Research, Technology, and Academic Perspectives
+            </p>
+
+            <div id="blog-posts" class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Posts will be loaded here -->
+                </div>
+                <div id="blog-loading" class="text-center py-8">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#4E6AFF]"></div>
+                    <p class="mt-2 text-gray-600">Loading articles...</p>
+                </div>
+                <div id="blog-error" class="text-center py-8 hidden">
+                    <p class="text-gray-600">Unable to load articles at the moment.</p>
+                    <a href="https://medium.com/@gmrafi" target="_blank" class="text-[#4E6AFF] hover:underline mt-2 inline-block">
+                        Visit Medium Profile →
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <button id="load-more-btn" class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg inline-flex items-center gap-2 hidden">
+                    <i class="fas fa-plus"></i>
+                    Load More Posts
+                </button>
+                <a href="https://medium.com/@gmrafi" target="_blank"
+                   class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg inline-flex items-center gap-2 ml-4">
+                    <i class="fab fa-medium"></i>
+                    Read More on Medium
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Photo Gallery -->
     <section id="gallery" class="py-8">
         <div class="w-full">
@@ -1043,250 +1516,6 @@
         <p class="text-gray-600 mt-2 text-sm">Explore all conference and event photos in our full gallery</p>
     </div>
 
-    <!-- Publications & Research -->
-    <section id="research" class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] text-center section-heading">Research & Publications</h2>
-
-            <div class="max-w-7xl mx-auto space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Publication 1 (Newest) -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                        <meta itemprop="datePublished" content="2025-12" />
-                        <meta itemprop="dateModified" content="2025-12-20" />
-                        <meta itemprop="inLanguage" content="en" />
-                        <meta itemprop="isPartOf" content="2nd International Case Conference on Business and Management (ICCBM) 2025" />
-                        <meta itemprop="publisher" content="BRAC Business School, BRAC University" />
-                        <meta itemprop="genre" content="Conference Paper" />
-                        <meta itemprop="keywords" content="AI, Nano Loans, Microfinance, Bangladesh, Sustainable Finance" />
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
-                        </div>
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Afshara Tasneem Zoa" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0004-9322-8465" />
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="text-2xl text-[#4E6AFF]">
-                                <i class="fas fa-presentation"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
-                                    <span class="badge" style="background-color:#f59e42;color:white;">Case Study</span>
-                                </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
-                                    bKash's AI-Driven Nano Loans: Advancing Sustainable Microfinance in Bangladesh
-                                </h3>
-                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
-                                    This paper examines the implementation and impact of AI-driven nano loans by bKash in Bangladesh, focusing on sustainable microfinance practices and their socio-economic implications.
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">
-                                    <i class="fas fa-users mr-2"></i>
-                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
-                                    <a href="https://orcid.org/0009-0004-9322-8465"><span class="text-gray-900">Afshara Tasneem Zoa <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
-                                </p>
-                                <p class="text-sm text-gray-600 mb-1">
-                                    <i class="fas fa-university mr-2"></i>2nd International Case Conference on Business and Management (ICCBM) 2025
-                                </p>
-                                <p class="text-sm text-gray-600 mb-3">
-                                    📍 BRAC Business School, BRAC University
-                                </p>
-                                <div class="flex gap-2 mt-3">
-                                    <a href="#" class="border border-[#4E6AFF] text-[#4E6AFF] bg-transparent px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4E6AFF] hover:text-white transition-all duration-200 shadow-md">View Proceeding</a>
-                                    <a href="#" class="bg-[#4E6AFF] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#3b4ba8] transition-all duration-200 shadow-md">View Conference Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Publication 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                        <meta itemprop="datePublished" content="2025-01" />
-                        <meta itemprop="dateModified" content="2025-01-15" />
-                        <meta itemprop="inLanguage" content="en" />
-                        <meta itemprop="isPartOf" content="International Conference on Challenges and Trends in Arts and Social Sciences (ICCTASS 2025)" />
-                        <meta itemprop="publisher" content="American International University-Bangladesh (AIUB)" />
-                        <meta itemprop="genre" content="Conference Paper" />
-                        <meta itemprop="keywords" content="Microfinance, Solar Home Systems, Sustainable Energy, Rural Bangladesh, Socio-Economic Impact" />
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Fariha Fairuz Proma" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-8265-775X" />
-                        </div>
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="text-2xl text-[#4E6AFF]">
-                                <i class="fas fa-solar-panel"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Sustainable Energy</span>
-                                </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
-                                    Microfinance-Enabled Solar Home Systems in Rural Bangladesh: Assessing Socio-Economic Impact for Sustainable Energy Policy
-                                </h3>
-                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
-                                    This research investigates the socio-economic impacts of microfinance-enabled solar home systems in rural Bangladesh, providing insights for sustainable energy policy development.
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">
-                                    <i class="fas fa-users mr-2"></i>
-                                    <a href="https://orcid.org/0009-0007-8265-775X"><span class="text-gray-900">Fariha Fairuz Proma <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
-                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
-                                </p>
-                                <p class="text-sm text-gray-600 mb-1">
-                                    <i class="fas fa-university mr-2"></i>International Conference on Challenges and Trends in Arts and Social Sciences (ICCTASS 2025)
-                                </p>
-                                <p class="text-sm text-gray-600 mb-3">
-                                    📍 American International University-Bangladesh (AIUB), Dhaka
-                                </p>
-                                <div class="flex gap-2 mt-3">
-                                    <a href="#" class="border border-[#4E6AFF] text-[#4E6AFF] bg-transparent px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4E6AFF] hover:text-white transition-all duration-200 shadow-md">View Proceeding</a>
-                                    <a href="#" class="bg-[#4E6AFF] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#3b4ba8] transition-all duration-200 shadow-md">View Conference Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Publication 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                        <meta itemprop="datePublished" content="2025-02" />
-                        <meta itemprop="dateModified" content="2025-02-10" />
-                        <meta itemprop="inLanguage" content="en" />
-                        <meta itemprop="isPartOf" content="International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025" />
-                        <meta itemprop="publisher" content="BRAC University" />
-                        <meta itemprop="genre" content="Conference Paper" />
-                        <meta itemprop="keywords" content="Mobile Financial Services, Financial Literacy, MFS Adoption, Market Merchants, Sylhet" />
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
-                        </div>
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Israt Zarin Ruponty" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4844-1154" />
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="text-2xl text-[#4E6AFF]">
-                                <i class="fas fa-presentation"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Conference Paper</span>
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Financial Literacy</span>
-                                </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">
-                                    Exploring Mobile Financial Services (MFS) Adoption and Basic Financial Literacy Among Market Merchants in Sylhet
-                                </h3>
-                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
-                                    This study explores the adoption of Mobile Financial Services and financial literacy levels among market merchants in Sylhet, Bangladesh.
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">
-                                    <i class="fas fa-users mr-2"></i>
-                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
-                                    <a href="https://orcid.org/0009-0007-4844-1154"><span class="text-gray-900">Israt Zarin Ruponty <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
-                                </p>
-                                <p class="text-sm text-gray-600 mb-1">
-                                    <i class="fas fa-university mr-2"></i>International Conference on Financial Literacy and Economic Wellbeing (ICFLEW) 2025
-                                </p>
-                                <p class="text-sm text-gray-600 mb-3">
-                                    📍 BRAC University
-                                </p>
-                                <div class="flex gap-2 mt-3">
-                                    <a href="#" class="border border-[#4E6AFF] text-[#4E6AFF] bg-transparent px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#4E6AFF] hover:text-white transition-all duration-200 shadow-md">View Proceeding</a>
-                                    <a href="#" class="bg-[#4E6AFF] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#3b4ba8] transition-all duration-200 shadow-md">View Conference Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Publication 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/ScholarlyArticle">
-                        <meta itemprop="datePublished" content="2025-02-21" />
-                        <meta itemprop="dateModified" content="2025-02-21" />
-                        <meta itemprop="inLanguage" content="en" />
-                        <meta itemprop="identifier" content="https://doi.org/10.71214/e35q5f27" />
-                        <meta itemprop="url" content="https://doi.org/10.71214/e35q5f27" />
-                        <meta itemprop="genre" content="Journal Article" />
-                        <meta itemprop="isPartOf" content="International Journal of Sustainability and Multidisciplinary Research (IJSMR)" />
-                        <meta itemprop="keywords" content="Repo Rate, Inflation Control, Monetary Policy, Proportional Relationship" />
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Mashrura Meshkat Punno" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0002-1022-7324" />
-                        </div>
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
-                        </div>
-                        <div class="flex items-start gap-4 mb-3">
-                            <div class="text-2xl text-gray-600">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Published</span>
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Journal Article</span>
-                                    <span class="badge" style="background-color:#f59e42;color:white;">Inflation & Monetary Policy</span>
-                                </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">Examining the Role of Repo Rate in Controlling Inflation: Analyzing the Dynamics of the Proportional Relationship</h3>
-                                <p class="text-sm text-gray-600 mb-2">
-                                    <i class="fas fa-users mr-2"></i>
-                                    <a href="https://orcid.org/0009-0002-1022-7324"><span class="text-gray-900">Mashrura Meshkat Punno <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>,
-                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
-                                </p>
-                                <p class="text-sm text-gray-600 mb-1">
-                                    <i class="fas fa-calendar mr-2"></i>Published: February 21, 2025
-                                </p>
-                                <p class="text-sm text-gray-600 mb-3">
-                                    <i class="fas fa-book mr-2"></i>International Journal of Sustainability and Multidisciplinary Research (IJSMR)
-                                </p>
-                                <div class="flex gap-2 mt-2">
-                                    <a href="https://doi.org/10.71214/e35q5f27" target="_blank" class="text-gray-600 hover:text-gray-900 hover:underline text-sm font-semibold">
-                                        <i class="fas fa-external-link-alt mr-1"></i>View Paper (DOI: 10.71214/e35q5f27)
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Publication 5 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover" itemscope itemtype="https://schema.org/Chapter">
-                        <meta itemprop="datePublished" content="2024" />
-                        <meta itemprop="inLanguage" content="en" />
-                        <meta itemprop="genre" content="Book Chapter" />
-                        <meta itemprop="keywords" content="Microeconomics, Demand and Supply, Economic Principles" />
-                        <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-                            <meta itemprop="name" content="Md Golam Mubasshir Rafi" />
-                            <meta itemprop="sameAs" content="https://orcid.org/0009-0007-4015-8354" />
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="text-2xl text-[#4E6AFF]">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex flex-wrap gap-1 mb-2">
-                                    <span class="badge" style="background-color:#f59e42;color:white;">Book Chapter</span>
-                                    <span class="badge" style="background-color:#6b7280;color:white;">Microeconomics</span>
-                                </div>
-                                <h3 class="text-xl font-bold font-serif text-gray-900 mb-2" itemprop="headline">Chapter 2: Demand and Supply</h3>
-                                <div itemprop="description" class="text-sm text-gray-600 mb-2 hidden">
-                                    Comprehensive coverage of demand and supply principles in microeconomics, including analysis of market equilibrium and price determination.
-                                </div>
-                                <p class="text-sm text-gray-600 mb-2">
-                                    <i class="fas fa-user mr-2"></i>
-                                    <a href="https://orcid.org/0009-0007-4015-8354"><span class="font-bold text-gray-900">Md Golam Mubasshir Rafi <img src="photos/ORCID-iD_icon_16x16.png" alt="ORCID iD" width="16" height="16" style="display:inline;margin-left:2px;vertical-align:middle;"></span></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Institutional Engagements & Collaborations -->
     <section id="institutional" class="py-12 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -1355,146 +1584,6 @@
                     </div>
 
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-8 text-center section-heading">Featured Projects</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                
-                <!-- Project 1 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border-2 border-[#4E6AFF] card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-satellite"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">OrbitBiZ - LEO Commerce Platform</h3>
-                    <p class="text-gray-600 mb-4">Satellite Inspection-as-a-Service (SIaaS) platform for NASA Space Apps Challenge 2025. Real-time tracking of 64,000+ space objects with AI collision prediction and interactive Mapbox visualization.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">NASA TLE Data</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Mapbox GL JS</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">AI/ML</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Business Analytics</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="badge badge-completed">Regional 1st Runner-Up</span>
-                        <span class="badge badge-progress">Global Nominee</span>
-                    </div>
-                    <div class="flex gap-3">
-                        <a href="https://orbitbiz.gmrafi.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                        </a>
-                        <a href="https://github.com/gmrafi/OrbitEdge" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                            <i class="fab fa-github mr-2"></i>GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">SSDRF Website</h3>
-                    <p class="text-gray-600 mb-4">Official website for Sylhet Sustainable Development Research Firm using WordPress and Elementor. Responsive, user-friendly platform showcasing research initiatives.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Elementor</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">SEO</span>
-                    </div>
-                    <a href="https://ssdrf.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>Visit Website
-                    </a>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Justice Half Marathon 2025</h3>
-                    <p class="text-gray-600 mb-4">Official website for first-ever national marathon hosted by Army IBA. Features online registration, event schedules, sponsor showcases, and participant resources.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Event Management</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Payment Gateway</span>
-                    </div>
-                    <a href="https://justicehalfmarathon.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>Visit Website
-                    </a>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Certificate Verification System</h3>
-                    <p class="text-gray-600 mb-4">Web-based system using HTML, CSS, and JavaScript, hosted on GitHub Pages. Enables students to verify certificates by entering Certificate Number or Student ID.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">HTML5</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">CSS3</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">JavaScript</span>
-                    </div>
-                    <a href="https://cvms-sportsaiba.gmrafi.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>View System
-                    </a>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">SSDRF Academy</h3>
-                    <p class="text-gray-600 mb-4">Educational platform for SSDRF's learning initiatives. Features course listings, user registration, and interactive content delivery systems built with WordPress and WooCommerce.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WooCommerce</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">LMS</span>
-                    </div>
-                    <a href="https://academy.ssdrf.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>Visit Platform
-                    </a>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Reach Out (Film Project)</h3>
-                    <p class="text-gray-600 mb-4">90-second TVC addressing mental health awareness among university students. Writer and Project Coordinator. Submitted to film festivals addressing psychological wellbeing.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Script Writing</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">TVC Production</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Mental Health</span>
-                    </div>
-                    <a href="https://filmfreeway.com/Reach-out" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>View on FilmFreeway
-                    </a>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <div class="text-3xl text-[#4E6AFF] mb-4">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Personal Portfolio</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive personal website showcasing academic achievements, professional projects, and creative works using WordPress for dynamic content management.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">WordPress</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Custom Theme</span>
-                        <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Portfolio Design</span>
-                    </div>
-                    <a href="https://gmrafi.com/" target="_blank" class="text-[#4E6AFF] hover:underline font-semibold">
-                        <i class="fas fa-external-link-alt mr-2"></i>Visit Portfolio
-                    </a>
-                </div>
-
             </div>
         </div>
     </section>
@@ -1862,7 +1951,7 @@
 
                 <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
                     <div class="flex items-start gap-4">
-                        <div class="text-2xl text-[#4E6AFF]"><i class="fab fa-wordpress"></i></div>
+                        <div class="text-2xl text-[#4E6AFF]"><i class="fas fa-trophy"></i></div>
                         <div class="flex-1">
                             <h3 class="text-lg font-semibold text-gray-900 mb-2">WordPress Contributor Recognition</h3>
                             <p class="text-sm text-gray-600 mb-2"><i class="fas fa-calendar mr-2"></i>2021 - Present</p>
@@ -1945,44 +2034,6 @@
 
             </div>
         </div>
-        </div>
-    </section>
-
-    <!-- Blog -->
-    <section id="blog" class="py-12 bg-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-8 text-center section-heading">Latest Articles</h2>
-            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-                Insights on FinTech, Research, Technology, and Academic Perspectives
-            </p>
-
-            <div id="blog-posts" class="max-w-6xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Posts will be loaded here -->
-                </div>
-                <div id="blog-loading" class="text-center py-8">
-                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#4E6AFF]"></div>
-                    <p class="mt-2 text-gray-600">Loading articles...</p>
-                </div>
-                <div id="blog-error" class="text-center py-8 hidden">
-                    <p class="text-gray-600">Unable to load articles at the moment.</p>
-                    <a href="https://medium.com/@gmrafi" target="_blank" class="text-[#4E6AFF] hover:underline mt-2 inline-block">
-                        Visit Medium Profile →
-                    </a>
-                </div>
-            </div>
-
-            <div class="text-center mt-8">
-                <button id="load-more-btn" class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg inline-flex items-center gap-2 hidden">
-                    <i class="fas fa-plus"></i>
-                    Load More Posts
-                </button>
-                <a href="https://medium.com/@gmrafi" target="_blank"
-                   class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg inline-flex items-center gap-2 ml-4">
-                    <i class="fab fa-medium"></i>
-                    Read More on Medium
-                </a>
-            </div>
         </div>
     </section>
 
@@ -2445,6 +2496,83 @@
             const loadMoreBtn = document.getElementById('load-more-btn');
             if (loadMoreBtn) {
                 loadMoreBtn.addEventListener('click', loadMorePosts);
+            }
+        });
+
+        // More dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const moreBtn = document.getElementById('more-btn');
+            const moreDropdown = document.getElementById('more-dropdown');
+
+            if (moreBtn && moreDropdown) {
+                // Toggle dropdown on click
+                moreBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    moreDropdown.classList.toggle('hidden');
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!moreBtn.contains(e.target) && !moreDropdown.contains(e.target)) {
+                        moreDropdown.classList.add('hidden');
+                    }
+                });
+
+                // Close dropdown when a link is clicked
+                const dropdownLinks = moreDropdown.querySelectorAll('a');
+                dropdownLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        moreDropdown.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Tablet More dropdown functionality
+            const tabletMoreBtn = document.getElementById('tablet-more-btn');
+            const tabletMoreDropdown = document.getElementById('tablet-more-dropdown');
+
+            if (tabletMoreBtn && tabletMoreDropdown) {
+                // Toggle dropdown on click
+                tabletMoreBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    tabletMoreDropdown.classList.toggle('hidden');
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!tabletMoreBtn.contains(e.target) && !tabletMoreDropdown.contains(e.target)) {
+                        tabletMoreDropdown.classList.add('hidden');
+                    }
+                });
+
+                // Close dropdown when a link is clicked
+                const tabletDropdownLinks = tabletMoreDropdown.querySelectorAll('a');
+                tabletDropdownLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        tabletMoreDropdown.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Mobile More dropdown functionality
+            const mobileMoreBtn = document.getElementById('mobile-more-btn');
+            const mobileMoreDropdown = document.getElementById('mobile-more-dropdown');
+            const mobileMoreIcon = document.getElementById('mobile-more-icon');
+
+            if (mobileMoreBtn && mobileMoreDropdown && mobileMoreIcon) {
+                // Toggle dropdown on click
+                mobileMoreBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const isHidden = mobileMoreDropdown.classList.contains('hidden');
+                    
+                    if (isHidden) {
+                        mobileMoreDropdown.classList.remove('hidden');
+                        mobileMoreIcon.classList.add('rotate-180');
+                    } else {
+                        mobileMoreDropdown.classList.add('hidden');
+                        mobileMoreIcon.classList.remove('rotate-180');
+                    }
+                });
             }
         });
     </script>

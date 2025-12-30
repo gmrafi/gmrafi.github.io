@@ -829,9 +829,9 @@
             <div class="text-center">
                 <h2 class="text-2xl md:text-3xl font-bold flex items-center justify-center gap-3 mb-4">
                     <i class="fas fa-tools text-yellow-300 text-3xl"></i>
-                    Welcome to my academic personal website
+                    The website is under construction
                 </h2>
-                <p class="text-blue-100 text-lg mb-6">The website is under construction. Please check back later.</p>
+                <p class="text-blue-100 text-lg mb-6">Welcome to my academic personal website. Please check back later.</p>
                 
                 <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-2xl mx-auto">
                     <p class="text-xl text-blue-100 mb-4 font-semibold">We will be back on:</p>
@@ -1508,9 +1508,16 @@
     <section id="blog" class="py-12 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-8 text-center section-heading">Latest Articles</h2>
-            <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+            <p class="text-center text-gray-600 mb-6 max-w-2xl mx-auto">
                 Insights on FinTech, Research, Technology, and Academic Perspectives
             </p>
+            
+            <div class="text-center mb-8">
+                <button id="refresh-blog-btn" class="inline-flex items-center gap-2 px-4 py-2 bg-[#4E6AFF] text-white rounded-lg hover:bg-[#3b4ba8] transition-colors text-sm font-medium">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh Articles
+                </button>
+            </div>
 
             <div id="blog-posts" class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2675,19 +2682,40 @@
             const loadingElement = document.getElementById('blog-loading');
             const errorElement = document.getElementById('blog-error');
             const loadMoreBtn = document.getElementById('load-more-btn');
+            const refreshBtn = document.getElementById('refresh-blog-btn');
 
             try {
+                // Show loading state
+                loadingElement.style.display = 'block';
+                errorElement.classList.add('hidden');
+                refreshBtn.disabled = true;
+                refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Refreshing...';
+
+                // Clear existing posts
+                const postsGrid = document.querySelector('#blog-posts .grid');
+                postsGrid.innerHTML = '';
+
+                // Reset post index
+                allPosts = [];
+                currentPostIndex = 0;
+
                 // Using RSS2JSON API to convert Medium RSS to JSON
-                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gmrafi');
+                // Add timestamp to bypass caching and ensure fresh posts
+                const timestamp = Date.now();
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gmrafi&_=${timestamp}`);
 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch Medium posts');
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
 
                 const data = await response.json();
 
-                if (data.status !== 'ok' || !data.items || data.items.length === 0) {
-                    throw new Error('No posts found');
+                if (data.status !== 'ok') {
+                    throw new Error(`API error: ${data.message || 'Unknown error'}`);
+                }
+
+                if (!data.items || data.items.length === 0) {
+                    throw new Error('No posts found in RSS feed');
                 }
 
                 // Store all posts
@@ -2696,6 +2724,8 @@
 
                 // Hide loading
                 loadingElement.style.display = 'none';
+                refreshBtn.disabled = false;
+                refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Articles';
 
                 // Load initial posts
                 loadMorePosts();
@@ -2704,6 +2734,8 @@
                 console.error('Error loading Medium posts:', error);
                 loadingElement.style.display = 'none';
                 errorElement.classList.remove('hidden');
+                refreshBtn.disabled = false;
+                refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh Articles';
             }
         }
 
@@ -2711,12 +2743,17 @@
             const postsGrid = document.querySelector('#blog-posts .grid');
             const loadMoreBtn = document.getElementById('load-more-btn');
 
+            console.log('Loading more posts. Current index:', currentPostIndex);
+            console.log('Posts grid element:', postsGrid);
+
             // Get next batch of posts
             const nextPosts = allPosts.slice(currentPostIndex, currentPostIndex + postsPerLoad);
             currentPostIndex += postsPerLoad;
 
+            console.log('Next posts to load:', nextPosts.length);
+
             // Create and append post cards
-            nextPosts.forEach(post => {
+            nextPosts.forEach((post, index) => {
                 const postDate = new Date(post.pubDate);
                 const formattedDate = postDate.toLocaleDateString('en-US', {
                     year: 'numeric',
@@ -2748,7 +2785,7 @@
                         </h3>
 
                         <p class="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
-                            ${post.description.replace(/<[^>]*>/g, '').substring(0, 150)}...
+                            ${(post.description || post.content) ? (post.description || post.content).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim().substring(0, 150) + '...' : 'Click to read the full article...'}
                         </p>
 
                         <div class="flex items-center justify-between">
@@ -2785,6 +2822,12 @@
             const loadMoreBtn = document.getElementById('load-more-btn');
             if (loadMoreBtn) {
                 loadMoreBtn.addEventListener('click', loadMorePosts);
+            }
+
+            // Add refresh button event listener
+            const refreshBtn = document.getElementById('refresh-blog-btn');
+            if (refreshBtn) {
+                refreshBtn.addEventListener('click', loadMediumPosts);
             }
         });
 
@@ -2892,7 +2935,7 @@
 
         // Countdown Timer for Website Launch
         function updateCountdown() {
-            const targetDate = new Date('January 5, 2026 00:00:00').getTime();
+            const targetDate = new Date('2026-01-05T00:00:00+00:00').getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 

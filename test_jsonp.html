@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSONP Test</title>
+</head>
+<body>
+    <h1>Testing JSONP</h1>
+    <div id="result"></div>
+
+    <script>
+        function testCallback(data) {
+            document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+        }
+
+        const script = document.createElement('script');
+        script.src = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gmrafi&callback=testCallback';
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

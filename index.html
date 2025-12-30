@@ -46,8 +46,81 @@
     <link rel="sitemap" type="application/xml" href="https://gmrafi.github.io/sitemap.xml">
     <link rel="sitemap" type="application/xml" href="https://gmrafi.github.io/image-sitemap.xml">
     
-    <!-- Performance and SEO optimizations -->
-    <meta name="theme-color" content="#4E6AFF">
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    
+    <!-- Critical CSS for Above-the-Fold Content -->
+    <style>
+        /* Critical styles for instant loading */
+        .hero-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .nav-fixed { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .loading { opacity: 0; transition: opacity 0.3s ease; }
+        .loaded { opacity: 1; }
+    </style>
+    <meta name="msapplication-TileColor" content="#4E6AFF">
+    <meta name="application-name" content="Md Golam Mubasshir Rafi - Academic Portfolio">
+    
+    <!-- Academic and Research Specific Meta Tags -->
+    <meta name="citation_author" content="Md Golam Mubasshir Rafi">
+    <meta name="citation_author_institution" content="Army Institute of Business Administration">
+    <meta name="citation_author_email" content="gmrafi@research.gmrafi.com">
+    <meta name="citation_journal_title" content="International Journal of Scientific and Management Research">
+    <meta name="citation_conference_title" content="International Case Conference on Business and Management">
+    <meta name="citation_publisher" content="BRAC University">
+    
+    <!-- Local SEO for Bangladesh -->
+    <meta name="geo.region" content="BD-A">
+    <meta name="geo.placename" content="Sylhet, Bangladesh">
+    <meta name="ICBM" content="24.8949, 91.8687">
+    
+    <!-- Performance and Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://gmrafi.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://gmrafi.github.io/#about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Research",
+          "item": "https://gmrafi.github.io/#research"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Projects",
+          "item": "https://gmrafi.github.io/#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Blog",
+          "item": "https://gmrafi.github.io/#blog"
+        }
+      ]
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="photos/gmr.png">
@@ -200,6 +273,112 @@
           }
         }
       ]
+    }
+    </script>
+
+    <!-- FAQ Schema for Academic Portfolio -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are Md Golam Mubasshir Rafi's research interests?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Md Golam Mubasshir Rafi specializes in FinTech, Financial Inclusion, Information Systems, Social Psychology, and Strategic Intelligence. He has published research on monetary policy, financial inclusion, and microeconomics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What academic achievements has Md Golam Mubasshir Rafi accomplished?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Md Golam Mubasshir Rafi is a NASA Space Apps Challenge 2025 Regional 1st Runner-Up and Global Nominee. He has published 3 academic works including journal articles and conference papers, and is an active WordPress contributor with multiple badges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What technical skills does Md Golam Mubasshir Rafi possess?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Md Golam Mubasshir Rafi is proficient in Web Development (HTML, CSS, JavaScript, PHP), WordPress, SPSS, Research Methods, FinTech, and Business Analytics. He is also a Web Developer & Tech Associate at SSDRF."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Md Golam Mubasshir Rafi currently studying?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Md Golam Mubasshir Rafi is currently in his 2nd year pursuing a Bachelor of Business Administration (BBA) at Army Institute of Business Administration (AIBA), Sylhet, which is affiliated with Bangladesh University of Professionals (BUP)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Award Schema for NASA Space Apps Achievement -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Award",
+      "name": "NASA Space Apps Challenge 2025 - Regional 1st Runner-Up",
+      "description": "Regional 1st Runner-Up and Global Nominee for NASA International Space Apps Challenge 2025 with project 'OrbitBiZ' - addressing commercialization of Low Earth Orbit",
+      "award": "Regional 1st Runner-Up",
+      "category": "Technology Competition",
+      "dateAwarded": "2025-10",
+      "recipient": {
+        "@type": "Person",
+        "name": "Md Golam Mubasshir Rafi"
+      },
+      "sponsor": {
+        "@type": "Organization",
+        "name": "NASA",
+        "url": "https://www.nasa.gov/"
+      },
+      "url": "https://orbitbiz.gmrafi.com/"
+    }
+    </script>
+
+    <!-- Organization Schema for Academic Institutions -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Army Institute of Business Administration",
+      "alternateName": "AIBA",
+      "url": "https://aiba.edu.bd/",
+      "logo": "https://gmrafi.github.io/photos/Institutional-logo/armyiba.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sylhet",
+        "addressCountry": "Bangladesh"
+      },
+      "description": "Army Institute of Business Administration (AIBA) is a premier business education institution affiliated with Bangladesh University of Professionals (BUP).",
+      "sameAs": [
+        "https://www.bup.edu.bd/",
+        "https://aiba.edu.bd/"
+      ]
+    }
+    </script>
+
+    <!-- Organization Schema for SSDRF -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sylhet Sustainable Development Research Firm",
+      "alternateName": "SSDRF",
+      "url": "https://ssdrf.org/",
+      "logo": "https://gmrafi.github.io/photos/Institutional-logo/ssdrf.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sylhet",
+        "addressCountry": "Bangladesh"
+      },
+      "description": "Sylhet Sustainable Development Research Firm (SSDRF) is a research organization focused on sustainable development initiatives in the Sylhet region.",
+      "knowsAbout": ["Sustainable Development", "Research", "Technology", "Business Development"]
     }
     </script>
 
@@ -666,7 +845,8 @@
                     <div class="relative mb-8">
                         <div class="w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 mx-auto relative">
                             <img src="photos/rsz_rafi_img_01.jpg" alt="Md Golam Mubasshir Rafi portrait" itemprop="image"
-                                 class="w-full h-full rounded-2xl object-cover profile-glow border-4 border-[#4E6AFF] shadow-2xl">
+                                 class="w-full h-full rounded-2xl object-cover profile-glow border-4 border-[#4E6AFF] shadow-2xl"
+                                 loading="eager" decoding="async">
                             <div class="absolute -bottom-4 -right-4 bg-[#4E6AFF] text-white rounded-full w-16 md:w-20 lg:w-20 h-16 md:h-20 lg:h-20 flex items-center justify-center shadow-xl">
                                 <i class="fas fa-graduation-cap text-xl md:text-2xl lg:text-2xl"></i>
                             </div>
@@ -1281,7 +1461,7 @@
                     <div class="flex animate-scroll-clockwise iccbm-gallery" id="iccbm-gallery" style="-webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
                         <div class="flex-shrink-0 w-80 md:w-96 mx-1">
                             <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover cursor-pointer gallery-item" data-src="photos/ICCBM2025/ICCBM2025-01.jpg" data-alt="ICCBM 2025 Event Photo 1">
-                                <img src="photos/ICCBM2025/ICCBM2025-01.jpg" alt="Md Golam Mubasshir Rafi presenting research at ICCBM 2025 Conference, BRAC Business School, BRAC University - Academic Event Photography" title="ICCBM 2025 Conference Presentation - Md Golam Mubasshir Rafi" class="w-full h-56 md:h-64 object-contain rounded-lg mx-auto">
+                                <img src="photos/ICCBM2025/ICCBM2025-01.jpg" alt="Md Golam Mubasshir Rafi presenting research at ICCBM 2025 Conference, BRAC Business School, BRAC University - Academic Event Photography" title="ICCBM 2025 Conference Presentation - Md Golam Mubasshir Rafi" class="w-full h-56 md:h-64 object-contain rounded-lg mx-auto" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-80 md:w-96 mx-1">
@@ -2574,6 +2754,17 @@
                     }
                 });
             }
+        });
+
+        // Performance Optimization: Add lazy loading to images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img:not([loading])');
+            images.forEach(img => {
+                if (!img.hasAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                    img.setAttribute('decoding', 'async');
+                }
+            });
         });
     </script>
 </body>

@@ -33,10 +33,71 @@
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#contact</loc>
-        <lastmod>2025-12-20</lastmod>
+        <loc>https://gmrafi.github.io/#blog</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#gallery</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#institutional</loc>
+        <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-</urlset>
+    <url>
+        <loc>https://gmrafi.github.io/#achievements</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#coursework</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#certifications</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#activities</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#awards</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/#education</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://gmrafi.github.io/gallery.html</loc>
+        <lastmod>2025-12-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>

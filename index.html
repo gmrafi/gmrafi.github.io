@@ -693,6 +693,7 @@
                     <a href="#research" class="block text-gray-700 hover:text-[#4E6AFF]">Research</a>
                     <a href="#projects" class="block text-gray-700 hover:text-[#4E6AFF]">Projects</a>
                     <a href="#blog" class="block text-gray-700 hover:text-[#4E6AFF]">Blog</a>
+                    <a href="network.html" class="block text-gray-700 hover:text-[#4E6AFF]">Network</a>
                     <a href="#gallery" class="block text-gray-700 hover:text-[#4E6AFF]">Gallery</a>
                     
                     <a href="#contact" class="block text-gray-700 hover:text-[#4E6AFF]">Contact</a>
@@ -781,6 +782,7 @@
                     <a href="#research" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Research</a>
                     <a href="#projects" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Projects</a>
                     <a href="#blog" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Blog</a>
+                    <a href="network.html" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Network</a>
                     <a href="#gallery" class="text-gray-700 hover:text-[#4E6AFF] transition-colors font-medium">Gallery</a>
                     
                     <!-- More Dropdown -->
@@ -967,7 +969,7 @@
                                     <i class="fas fa-microphone text-white text-lg"></i>
                                 </div>
                                 <div>
-                                    <div class="font-semibold text-gray-900 text-base">ICCBM 2025 Participant</div>
+                                    <div class="font-semibold text-gray-900 text-base">ICCBM 2025 Presentation</div>
                                     <div class="text-sm text-gray-600">2nd International Case Conference on Business and Management • BRAC University</div>
                                 </div>
                             </div>
@@ -1004,9 +1006,15 @@
                 <!-- About Me Content -->
                 <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-200 card-hover">
                     <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
-                        I am an undergraduate student at the Army Institute of Business Administration (Army IBA), Sylhet—an affiliated institute of Bangladesh University of Professionals (BUP). Currently working as Web Developer & Tech Associate at Sylhet Sustainable Development Research Firm (SSDRF), I am passionate about bridging business and technology through innovative research and development.
+                        I am an <strong>undergraduate student</strong> at the Army Institute of Business Administration (Army IBA), Sylhet—an affiliated institute of Bangladesh University of Professionals (BUP). Currently working as <strong>Web Developer & Tech Associate</strong> at Sylhet Sustainable Development Research Firm (SSDRF), I am passionate about bridging business and technology through innovative research and development.
                         <br><br>
-                        My recent achievements include participating in the 2nd International Case Conference on Business and Management (ICCBM) 2025 at BRAC University with accepted research on AI-driven nano loans, achieving Regional 1st Runner-Up in NASA's Space Apps Challenge 2025 with OrbitBiZ, and volunteering at WordCamp Dhaka 2025. I have published research in conferences like ICCTASS 2025 and ICFLEW 2025, plus a journal article in the International Journal of Sustainability and Multidisciplinary Research. As a dedicated WordPress web designer and open-source contributor, I serve 4 hours weekly with WordPress Polyglots and Training teams, having attended WordCamp Sylhet 2024 and WordCamp Europe 2024. Writing and participating in hackathons remain passions that help me apply strategic thinking to real-world business and tech challenges.
+                        <strong>2025 Key Achievements:</strong><br>
+                        • <strong>NASA Space Apps Challenge:</strong> Global Nominee & Regional 1st Runner-Up with Team AIBA SpaceWeb<br>
+                        • <strong>ICCBM 2025:</strong> 3rd International Conference Presentation on AI-driven nano loans<br>
+                        • <strong>ICCTASS 2025:</strong> 2nd International Conference on sustainable energy policy<br>
+                        • <strong>ICFLEW 2025:</strong> First international conference on financial literacy research<br>
+                        • <strong>AIBA Half Marathon:</strong> Digital infrastructure for 850+ runners (167 GitHub commits)<br>
+                        • <strong>WordPress Community:</strong> Volunteer at WordCamp Dhaka 2025 & active contributor
                     </p>
                 </div>
 
@@ -1512,11 +1520,14 @@
                 Insights on FinTech, Research, Technology, and Academic Perspectives
             </p>
 
+            <div class="text-center mb-8">
+                <button id="refresh-posts-btn" class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg inline-flex items-center gap-2">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh Posts
+                </button>
+            </div>
+
             <div id="blog-posts" class="max-w-6xl mx-auto">
-                <div id="debug-info" class="mb-4 p-4 bg-gray-100 rounded-lg text-sm font-mono hidden">
-                    <strong>Debug Info:</strong><br>
-                    <span id="debug-status"></span>
-                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Posts will be loaded here -->
                 </div>
@@ -1533,10 +1544,6 @@
             </div>
 
             <div class="text-center mt-8">
-                <button id="refresh-posts-btn" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 shadow-lg inline-flex items-center gap-2 mr-4">
-                    <i class="fas fa-sync-alt"></i>
-                    Refresh Posts
-                </button>
                 <button id="load-more-btn" class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg inline-flex items-center gap-2 hidden">
                     <i class="fas fa-plus"></i>
                     Load More Posts
@@ -2682,33 +2689,21 @@
             const blogContainer = document.getElementById('blog-posts');
             const loadingElement = document.getElementById('blog-loading');
             const errorElement = document.getElementById('blog-error');
-            const debugElement = document.getElementById('debug-info');
-            const debugStatus = document.getElementById('debug-status');
-
-            // Show debug info
-            if (debugElement && debugStatus) {
-                debugElement.classList.remove('hidden');
-                debugStatus.textContent = 'Starting to load Medium posts...';
-            }
 
             try {
                 // Using RSS2JSON API to convert Medium RSS to JSON with cache busting
                 const timestamp = new Date().getTime();
-                if (debugStatus) debugStatus.textContent = `Fetching from API with timestamp: ${timestamp}`;
                 const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@gmrafi&_=${timestamp}`);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch Medium posts');
                 }
 
-                if (debugStatus) debugStatus.textContent = 'API response received, parsing JSON...';
                 const data = await response.json();
 
                 if (data.status !== 'ok' || !data.items || data.items.length === 0) {
                     throw new Error('No posts found');
                 }
-
-                if (debugStatus) debugStatus.textContent = `Found ${data.items.length} posts. Latest: ${data.items[0]?.title}`;
 
                 console.log('Medium posts loaded:', data.items.length, 'posts');
                 console.log('Latest post:', data.items[0]?.title);
@@ -2717,16 +2712,11 @@
                 allPosts = data.items;
                 currentPostIndex = 0;
 
-                if (debugStatus) debugStatus.textContent = `Stored ${allPosts.length} posts, loading initial batch...`;
-
                 // Hide loading
                 loadingElement.style.display = 'none';
 
                 // Load initial posts
                 loadMorePosts();
-
-                // Add a visible success message
-                if (debugStatus) debugStatus.textContent = `✅ Success! Loaded ${data.items.length} posts from Medium. Check the blog section below.`;
 
             } catch (error) {
                 console.error('Error loading Medium posts:', error);

@@ -1,0 +1,8 @@
+# Redirect index.html to root
+/index.html / 301
+
+# Redirect gmrafi.github.io to www.gmrafi.com.bd
+https://gmrafi.github.io/* https://www.gmrafi.com.bd/:splat 301!
+
+# Redirect non-www to www
+https://gmrafi.com.bd/* https://www.gmrafi.com.bd/:splat 301!

@@ -5,120 +5,120 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-        <loc>https://gmrafi.github.io/</loc>
-        <lastmod>2025-12-20</lastmod>
+        <loc>https://www.gmrafi.com.bd/</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#about</loc>
-        <lastmod>2025-12-20</lastmod>
+        <loc>https://www.gmrafi.com.bd/#about</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#research</loc>
-        <lastmod>2025-12-20</lastmod>
+        <loc>https://www.gmrafi.com.bd/#research</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#projects</loc>
-        <lastmod>2025-12-20</lastmod>
+        <loc>https://www.gmrafi.com.bd/#projects</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#blog</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#blog</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#gallery</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#gallery</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#institutional</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#institutional</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#achievements</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#achievements</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#coursework</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#coursework</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#certifications</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#certifications</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#activities</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#activities</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#awards</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#awards</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/#education</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/#education</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/research.html</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/research.html</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/gallery.html</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/gallery.html</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/secret.html</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/secret.html</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://gmrafi.github.io/ACADEMIC_PROFILES_SETUP.md</loc>
-        <lastmod>2025-12-30</lastmod>
+        <loc>https://www.gmrafi.com.bd/ACADEMIC_PROFILES_SETUP.md</loc>
+        <lastmod>2026-01-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

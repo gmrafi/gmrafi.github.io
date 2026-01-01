@@ -2530,7 +2530,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <!-- Copyright Section (Left/Center) -->
                 <div class="text-center md:text-left flex-1">
                     <p class="text-gray-400 mb-2">
@@ -2541,8 +2541,12 @@
                     </p>
                 </div>
                 
-                <!-- DMCA Protection Badge (Right) -->
-                <div class="flex-shrink-0">
+                <!-- Badges Section (Right) -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 flex-shrink-0">
+                    <!-- Website Carbon Badge -->
+                    <div id="wcb" class="carbonbadge wcb-d"></div>
+                    
+                    <!-- DMCA Protection Badge -->
                     <a href="//www.dmca.com/Protection/Status.aspx?ID=b466e079-f4e1-44d2-9083-9e8577155412" 
                        title="DMCA.com Protection Status" 
                        class="dmca-badge inline-block transition-opacity hover:opacity-80" 
@@ -2560,6 +2564,9 @@
 
     <!-- DMCA Badge Helper Script -->
     <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+    
+    <!-- Website Carbon Badge Script -->
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 
     <!-- Simple JavaScript -->
     <script>

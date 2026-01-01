@@ -955,9 +955,9 @@
                 </div>
 
                 <!-- Right Column: Profile Image & Achievements (1/2 width on md, 1/3 on lg) -->
-                <div class="md:col-span-1 space-y-6 flex flex-col justify-center pt-8">
+                <div class="md:col-span-1 space-y-6 md:space-y-3 flex flex-col justify-center pt-8 md:pt-4">
                     <!-- Profile Image -->
-                    <div class="relative mb-8">
+                    <div class="relative mb-8 md:mb-3">
                         <div class="w-48 md:w-56 lg:w-64 h-48 md:h-56 lg:h-64 mx-auto relative">
                             <img src="photos/rsz_rafi_img_01.jpg" alt="Md Golam Mubasshir Rafi portrait" itemprop="image"
                                  class="w-full h-full rounded-2xl object-cover profile-glow border-4 border-[#4E6AFF] shadow-2xl"
@@ -1012,28 +1012,49 @@
     </main>
 
     <!-- About Section -->
-    <section id="about" class="py-6 bg-gray-50" itemscope itemtype="https://schema.org/AboutPage">
+    <section id="about" class="py-12 bg-gray-50" itemscope itemtype="https://schema.org/AboutPage">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-8 text-center section-heading">About Me</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
                 <!-- About Me Content -->
                 <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md border border-gray-200 card-hover">
-                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
-                        I am an <strong>undergraduate student</strong> at the Army Institute of Business Administration (Army IBA), Sylhetan affiliated institute of Bangladesh University of Professionals (BUP). Currently working as <strong>Web Developer & Tech Associate</strong> at Sylhet Sustainable Development Research Firm (SSDRF), I am passionate about bridging business and technology through innovative research and development.
-                        <br><br>
-                        <strong>2025 Key Achievements:</strong><br>
-                        • <strong>NASA Space Apps Challenge:</strong> Global Nominee & Regional 1st Runner-Up with Team AIBA SpaceWeb<br>
-                        • <strong>ICCBM 2025:</strong> 3rd International Conference Presentation on AI-driven nano loans<br>
-                        • <strong>ICCTASS 2025:</strong> 2nd International Conference on sustainable energy policy<br>
-                        • <strong>ICFLEW 2025:</strong> First international conference on financial literacy research<br>
-                        • <strong>AIBA Half Marathon:</strong> Digital infrastructure for 850+ runners (167 GitHub commits)<br>
-                        • <strong>WordPress Community:</strong> Volunteer at WordCamp Dhaka 2025 & active contributor
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Background</h3>
+                    <p class="text-gray-700 leading-relaxed text-sm sm:text-base mb-6">
+                        I am an <strong>undergraduate student</strong> at the Army Institute of Business Administration (Army IBA), Sylhet, an affiliated institute of Bangladesh University of Professionals (BUP). Currently serving as <strong>Web Developer & Tech Associate</strong> at Sylhet Sustainable Development Research Firm (SSDRF), where I bridge business strategy with technological innovation through research-driven solutions.
                     </p>
+                    
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">2025 Key Achievements</h3>
+                    <div class="space-y-3 text-sm sm:text-base">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-trophy text-[#4E6AFF] mt-1"></i>
+                            <p class="text-gray-700"><strong>NASA Space Apps Challenge:</strong> Global Nominee & Regional 1st Runner-Up with Team AIBA SpaceWeb</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-microphone text-[#4E6AFF] mt-1"></i>
+                            <p class="text-gray-700"><strong>ICCBM 2025:</strong> 3rd international conference presentation on AI-driven nano loans at 2nd International Case Conference on Business and Management</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-leaf text-[#4E6AFF] mt-1"></i>
+                            <p class="text-gray-700"><strong>ICCTASS 2025:</strong> Contributed research on sustainable energy policy frameworks</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-book text-[#4E6AFF] mt-1"></i>
+                            <p class="text-gray-700"><strong>ICFLEW 2025:</strong> Presented at inaugural International Conference on Financial Literacy & Economic Wellbeing</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-running text-[#4E6AFF] mt-1"></i>
+                            <p class="text-gray-700"><strong>AIBA Half Marathon:</strong> Developed complete digital infrastructure serving 850+ runners (167 GitHub commits)</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fab fa-wordpress text-[#4E6AFF] mt-1"></i>
+                            <p class="text-gray-700"><strong>WordPress Community:</strong> Active volunteer at WordCamp Dhaka 2025 and contributor to open-source initiatives</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Research Interests -->
                 <div id="research-interests" itemscope itemtype="https://schema.org/CreativeWork">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-6 text-center">Research Interests</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-[#4E6AFF] mb-6 text-center">Research Interests</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         
                         <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
@@ -1071,69 +1092,48 @@
                     </div>
 
                     <!-- Skills Section -->
-                    <h3 class="text-2xl sm:text-3xl font-bold text-[#4E6AFF] mb-6 text-center">Expertise</h3>
-                    <div class="grid grid-cols-3 gap-3">
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-[#4E6AFF] mb-6 text-center mt-8">Expertise</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
+                            <div class="text-3xl text-[#4E6AFF] mb-3">
                                 <i class="fas fa-code"></i>
                             </div>
                             <h4 class="text-sm font-semibold text-gray-900">Web Development</h4>
                         </div>
 
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
+                            <div class="text-3xl text-[#4E6AFF] mb-3">
                                 <i class="fab fa-wordpress"></i>
                             </div>
                             <h4 class="text-sm font-semibold text-gray-900">WordPress</h4>
                         </div>
 
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
+                            <div class="text-3xl text-[#4E6AFF] mb-3">
                                 <i class="fas fa-chart-bar"></i>
                             </div>
-                            <h4 class="text-sm font-semibold text-gray-900">SPSS</h4>
+                            <h4 class="text-sm font-semibold text-gray-900">SPSS Analytics</h4>
                         </div>
 
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
+                            <div class="text-3xl text-[#4E6AFF] mb-3">
                                 <i class="fas fa-database"></i>
                             </div>
                             <h4 class="text-sm font-semibold text-gray-900">Research Methods</h4>
                         </div>
 
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
+                            <div class="text-3xl text-[#4E6AFF] mb-3">
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <h4 class="text-sm font-semibold text-gray-900">FinTech</h4>
                         </div>
 
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200 card-hover text-center">
+                            <div class="text-3xl text-[#4E6AFF] mb-3">
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <h4 class="text-sm font-semibold text-gray-900">Business Analytics</h4>
-                        </div>
-
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <h4 class="text-sm font-semibold text-gray-900">HTML/CSS</h4>
-                        </div>
-
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <h4 class="text-sm font-semibold text-gray-900">JavaScript</h4>
-                        </div>
-
-                        <div class="bg-white p-3 rounded-lg shadow-md border border-gray-200 card-hover text-center">
-                            <div class="text-2xl text-[#4E6AFF] mb-2">
-                                <i class="fab fa-php"></i>
-                            </div>
-                            <h4 class="text-sm font-semibold text-gray-900">PHP</h4>
                         </div>
                     </div>
                 </div>

@@ -104,12 +104,6 @@
     <meta name="geo.placename" content="Sylhet, Bangladesh">
     <meta name="ICBM" content="24.8949, 91.8687">
     
-    <!-- Performance and Security -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
     {
@@ -694,7 +688,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" role="navigation" aria-label="Main Navigation">
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" aria-label="Main Navigation">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Mobile: Hamburger menu -->
             <div class="md:hidden flex justify-between items-center py-3">
@@ -833,6 +827,7 @@
                     </a>
                 </div>
             </div>
+        </div>
     </nav>
 
     <main id="home" class="pt-36 sm:pt-32 md:pt-40 lg:pt-24 pb-20 bg-white relative overflow-hidden" itemscope itemtype="https://schema.org/Person">
@@ -972,7 +967,9 @@
 
                     <!-- Current Highlights -->
                     <div class="bg-white p-5 rounded-xl shadow-lg border-2 border-[#4E6AFF] animate-pulse-border">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <!-- Current Highlights -->
+                    <div>
+                        <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                             <i class="fas fa-star text-[#4E6AFF] text-lg animate-pulse"></i>
                             Current Highlights
                             <span class="inline-flex items-center gap-1.5 text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full animate-pulse">
@@ -980,7 +977,7 @@
                                 <span class="w-2 h-2 bg-green-500 rounded-full absolute"></span>
                                 Live Feed
                             </span>
-                        </h3>
+                        </h2>
                         <div class="space-y-4">
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 bg-[#4E6AFF] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -1887,7 +1884,7 @@
     <!-- Gallery Modal -->
     <div id="gallery-modal" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center">
         <div class="relative w-full max-w-7xl max-h-full flex flex-col items-center px-4">
-            <img id="modal-image" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+            <img id="modal-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Gallery Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
             <button id="close-modal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-400 transition-all bg-gray-800 bg-opacity-70 hover:bg-opacity-90 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-10">
                 <i class="fas fa-times"></i>
             </button>
@@ -2555,7 +2552,7 @@
                         <img src="https://images.dmca.com/Badges/dmca-badge-w250-5x1-10.png?ID=b466e079-f4e1-44d2-9083-9e8577155412" 
                              alt="DMCA.com Protection Status" 
                              class="h-10 w-auto" 
-                             loading="lazy" />
+                             loading="lazy">
                     </a>
                 </div>
             </div>

@@ -578,6 +578,21 @@
             to { transform: rotate(360deg); }
         }
 
+        @keyframes pulse-border {
+            0%, 100% { 
+                border-color: #4E6AFF;
+                box-shadow: 0 0 0 0 rgba(78, 106, 255, 0.4);
+            }
+            50% { 
+                border-color: #6B8AFF;
+                box-shadow: 0 0 0 4px rgba(78, 106, 255, 0.2);
+            }
+        }
+
+        .animate-pulse-border {
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+
         .animate-fade-in {
             animation: fadeIn 1s ease-out;
         }
@@ -870,16 +885,15 @@
                     </h1>
 
                     <!-- Roles -->
-                    <div class="flex flex-wrap gap-4 mb-6">
-                        <span class="bg-[#4E6AFF] text-white px-4 py-2 rounded-full text-base font-medium">Student (Business Administration)</span>
-                        <span class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-4 py-2 rounded-full text-base font-medium">Undergraduate Researcher</span>
-                        <span class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-4 py-2 rounded-full text-base font-medium">Web Developer</span>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="bg-[#4E6AFF] text-white px-4 py-2 rounded-full text-sm md:text-base font-medium shadow-md">Student (Business Administration)</span>
+                        <span class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-4 py-2 rounded-full text-sm md:text-base font-medium shadow-md hover:bg-[#4E6AFF] hover:text-white transition-all duration-300">Undergraduate Researcher</span>
+                        <span class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-4 py-2 rounded-full text-sm md:text-base font-medium shadow-md hover:bg-[#4E6AFF] hover:text-white transition-all duration-300">Web Developer</span>
                     </div>
 
                     <!-- Bio -->
-                    <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mb-6">
-                        Passionate about bridging business and technology through innovative research and development.
-                        Specializing in FinTech, Information Systems, and Business Analytics with a focus on creating impactful solutions.
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl mb-6">
+                        <strong>Business Administration student</strong> passionate about bridging business strategy with technology. Specializing in <strong>FinTech research</strong>, <strong>Information Systems</strong>, and <strong>Data Analytics</strong> with focus on <strong>sustainable development</strong>.
                     </p>
 
                     <!-- Affiliations -->
@@ -909,33 +923,30 @@
                         <!-- Social Links and Action Buttons - All in one row on desktop -->
                         <div class="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 items-center md:items-start lg:justify-start">
                             <!-- Social Links -->
-                            <div class="flex gap-3 justify-center md:justify-start">
-                                <a href="mailto:golammubasshirrafi@gmail.com" class="bg-[#4E6AFF] text-white p-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg" title="Email">
+                            <div class="flex gap-3 justify-center md:justify-start flex-wrap">
+                                <a href="mailto:golammubasshirrafi@gmail.com" class="bg-[#4E6AFF] text-white p-3 rounded-lg hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" title="Email" aria-label="Email">
                                     <i class="fas fa-envelope text-lg"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/gmrafi" target="_blank" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#4E6AFF] hover:text-white hover:border-[#4E6AFF] transition-all duration-300 shadow-lg" title="LinkedIn">
+                                <a href="https://www.linkedin.com/in/gmrafi" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#0077B5] hover:text-white hover:border-[#0077B5] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" title="LinkedIn" aria-label="LinkedIn">
                                     <i class="fab fa-linkedin text-lg"></i>
                                 </a>
-                                <a href="https://github.com/gmrafi" target="_blank" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#4E6AFF] hover:text-white hover:border-[#4E6AFF] transition-all duration-300 shadow-lg" title="GitHub">
+                                <a href="https://github.com/gmrafi" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#333] hover:text-white hover:border-[#333] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" title="GitHub" aria-label="GitHub">
                                     <i class="fab fa-github text-lg"></i>
                                 </a>
-                                <a href="https://orcid.org/0009-0007-4015-8354" target="_blank" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#4E6AFF] hover:text-white hover:border-[#4E6AFF] transition-all duration-300 shadow-lg" title="ORCID">
+                                <a href="https://orcid.org/0009-0007-4015-8354" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#A6CE39] hover:text-white hover:border-[#A6CE39] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" title="ORCID" aria-label="ORCID">
                                     <i class="fab fa-orcid text-lg"></i>
                                 </a>
-                                <a href="https://www.researchgate.net/profile/Md-Golam-Mubasshir-Rafi" target="_blank" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#4E6AFF] hover:text-white hover:border-[#4E6AFF] transition-all duration-300 shadow-lg" title="ResearchGate">
+                                <a href="https://scholar.google.com/citations?user=hMnd7MMAAAAJ" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#4285F4] hover:text-white hover:border-[#4285F4] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" title="Google Scholar" aria-label="Google Scholar">
                                     <i class="fas fa-graduation-cap text-lg"></i>
-                                </a>
-                                <a href="https://scholar.google.com/citations?user=hMnd7MMAAAAJ" target="_blank" class="bg-white text-gray-700 p-3 rounded-lg border-2 border-gray-300 hover:bg-[#4E6AFF] hover:text-white hover:border-[#4E6AFF] transition-all duration-300 shadow-lg" title="Google Scholar">
-                                    <i class="fas fa-book text-lg"></i>
                                 </a>
                             </div>
 
                             <!-- Action Buttons -->
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                <a href="#projects" class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg transform hover:scale-105 text-base">
+                            <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                                <a href="#projects" class="bg-[#4E6AFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#3b4ba8] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base text-center">
                                     <i class="fas fa-briefcase mr-2"></i>View Work
                                 </a>
-                                <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" class="bg-white text-gray-700 border-2 border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg transform hover:scale-105 text-base">
+                                <a href="files/CV_Md_Golam_Mubasshir_Rafi.pdf" target="_blank" class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-6 py-3 rounded-lg font-semibold hover:bg-[#4E6AFF] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base text-center">
                                     <i class="fas fa-download mr-2"></i>Download CV
                                 </a>
                             </div>
@@ -955,11 +966,15 @@
                     </div>
 
                     <!-- Current Highlights -->
-                    <div class="bg-white p-5 rounded-xl shadow-lg border border-gray-200">
+                    <div class="bg-white p-5 rounded-xl shadow-lg border-2 border-[#4E6AFF] animate-pulse-border">
                         <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <i class="fas fa-star text-[#4E6AFF] text-lg"></i>
+                            <i class="fas fa-star text-[#4E6AFF] text-lg animate-pulse"></i>
                             Current Highlights
-                            <span class="text-xs text-green-600 font-normal">(Live Feed)</span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full animate-pulse">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
+                                <span class="w-2 h-2 bg-green-500 rounded-full absolute"></span>
+                                Live Feed
+                            </span>
                         </h3>
                         <div class="space-y-4">
                             <div class="flex items-start gap-4">
@@ -977,7 +992,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold text-gray-900 text-base">NASA Space Apps Challenge</div>
-                                    <div class="text-sm text-gray-600">Regional 1st Runner-Up • 2025</div>
+                                    <div class="text-sm text-gray-600">Global Nominee • Regional 1st Runner-Up • 2025</div>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">

@@ -449,6 +449,21 @@
             border-color: #4E6AFF;
         }
         
+        .hidden-project {
+            display: none;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         .btn-primary {
             background-color: #4E6AFF;
             color: white;
@@ -1449,10 +1464,10 @@
                         <i class="fas fa-running text-3xl text-[#4E6AFF]"></i>
                     </div>
                     <div class="flex items-center gap-2 mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Justice Half Marathon 2025</h3>
+                        <h3 class="text-xl font-semibold text-gray-900">AIBA Sylhet National Half Marathon 2025</h3>
                         <span class="inline-block px-2 py-0.5 text-xs font-semibold rounded-full bg-[#0F7A4A] text-white">Live</span>
                     </div>
-                    <p class="text-gray-600 mb-4">Official website for first-ever national marathon hosted by Army IBA. Features online registration, event schedules, sponsor showcases, and participant resources.</p>
+                    <p class="text-gray-600 mb-4">Official website for national half marathon organized by Army IBA Hiking and Trekking Club, Sylhet. Features online registration, event schedules, sponsor showcases, and participant resources.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">WordPress</span>
                         <span class="bg-[#0F7A4A]/10 text-[#0F7A4A] px-3 py-1 rounded-full text-xs font-medium">Event Management</span>
@@ -1512,30 +1527,38 @@
                 <!-- Project 6 -->
                 <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
                     <div class="w-14 h-14 bg-[#4E6AFF]/10 rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-certificate text-3xl text-[#4E6AFF]"></i>
+                        <i class="fas fa-bus text-3xl text-[#4E6AFF]"></i>
                     </div>
                     <div class="flex items-center gap-2 mb-2">
-                        <h3 class="text-xl font-semibold text-gray-900">Certificate Verification System</h3>
+                        <h3 class="text-xl font-semibold text-gray-900">AIBA Bus Tracking System</h3>
                         <span class="inline-block px-2 py-0.5 text-xs font-semibold rounded-full bg-[#0F7A4A] text-white">Live</span>
                     </div>
-                    <p class="text-gray-600 mb-4">Web-based system using HTML, CSS, and JavaScript, hosted on GitHub Pages. Enables students to verify certificates by entering Certificate Number or Student ID.</p>
+                    <p class="text-gray-600 mb-4">Real-time university bus tracking system for Army IBA using Mapbox GL JS. Features live location tracking, route visualization, and ETA predictions for campus transportation.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">HTML5</span>
-                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">CSS3</span>
-                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">JavaScript</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">Mapbox GL JS</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-3 py-1 rounded-full text-xs font-medium">Real-time Tracking</span>
+                        <span class="bg-[#0F7A4A]/10 text-[#0F7A4A] px-3 py-1 rounded-full text-xs font-medium">Transportation</span>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <a href="https://cvms-sportsaiba.gmrafi.com/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-white bg-[#4E6AFF] hover:bg-[#3b4ba8] rounded-md transition-colors duration-200">
-                            <i class="fas fa-external-link-alt"></i>View System
-                        </a>
-                        <a href="https://github.com/gmrafi/CVMS-Sports-AIBA" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-[#4E6AFF] border border-[#4E6AFF] hover:bg-[#4E6AFF] hover:text-white rounded-md transition-colors duration-200">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+                    <a href="https://aiba-transportation.vercel.app/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-white bg-[#4E6AFF] hover:bg-[#3b4ba8] rounded-md transition-colors duration-200">
+                        <i class="fas fa-external-link-alt"></i>View System
+                    </a>
+                </div>
+
+                <!-- Load More Card -->
+                <div id="load-more-card" class="bg-gradient-to-br from-[#4E6AFF]/5 to-[#0F7A4A]/5 p-6 rounded-lg shadow-md border-2 border-dashed border-[#4E6AFF] card-hover flex flex-col items-center justify-center min-h-[300px] cursor-pointer transition-all duration-300 hover:border-[#0F7A4A]" onclick="loadMoreProjects()">
+                    <div class="w-16 h-16 bg-[#4E6AFF]/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-plus-circle text-4xl text-[#4E6AFF]"></i>
                     </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">View More Projects</h3>
+                    <p class="text-gray-600 text-center mb-4">Discover 4 more exciting projects</p>
+                    <button class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-[#4E6AFF] hover:bg-[#3b4ba8] rounded-md transition-colors duration-200">
+                        <i class="fas fa-arrow-down"></i>Load More
+                    </button>
                 </div>
 
                 <!-- Project 7 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover hidden-project">
                     <div class="w-14 h-14 bg-[#4E6AFF]/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-graduation-cap text-3xl text-[#4E6AFF]"></i>
                     </div>
@@ -1555,7 +1578,7 @@
                 </div>
 
                 <!-- Project 8 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover hidden-project">
                     <div class="w-14 h-14 bg-[#4E6AFF]/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-map-marked-alt text-3xl text-[#4E6AFF]"></i>
                     </div>
@@ -1581,7 +1604,7 @@
                 </div>
 
                 <!-- Project 9 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover hidden-project">
                     <div class="w-14 h-14 bg-[#4E6AFF]/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-film text-3xl text-[#4E6AFF]"></i>
                     </div>
@@ -1601,7 +1624,7 @@
                 </div>
 
                 <!-- Project 10 -->
-                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 card-hover hidden-project">
                     <div class="w-14 h-14 bg-[#4E6AFF]/10 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-trophy text-3xl text-[#4E6AFF]"></i>
                     </div>
@@ -2614,6 +2637,21 @@
                 icon.classList.remove('fa-times');
             });
         });
+
+        // Load More Projects Functionality
+        function loadMoreProjects() {
+            const hiddenProjects = document.querySelectorAll('.hidden-project');
+            const loadMoreCard = document.getElementById('load-more-card');
+            
+            hiddenProjects.forEach(project => {
+                project.classList.remove('hidden-project');
+                project.style.animation = 'fadeIn 0.5s ease-in';
+            });
+            
+            if (loadMoreCard) {
+                loadMoreCard.style.display = 'none';
+            }
+        }
 
         // Gallery Manual Control and Touch Support
         let autoScrollTimeouts = {};

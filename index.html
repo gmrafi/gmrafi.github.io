@@ -2534,16 +2534,36 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-gray-400 mb-2">
-                    &copy; <span id="current-year"></span> Md Golam Mubasshir Rafi. All rights reserved.
-                </p>
-                <p class="text-gray-500 text-sm">
-                    v1.0 Initialized by Md Golam Mubasshir Rafi
-                </p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <!-- Copyright Section (Left/Center) -->
+                <div class="text-center md:text-left flex-1">
+                    <p class="text-gray-400 mb-2">
+                        &copy; <span id="current-year"></span> Md Golam Mubasshir Rafi. All rights reserved.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        v1.0 Initialized by Md Golam Mubasshir Rafi
+                    </p>
+                </div>
+                
+                <!-- DMCA Protection Badge (Right) -->
+                <div class="flex-shrink-0">
+                    <a href="//www.dmca.com/Protection/Status.aspx?ID=b466e079-f4e1-44d2-9083-9e8577155412" 
+                       title="DMCA.com Protection Status" 
+                       class="dmca-badge inline-block transition-opacity hover:opacity-80" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <img src="https://images.dmca.com/Badges/dmca-badge-w250-5x1-10.png?ID=b466e079-f4e1-44d2-9083-9e8577155412" 
+                             alt="DMCA.com Protection Status" 
+                             class="h-10 w-auto" 
+                             loading="lazy" />
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- DMCA Badge Helper Script -->
+    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
 
     <!-- Simple JavaScript -->
     <script>

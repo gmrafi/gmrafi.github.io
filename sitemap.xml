@@ -4,129 +4,100 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+    <!-- Homepage -->
     <url>
         <loc>https://www.gmrafi.com.bd/</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
 
+    <!-- About Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#about</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
 
+    <!-- Publications Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#research</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
+    <!-- Projects Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#projects</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
+    <!-- Blog Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#blog</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
+    <!-- Photo Gallery Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#gallery</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
 
+    <!-- Institutional Engagements Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#institutional</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
-    <url>
-        <loc>https://www.gmrafi.com.bd/#achievements</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <url>
-        <loc>https://www.gmrafi.com.bd/#coursework</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://www.gmrafi.com.bd/#certifications</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://www.gmrafi.com.bd/#activities</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://www.gmrafi.com.bd/#awards</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
+    <!-- Education Section -->
     <url>
         <loc>https://www.gmrafi.com.bd/#education</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://www.gmrafi.com.bd/research.html</loc>
-        <lastmod>2026-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.gmrafi.com.bd/gallery.html</loc>
-        <lastmod>2026-01-01</lastmod>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
+    <!-- Achievements Section -->
     <url>
-        <loc>https://www.gmrafi.com.bd/secret.html</loc>
-        <lastmod>2026-01-01</lastmod>
+        <loc>https://www.gmrafi.com.bd/#achievements</loc>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.8</priority>
     </url>
 
+    <!-- Certifications Section -->
     <url>
-        <loc>https://www.gmrafi.com.bd/privacy-policy.html</loc>
+        <loc>https://www.gmrafi.com.bd/#certifications</loc>
         <lastmod>2026-01-02</lastmod>
-        <changefreq>quarterly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
+    <!-- Contact Section -->
     <url>
-        <loc>https://www.gmrafi.com.bd/ACADEMIC_PROFILES_SETUP.md</loc>
-        <lastmod>2026-01-01</lastmod>
+        <loc>https://www.gmrafi.com.bd/#contact</loc>
+        <lastmod>2026-01-02</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Static Pages -->
+    <url>
+        <loc>https://www.gmrafi.com.bd/test.html</loc>
+        <lastmod>2026-01-02</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
+
 </urlset>

@@ -3,7 +3,6 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://www.gmrafi.com.bd/sitemap.xml
-Sitemap: https://www.gmrafi.com.bd/image-sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

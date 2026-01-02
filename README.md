@@ -1,4 +1,4 @@
-# Md. Golam Mubasshir Rafi - Professional Portfolio Website
+# Md Golam Mubasshir Rafi - Professional Portfolio Website
 
 > A comprehensive academic and professional portfolio showcasing research, publications, projects, and expertise in Business Administration and Finance.
 
@@ -245,65 +245,25 @@ git push origin main
 
 ---
 
-## 💻 Local Development
+## 💻 Development & Updates
 
-### Prerequisites
-- Git installed
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Text editor (VS Code recommended)
+**⚠️ IMPORTANT COPYRIGHT NOTICE:**
+This repository and website are protected by copyright. **Cloning, copying, or reproducing this website's design, code, or structure without explicit written permission is prohibited.** See [Copyright & License](#-copyright--license) section below.
 
-### Setup Instructions
+### For Website Owner Only
 
-1. **Clone Repository**
-```bash
-git clone https://github.com/gmrafi/gmrafi.github.io.git
-cd gmrafi.github.io
-```
+This section is for Md Golam Mubasshir Rafi to maintain and update the website.
 
-2. **Open in Browser**
-```bash
-# Windows
-start index.html
+**Update Workflow:**
+1. Edit content in HTML files
+2. Test changes locally
+3. Commit changes: `git add . && git commit -m "Update"`
+4. Deploy: `git push origin main`
+5. Changes go live automatically within 2-3 minutes on both domains
 
-# macOS
-open index.html
-
-# Linux
-xdg-open index.html
-```
-
-3. **Development Server (Optional)**
-```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js (http-server)
-npx http-server -p 8000
-
-# Using PHP
-php -S localhost:8000
-```
-
-4. **Access Locally**
-```
-http://localhost:8000
-```
-
-### Making Changes
-
-1. Edit HTML/CSS/JS in your preferred editor
-2. Save changes
-3. Refresh browser (Ctrl+F5 for hard refresh)
-4. Test responsiveness (F12 → Device Toolbar)
-5. Commit and push when ready
-
-```bash
-git add .
-git commit -m "Description of changes"
-git push origin main
-```
-
-Changes go live automatically within 2-3 minutes on both domains.
+**Deployment Targets:**
+- GitHub Pages: gmrafi.github.io (automatic)
+- Vercel → Cloudflare: www.gmrafi.com.bd (automatic)
 
 ---
 
@@ -541,26 +501,50 @@ This is a personal portfolio, but suggestions and improvements are welcome!
 
 ## 📄 Copyright & License
 
-**© 2026 Md. Golam Mubasshir Rafi. All Rights Reserved.**
+**© 2026 Md Golam Mubasshir Rafi. All Rights Reserved.**
 
-This website, including all content, design, code, images, and documentation, is the exclusive intellectual property of **Md. Golam Mubasshir Rafi**.
+This website, including all content, design, code, images, and documentation, is the exclusive intellectual property of **Md Golam Mubasshir Rafi**.
 
 ### Copyright Protection
 
-- **Owner**: Md. Golam Mubasshir Rafi
+- **Owner**: Md Golam Mubasshir Rafi
 - **Website**: www.gmrafi.com.bd | gmrafi.github.io
 - **Copyright Year**: 2026
 - **Rights**: All rights reserved
 
-### Terms of Use
+### ⚠️ Strict Terms of Use
 
-No part of this website may be reproduced, distributed, modified, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright owner, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+**PROHIBITED WITHOUT WRITTEN PERMISSION:**
+- ❌ Cloning or copying this repository
+- ❌ Reproducing the website design or layout
+- ❌ Copying HTML/CSS/JavaScript code
+- ❌ Reusing images, graphics, or visual elements
+- ❌ Modifying and redistributing any part of this website
+- ❌ Using this website as a template for other projects
+- ❌ Extracting code snippets for commercial use
 
-### Permissions
+**ALLOWED WITH PROPER ATTRIBUTION:**
+- ✅ Citing research publications (with proper academic citation)
+- ✅ Sharing website URL for reference purposes
+- ✅ Brief quotations for reviews or educational purposes (with attribution)
+- ✅ Linking to research papers with DOI/Google Scholar links
 
-For permission requests, contact:
+### Academic Research & Publications
+
+Research publications and academic work listed on this website can be **cited using proper academic citation formats**. This follows standard academic practice and does not require additional permission. However, the **website design, code, and presentation** remain protected and cannot be copied.
+
+### Permissions & Licensing
+
+For permission requests regarding:
+- Website design/code usage
+- Template licensing
+- Commercial use
+- Collaboration opportunities
+
+**Contact:**
 - **Email**: rafi@gmrafi.com.bd
 - **Subject**: "Copyright Permission Request - www.gmrafi.com.bd"
+- **Required**: Detailed description of intended use and purpose
 
 ### Third-Party Resources
 
@@ -569,13 +553,13 @@ The following third-party resources are used under their respective licenses:
 - **Font Awesome**: Icons licensed under CC BY 4.0 / Font under SIL OFL 1.1
 - **Google Fonts**: Inter font under Open Font License
 
-All original content, design, and code remain the exclusive property of Md. Golam Mubasshir Rafi.
+**All original content, design, code, and presentation remain the exclusive property of Md Golam Mubasshir Rafi and may not be copied or reproduced without explicit written permission.**
 
 ---
 
 ## Acknowledgments
 
-- **Design & Development**: Md. Golam Mubasshir Rafi
+- **Design & Development**: Md Golam Mubasshir Rafi
 - **Built With**: HTML5, Tailwind CSS, Font Awesome, Google Fonts
 - **Hosting**: GitHub Pages (primary), Cloudflare (CDN)
 - **Domain**: BTCL (Bangladesh)
@@ -595,7 +579,7 @@ All original content, design, and code remain the exclusive property of Md. Gola
 **Version**: v1.0.0  
 **Last Updated**: January 2, 2026  
 **Status**: ✅ Production Ready  
-**Maintained by**: Md. Golam Mubasshir Rafi
+**Maintained by**: Md Golam Mubasshir Rafi
 
 ---
 
@@ -605,6 +589,6 @@ All original content, design, and code remain the exclusive property of Md. Gola
 
 [🌐 www.gmrafi.com.bd](https://www.gmrafi.com.bd) | [🐙 gmrafi.github.io](https://gmrafi.github.io)
 
-Made with 💙 by Md. Golam Mubasshir Rafi
+Made with 💙 by Md Golam Mubasshir Rafi
 
 </div>

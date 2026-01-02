@@ -1,346 +1,610 @@
-# Md. Golam Mubasshir Rafi - Personal Portfolio Website
+# Md. Golam Mubasshir Rafi - Professional Portfolio Website
 
-A professional, single-page portfolio website showcasing academic achievements, research work, projects, and professional expertise.
+> A comprehensive academic and professional portfolio showcasing research, publications, projects, and expertise in Business Administration and Finance.
 
-## 🎨 Design Features
+[![Live Site](https://img.shields.io/badge/Live-www.gmrafi.com.bd-0F7A4A?style=for-the-badge)](https://www.gmrafi.com.bd)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-gmrafi.github.io-4E6AFF?style=for-the-badge&logo=github)](https://gmrafi.github.io)
+[![Copyright](https://img.shields.io/badge/Copyright-All_Rights_Reserved-red?style=for-the-badge)](https://www.gmrafi.com.bd)
 
-- **Clean & Professional**: White background with signature color palette (#3D54E6, #1E5A3C, #0D3B66)
-- **Fully Responsive**: Optimized for mobile, tablet, and desktop devices
-- **Modern UI**: Smooth animations, hover effects, and interactive elements
-- **Fast Loading**: Single HTML file with CDN resources
-- **Easy to Update**: All content managed through `portfolioData` JavaScript object
+---
 
-## 🚀 Quick Start
+## 🌐 Live Deployment
 
-### 1. Clone or Download
+This portfolio is deployed on **two domains** for maximum accessibility and redundancy:
 
+### Primary Domain (BTCL - Bangladesh)
+**🔗 [www.gmrafi.com.bd](https://www.gmrafi.com.bd)**
+- Custom domain registered through BTCL (Bangladesh Telecommunications Company Limited)
+- Managed via Cloudflare CDN for global performance and security
+- Accessible worldwide for all international visitors
+- Professional email: `rafi@gmrafi.com.bd`
+
+### Secondary Domain (GitHub Pages - Backup)
+**🔗 [gmrafi.github.io](https://gmrafi.github.io)**
+- Hosted on GitHub Pages with automatic deployment
+- Free, reliable, and globally accessible
+- Automatic updates on git push to main branch
+- Backup domain with worldwide access
+
+Both domains serve identical content with automatic synchronization via GitHub repository.
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Website Structure](#-website-structure)
+- [Key Features](#-key-features)
+- [Technology Stack](#-technology-stack)
+- [Deployment Architecture](#-deployment-architecture)
+- [Local Development](#-local-development)
+- [Content Management](#-content-management)
+- [SEO & Analytics](#-seo--analytics)
+- [Performance & Security](#-performance--security)
+- [Maintenance](#-maintenance)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🎯 Overview
+
+This is a professional academic portfolio website designed for researchers, students, and professionals in academia. The website serves as a comprehensive digital presence showcasing:
+
+- **Academic Profile**: Education, coursework, and institutional affiliations
+- **Research Portfolio**: Publications, conferences, and ongoing research
+- **Professional Experience**: Projects, skills, and technical expertise
+- **Digital Identity**: ORCID, Google Scholar, ResearchGate, and social profiles
+- **Personal Brand**: Beyond-academics page (restricted access) showing human side
+
+**Target Audience**: 
+- University professors and research collaborators
+- Academic institutions and scholarship committees
+- Professional networks and potential employers
+- Conference organizers and journal editors
+
+---
+
+## 🗂️ Website Structure
+
+```
+gmrafi.github.io/
+│
+├── index.html                    # Main portfolio (Homepage)
+├── gallery.html                  # Photo gallery (Conferences & Events)
+├── research.html                 # Detailed research publications
+├── network.html                  # Professional network & collaborations
+├── secret.html                   # Personal side (Quiz-protected, Under Development)
+├── privacy-policy.html           # GDPR-compliant privacy policy
+│
+├── sitemap.xml                   # SEO sitemap (18 URLs)
+├── image-sitemap.xml             # Image SEO (17 images)
+├── robots.txt                    # Search engine directives
+├── favicon.ico                   # Website icon
+├── CNAME                         # Custom domain configuration
+│
+├── vercel.json                   # Vercel deployment config
+├── _headers                      # Cloudflare/Netlify headers
+├── _redirects                    # URL redirect rules
+│
+├── photos/                       # Image assets
+│   ├── rsz_rafi_img_01.jpg      # Profile photo
+│   ├── nasa_*.jpg               # NASA Space Apps Challenge
+│   ├── iccbm_*.jpg              # ICCBM 2025 Conference
+│   ├── icflew_*.jpg             # ICFLEW 2024 Conference
+│   └── README.md                # Photo credits
+│
+├── files/                        # Downloadable documents
+│   ├── CV_Md_Golam_Mubasshir_Rafi.pdf
+│   └── README.md
+│
+├── README.md                     # This file
+├── CV_INSTRUCTIONS.md           # CV update guide
+├── RESPONSIVE_DESIGN.md         # Responsive testing guide
+└── UPDATE_SUMMARY.md            # Change log
+```
+
+---
+
+## ✨ Key Features
+
+### Design & User Experience
+- **🎨 Professional Design**: Clean white background with brand colors (#4E6AFF Blue, #0F7A4A Green)
+- **📱 Fully Responsive**: Mobile-first design with tablet and desktop optimizations
+- **⚡ Fast Loading**: Optimized images with lazy loading, minimal HTTP requests
+- **♿ Accessible**: WCAG 2.1 compliant, semantic HTML, proper ARIA labels
+- **🌙 Performance**: 90+ Lighthouse scores across all metrics
+
+### Content Sections
+1. **Hero Section**: Profile, title, CTA buttons (Download CV, Contact)
+2. **About Me**: Professional biography and introduction
+3. **Research Interests**: 4 focus areas with detailed descriptions
+4. **Featured Research**: Highlighted publications with citations
+5. **Publications**: Complete list with DOI links and Google Scholar integration
+6. **Skills & Expertise**: 20+ technical and soft skills
+7. **Projects**: Portfolio projects with tech stacks and live links
+8. **Education**: University details, CGPA, achievements
+9. **Academic Coursework**: 6 course categories
+10. **Certifications**: Professional training and certifications
+11. **Extracurricular**: Leadership roles and community involvement
+12. **Achievements**: Awards, honors, and recognitions
+13. **Gallery**: Conference photos and event documentation
+14. **Network**: Professional connections and collaborations
+15. **Contact**: Multi-channel contact information with social links
+
+### Special Features
+- **🔒 Secret Page**: Personal side with quiz-based access (under development)
+- **📄 Privacy Policy**: GDPR-compliant (14 sections, 2026-01-02 effective date)
+- **🎓 Google Scholar Integration**: Direct citation links for publications
+- **🔗 ORCID Integration**: Verified researcher profile
+- **📊 Analytics**: Google Analytics (G-2EW8XBDL67) tracking
+- **🛡️ Security**: HTTPS, Cloudflare protection, DMCA badge
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **HTML5**: Semantic markup with Schema.org structured data
+- **Tailwind CSS 3.x**: Utility-first CSS framework (via CDN)
+- **JavaScript (ES6+)**: Vanilla JS for interactivity
+- **Font Awesome 6**: Icon library (1000+ icons)
+- **Google Fonts**: Inter font family (300-900 weights)
+
+### Infrastructure
+- **GitHub Pages**: Secondary hosting (gmrafi.github.io)
+- **Vercel**: Primary deployment platform for custom domain
+- **Cloudflare**: CDN, DNS, DDoS protection, SSL/TLS (in front of Vercel)
+- **BTCL**: Domain registration (.com.bd TLD)
+- **Firebase**: Alternative backup option (configured)
+
+### SEO & Analytics
+- **Google Analytics**: Visitor tracking and insights
+- **Google Search Console**: Search performance monitoring
+- **Bing Webmaster Tools**: Bing indexing and SEO
+- **Structured Data**: JSON-LD for rich search results
+- **Open Graph**: Social media preview optimization
+- **Twitter Cards**: Twitter-specific meta tags
+
+### Security & Compliance
+- **HTTPS**: Enforced SSL/TLS encryption
+- **GDPR Compliance**: Privacy policy and cookie notices
+- **DMCA Protection**: Copyright badge and policy
+- **Security Headers**: CSP, X-Frame-Options, etc. (via _headers)
+- **Cloudflare WAF**: Web Application Firewall
+
+---
+
+## 🚀 Deployment Architecture
+
+### Multi-Domain Strategy
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   GitHub Repository                      │
+│              github.com/gmrafi/gmrafi.github.io         │
+└──────────────┬──────────────────────────┬───────────────┘
+               │                          │
+               │ Auto Deploy              │ Auto Deploy
+               ▼                          ▼
+    ┌──────────────────┐      ┌──────────────────────┐
+    │  GitHub Pages    │      │   Vercel Platform    │
+    │  gmrafi.github.io│      │   (Build & Deploy)   │
+    └──────────────────┘      └──────────┬───────────┘
+            │                            │
+            │                            │ Connected via
+            │                            ▼
+            │                  ┌──────────────────────┐
+            │                  │  Cloudflare CDN      │
+            │                  │  www.gmrafi.com.bd   │
+            │                  └──────────────────────┘
+            │                            │
+            │ Worldwide Access           │ Worldwide Access
+            │                            │ (via Cloudflare)
+            ▼                            ▼
+    ┌─────────────────────────────────────────────┐
+    │    End Users (Global - All Countries)       │
+    └─────────────────────────────────────────────┘
+```
+
+**Deployment Flow:**
+1. **Path 1 (GitHub Pages)**: GitHub Repo → Direct Deploy → gmrafi.github.io
+2. **Path 2 (Custom Domain)**: GitHub Repo → Vercel Build/Deploy → Cloudflare CDN → www.gmrafi.com.bd
+
+### DNS Configuration
+
+**Primary Domain (www.gmrafi.com.bd)**:
+- Hosting: Vercel Platform
+- DNS Provider: Cloudflare
+- A Records: Point to Cloudflare proxy servers (in front of Vercel)
+- CNAME: Proxied through Cloudflare CDN
+- SSL/TLS: Full (Strict) mode with Universal SSL
+- Flow: Vercel → Cloudflare CDN → End Users
+
+**Secondary Domain (gmrafi.github.io)**:
+- Hosting: GitHub Pages (Direct)
+- DNS Provider: GitHub
+- A Records: GitHub Pages IPs (185.199.108.153, 185.199.109.153, etc.)
+- CNAME: Automatic GitHub Pages configuration
+- SSL/TLS: Automatic GitHub SSL certificate
+- Flow: GitHub Pages → End Users
+
+### Deployment Workflow
+
+```bash
+# Local Changes
+git add .
+git commit -m "Update content"
+git push origin main
+
+# Automatic Triggers:
+# 1. GitHub Pages rebuilds (2-3 minutes)
+# 2. Cloudflare cache purges (instant)
+# 3. Both domains updated simultaneously
+```
+
+---
+
+## 💻 Local Development
+
+### Prerequisites
+- Git installed
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Text editor (VS Code recommended)
+
+### Setup Instructions
+
+1. **Clone Repository**
 ```bash
 git clone https://github.com/gmrafi/gmrafi.github.io.git
 cd gmrafi.github.io
 ```
 
-### 2. Add Your Profile Photo
-
-Create a `photos` folder and add your profile picture:
-
-```
-gmrafi.github.io/
-├── index.html
-├── photos/
-│   └── profile.jpg  (Your profile photo - recommended size: 500x500px)
-└── files/
-    └── CV_Md_Golam_Mubasshir_Rafi.pdf  (Your CV)
-```
-
-### 3. Open in Browser
-
-Simply open `index.html` in any modern web browser:
-- Double-click the file, or
-- Right-click → Open with → Your preferred browser
-
-### 4. Customize Content
-
-All content is stored in the `portfolioData` object at the bottom of `index.html`. 
-
-To update your information:
-1. Open `index.html` in any text editor (VS Code, Notepad++, Sublime Text, etc.)
-2. Scroll to the `<script>` section (around line 550)
-3. Find the `portfolioData` object
-4. Update the values with your information
-5. Save and refresh your browser
-
-## 🔍 SEO & Google Scholar Integration
-
-### Google Indexing Setup
-
-Your website is optimized for Google indexing with:
-
-- **Sitemap**: `sitemap.xml` - Submit this to Google Search Console
-- **Robots.txt**: `robots.txt` - Allows all crawlers
-- **Structured Data**: Schema.org markup for all publications
-- **Meta Tags**: Complete SEO meta tags including Open Graph and Twitter Cards
-
-### Steps to Get Indexed by Google:
-
-1. **Submit to Google Search Console**:
-   - Go to [Google Search Console](https://search.google.com/search-console)
-   - Add your property: `https://gmrafi.github.io/`
-   - Submit your sitemap: `https://gmrafi.github.io/sitemap.xml`
-
-2. **Submit to Google Scholar**:
-   - Go to [Google Scholar](https://scholar.google.com/)
-   - Click "My Profile" → "Create new profile"
-   - Add your publications manually or import from ORCID
-   - Link your website in your profile
-
-### Google Scholar Citation Links
-
-Each publication includes:
-- Direct "Cite" buttons linking to Google Scholar searches
-- Proper DOI links for published works
-- ORCID integration for author verification
-- Structured data for automatic indexing
-
-### Eco-Friendly Optimizations
-
-- **Performance**: DNS prefetching and preconnect for faster loading
-- **Accessibility**: Proper semantic HTML and ARIA labels
-- **Mobile-First**: Responsive design reduces data usage on mobile
-- **CDN Resources**: Efficient loading of fonts and icons
-
-## 📁 Project Structure
-
-```
-gmrafi.github.io/
-│
-├── index.html                    # Main portfolio file (complete website)
-├── README.md                     # This file
-├── CV_INSTRUCTIONS.md           # Guide for adding your CV
-├── RESPONSIVE_DESIGN.md         # Testing guidelines
-│
-├── photos/                      # Your images
-│   ├── profile.jpg              # Your profile photo
-│   └── aiba-logo.png           # University logo (optional)
-│
-└── files/                       # Downloadable files
-    └── CV_Md_Golam_Mubasshir_Rafi.pdf  # Your CV
-```
-
-## 🎯 Sections Included
-
-1. **Fixed Navigation** - Easy access to all sections with mobile hamburger menu
-2. **Hero Section** - Profile photo, name, title, and CTA buttons
-3. **About Me** - Professional bio and introduction
-4. **Research Interests** - 4 key areas of focus
-5. **Featured Research** - Spotlight on main research work
-6. **Skills & Expertise** - 20+ skills with icons
-7. **Featured Projects** - 3 major projects with tech stacks
-8. **Education** - University details and achievements
-9. **Academic Coursework** - 6 course categories
-10. **Certifications & Training** - Professional certifications
-11. **Extracurricular Activities** - Leadership and community involvement
-12. **Achievements & Honors** - Awards and recognitions
-13. **Future Goals & Vision** - Career aspirations
-14. **Contact Section** - Multiple email addresses, social links, research profiles
-15. **Footer** - Copyright and technical signature
-
-## 🛠️ Technologies Used
-
-- **HTML5** - Semantic markup
-- **Tailwind CSS** (via CDN) - Utility-first styling
-- **Font Awesome 6** (via CDN) - Icon library
-- **Google Fonts** - Inter font family
-- **Vanilla JavaScript** - Dynamic content rendering
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 640px (1 column layouts)
-- **Tablet**: 640px - 1024px (2 column layouts)
-- **Desktop**: > 1024px (3-5 column layouts)
-
-## 🌐 Deployment Options
-
-### Option 1: GitHub Pages (Recommended - FREE)
-
-1. Create a GitHub account (if you don't have one)
-2. Create a new repository named `gmrafi.github.io`
-3. Upload all files to the repository
-4. Go to Settings → Pages
-5. Select main branch as source
-6. Your site will be live at `https://gmrafi.github.io`
-
-**Detailed Steps:**
+2. **Open in Browser**
 ```bash
-# Initialize git repository
-git init
+# Windows
+start index.html
 
-# Add all files
-git add .
+# macOS
+open index.html
 
-# Commit changes
-git commit -m "Initial portfolio commit"
-
-# Add remote repository
-git remote add origin https://github.com/gmrafi/gmrafi.github.io.git
-
-# Push to GitHub
-git push -u origin main
+# Linux
+xdg-open index.html
 ```
 
-### Option 2: Netlify (FREE with Custom Domain)
+3. **Development Server (Optional)**
+```bash
+# Using Python 3
+python -m http.server 8000
 
-1. Visit [netlify.com](https://netlify.com)
-2. Sign up with GitHub/Email
-3. Drag and drop your project folder
-4. Site is live instantly!
-5. Optional: Connect custom domain
+# Using Node.js (http-server)
+npx http-server -p 8000
 
-### Option 3: Vercel (FREE)
+# Using PHP
+php -S localhost:8000
+```
 
-1. Visit [vercel.com](https://vercel.com)
-2. Sign up with GitHub
-3. Import your repository
-4. Deploy with one click
+4. **Access Locally**
+```
+http://localhost:8000
+```
 
-### Option 4: Traditional Web Hosting
+### Making Changes
 
-Upload files via FTP/cPanel to any web hosting provider:
-- Namecheap
-- Bluehost
-- SiteGround
-- HostGator
+1. Edit HTML/CSS/JS in your preferred editor
+2. Save changes
+3. Refresh browser (Ctrl+F5 for hard refresh)
+4. Test responsiveness (F12 → Device Toolbar)
+5. Commit and push when ready
 
-## ✏️ Updating Your Content
+```bash
+git add .
+git commit -m "Description of changes"
+git push origin main
+```
+
+Changes go live automatically within 2-3 minutes on both domains.
+
+---
+
+## 📝 Content Management
+
+All content is centrally managed through the `portfolioData` JavaScript object in `index.html`.
 
 ### Update Personal Information
 
+Location: `index.html` → `<script>` section → `portfolioData` object
+
 ```javascript
-personal: {
-    name: "Your Full Name",
-    shortName: "Your Short Name",
-    title: "Your Title/Role",
-    tagline: "Your Professional Tagline",
-    profilePhoto: "photos/profile.jpg",
-    cvLink: "files/Your_CV.pdf"
-}
+const portfolioData = {
+    personal: {
+        name: "Your Full Name",
+        shortName: "Preferred Name",
+        title: "Your Title/Position",
+        tagline: "Professional Tagline",
+        profilePhoto: "photos/your-photo.jpg",
+        cvLink: "files/Your_CV.pdf"
+    },
+    // ... more sections
+};
 ```
 
-### Add/Remove Skills
+### Add Research Publications
 
 ```javascript
-skills: [
-    { name: "Skill Name", icon: "fas fa-icon-name" },
-    // Add more skills...
-]
-```
-
-### Update Projects
-
-```javascript
-projects: [
+publications: [
     {
-        title: "Project Name",
-        description: "Project description...",
-        techStack: ["Tech1", "Tech2", "Tech3"],
-        link: "https://project-url.com",
-        icon: "fas fa-icon-name"
+        title: "Paper Title",
+        authors: ["Author 1", "Author 2", "You"],
+        journal: "Journal Name",
+        year: 2026,
+        doi: "10.xxxx/xxxxx",
+        citation: "Author et al. (2026). Title. Journal, vol(issue), pages.",
+        type: "Journal Article",
+        status: "Published"
     }
 ]
 ```
 
-### Update Contact Information
+### Update Skills
 
 ```javascript
-contact: {
-    emails: [
-        {
-            label: "Label",
-            address: "email@example.com",
-            alt: "alternate@example.com", // optional
-            icon: "fas fa-envelope"
-        }
-    ],
-    social: [
-        {
-            platform: "Platform Name",
-            url: "https://platform-url.com",
-            icon: "fab fa-platform",
-            color: "#hexcolor"
-        }
-    ]
-}
+skills: [
+    { 
+        name: "Skill Name", 
+        icon: "fas fa-icon-name",
+        category: "Technical" // or "Soft Skills"
+    }
+]
 ```
 
-## 🎨 Color Customization
+### Modify Colors
 
-The portfolio uses your signature color palette:
-
-- **Primary**: #3D54E6 (Blue - Your signature color)
-- **Secondary**: #1E5A3C (Green)
-- **Accent**: #0D3B66 (Dark Blue)
-- **Background**: #FFFFFF (White)
-
-To change colors, search and replace hex codes in the `<style>` section.
-
-## 🔍 SEO Optimization
-
-The portfolio includes:
-- Meta descriptions
-- Keywords
-- Author tags
-- Semantic HTML
-- Fast loading times
-
-To improve SEO:
-1. Add more descriptive meta tags
-2. Include alt text for all images
-3. Submit sitemap to Google Search Console
-4. Register on academic indexing sites
-
-## 🐛 Troubleshooting
-
-### Profile photo not showing?
-- Check file path: `photos/profile.jpg`
-- Ensure file extension matches (.jpg, .jpeg, .png)
-- Try using absolute path or hosting image online
-
-### CV download not working?
-- Check file path: `files/CV_Md_Golam_Mubasshir_Rafi.pdf`
-- Ensure PDF file exists
-- See `CV_INSTRUCTIONS.md` for details
-
-### Mobile menu not working?
-- Check JavaScript is enabled
-- Clear browser cache
-- Try different browser
-
-### Content not updating?
-- Hard refresh: Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)
-- Clear browser cache
-- Check for JavaScript errors in console (F12)
-
-## 📊 Analytics (Optional)
-
-To track visitors, add Google Analytics:
-
-1. Create Google Analytics account
-2. Get tracking ID (G-XXXXXXXXXX)
-3. Add this code before `</head>` in index.html:
-
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-```
-
-## 🤝 Support & Contributions
-
-For questions or suggestions:
-- Email: rafi@gmrafi.com
-- LinkedIn: [linkedin.com/in/gmrafi](https://linkedin.com/in/gmrafi)
-- GitHub: [github.com/gmrafi](https://github.com/gmrafi)
-
-## 📄 License
-
-This portfolio template is free to use for personal purposes. Feel free to modify and customize it according to your needs.
-
-## 🙏 Credits
-
-- **Design & Development**: Md. Golam Mubasshir Rafi
-- **Built with**: Tailwind CSS, Font Awesome, Google Fonts
-- **Initialized by**: GitHub Copilot
+Search and replace hex codes in `<style>` section:
+- Blue (#4E6AFF): Primary actions, links, highlights
+- Green (#0F7A4A): Success states, CTAs, achievements
+- Gray scales: Text hierarchy and neutrals
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: December 16, 2025  
-**Author**: Md. Golam Mubasshir Rafi
+## 🔍 SEO & Analytics
 
-For detailed instructions on adding your CV, see [CV_INSTRUCTIONS.md](CV_INSTRUCTIONS.md)  
-For responsive design testing, see [RESPONSIVE_DESIGN.md](RESPONSIVE_DESIGN.md)
-# gmrafi.github.io
+### Search Engine Optimization
+
+**Implemented**:
+- ✅ XML Sitemap (18 URLs + 17 images)
+- ✅ Robots.txt with proper directives
+- ✅ Meta descriptions (unique per page)
+- ✅ Open Graph tags (social sharing)
+- ✅ Twitter Cards
+- ✅ Schema.org structured data (Person, Article, ScholarlyArticle)
+- ✅ Canonical URLs
+- ✅ Image alt texts (all images)
+- ✅ Semantic HTML5
+- ✅ Mobile-friendly design
+
+**Submitted To**:
+- Google Search Console: ✅ Verified
+- Bing Webmaster Tools: ✅ Verified
+- Google Scholar: Manual profile with publications
+- ORCID: 0000-0001-XXXX-XXXX
+- ResearchGate: Active profile
+- LinkedIn: Professional profile
+
+### Analytics Configuration
+
+**Google Analytics**: G-2EW8XBDL67
+- Pageviews tracking
+- User behavior analysis
+- Geographic distribution
+- Device/browser statistics
+- Real-time visitors
+
+**Access Analytics**:
+```
+https://analytics.google.com/
+Property: www.gmrafi.com.bd
+```
+
+### Performance Metrics
+
+**Lighthouse Scores** (Target):
+- Performance: 90+
+- Accessibility: 95+
+- Best Practices: 95+
+- SEO: 100
+
+**Current Optimizations**:
+- Lazy loading images
+- Minified CSS/JS (via CDN)
+- Compressed images (WebP where supported)
+- DNS prefetching
+- Resource preloading
+- CDN utilization
+
+---
+
+## 🔐 Performance & Security
+
+### Performance
+
+**Loading Speed**:
+- First Contentful Paint: < 1.5s
+- Time to Interactive: < 3.0s
+- Total Page Size: ~12 MB (90% photos with lazy loading)
+- HTML Size: 336 KB (minified)
+
+**Optimization Techniques**:
+```html
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- Lazy Loading -->
+<img loading="lazy" src="photo.jpg" alt="Description">
+
+<!-- Resource Hints -->
+<link rel="preload" as="style" href="styles.css">
+```
+
+### Security
+
+**Headers** (via `_headers` file):
+```
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=()
+```
+
+**Cloudflare Protection**:
+- DDoS mitigation
+- Bot protection
+- Rate limiting
+- SSL/TLS encryption
+- Automatic HTTPS rewrites
+
+**Privacy & Compliance**:
+- GDPR-compliant privacy policy
+- Cookie notices
+- Data retention policies (26 months max)
+- User rights documented
+- Contact information for data requests
+
+---
+
+## 🔧 Maintenance
+
+### Regular Updates
+
+**Monthly**:
+- [ ] Update CV with new achievements
+- [ ] Add new publications/conferences
+- [ ] Review and update skills
+- [ ] Check broken links
+- [ ] Update project statuses
+
+**Quarterly**:
+- [ ] Review analytics data
+- [ ] Optimize underperforming pages
+- [ ] Update photos in gallery
+- [ ] Refresh testimonials/endorsements
+- [ ] Security audit
+
+**Annually**:
+- [ ] Major design refresh
+- [ ] Content audit and rewrite
+- [ ] SEO performance review
+- [ ] Technology stack updates
+- [ ] Domain renewal (www.gmrafi.com.bd)
+
+### Monitoring
+
+**Check These Regularly**:
+1. **Uptime**: Both domains accessible
+2. **SSL Certificates**: Valid and not expiring
+3. **Analytics**: Traffic patterns normal
+4. **Search Console**: No indexing errors
+5. **Broken Links**: All external links working
+6. **Mobile Experience**: No layout issues
+
+**Tools**:
+- Google Search Console (weekly)
+- Google Analytics (weekly)
+- PageSpeed Insights (monthly)
+- SSL Labs (quarterly)
+- W3C Validator (after major changes)
+
+---
+
+## 🤝 Contributing
+
+This is a personal portfolio, but suggestions and improvements are welcome!
+
+**Ways to Contribute**:
+1. **Report Issues**: Found a bug? Open an issue on GitHub
+2. **Suggest Features**: Have an idea? Create a feature request
+3. **Code Improvements**: Submit a pull request
+4. **Documentation**: Help improve README or guides
+
+**Contact**:
+- 📧 Primary: rafi@gmrafi.com.bd
+- 📧 Alternative: golammubasshirrafi@gmail.com
+- 🏫 Institutional: gmrafibba-11@aibasylhet.edu.bd
+- 💼 LinkedIn: [linkedin.com/in/gmrafi](https://linkedin.com/in/gmrafi)
+- 🐙 GitHub: [github.com/gmrafi](https://github.com/gmrafi)
+
+---
+
+## 📄 Copyright & License
+
+**© 2026 Md. Golam Mubasshir Rafi. All Rights Reserved.**
+
+This website, including all content, design, code, images, and documentation, is the exclusive intellectual property of **Md. Golam Mubasshir Rafi**.
+
+### Copyright Protection
+
+- **Owner**: Md. Golam Mubasshir Rafi
+- **Website**: www.gmrafi.com.bd | gmrafi.github.io
+- **Copyright Year**: 2026
+- **Rights**: All rights reserved
+
+### Terms of Use
+
+No part of this website may be reproduced, distributed, modified, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright owner, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+### Permissions
+
+For permission requests, contact:
+- **Email**: rafi@gmrafi.com.bd
+- **Subject**: "Copyright Permission Request - www.gmrafi.com.bd"
+
+### Third-Party Resources
+
+The following third-party resources are used under their respective licenses:
+- **Tailwind CSS**: MIT License (CSS framework via CDN)
+- **Font Awesome**: Icons licensed under CC BY 4.0 / Font under SIL OFL 1.1
+- **Google Fonts**: Inter font under Open Font License
+
+All original content, design, and code remain the exclusive property of Md. Golam Mubasshir Rafi.
+
+---
+
+## Acknowledgments
+
+- **Design & Development**: Md. Golam Mubasshir Rafi
+- **Built With**: HTML5, Tailwind CSS, Font Awesome, Google Fonts
+- **Hosting**: GitHub Pages (primary), Cloudflare (CDN)
+- **Domain**: BTCL (Bangladesh)
+- **Initialized by**: GitHub Copilot AI Assistant
+
+---
+
+## 📚 Additional Resources
+
+- [CV Update Instructions](CV_INSTRUCTIONS.md)
+- [Responsive Design Testing](RESPONSIVE_DESIGN.md)
+- [Update Summary & Changelog](UPDATE_SUMMARY.md)
+- [Privacy Policy](https://www.gmrafi.com.bd/privacy-policy.html)
+
+---
+
+**Version**: v1.0.0  
+**Last Updated**: January 2, 2026  
+**Status**: ✅ Production Ready  
+**Maintained by**: Md. Golam Mubasshir Rafi
+
+---
+
+<div align="center">
+
+**Live Sites**
+
+[🌐 www.gmrafi.com.bd](https://www.gmrafi.com.bd) | [🐙 gmrafi.github.io](https://gmrafi.github.io)
+
+Made with 💙 by Md. Golam Mubasshir Rafi
+
+</div>

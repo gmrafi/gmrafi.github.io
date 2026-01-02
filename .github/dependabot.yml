@@ -1,0 +1,23 @@
+# Dependabot configuration for gmrafi.github.io
+# This static website uses CDN resources, so we configure Dependabot for GitHub Actions only
+
+version: 2
+updates:
+  # Monitor GitHub Actions workflows for updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+
+  # Note: This is a static HTML website using CDN resources (Tailwind CSS, Font Awesome)
+  # CDN dependencies are not managed by package managers, so no npm/pip/bundler config needed
+  # To update CDN versions, manually check:
+  # - Tailwind CSS: https://cdn.tailwindcss.com
+  # - Font Awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/

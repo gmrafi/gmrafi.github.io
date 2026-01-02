@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Email Support
+    url: mailto:rafi@gmrafi.com.bd
+    about: For private matters, personal inquiries, or sensitive issues
+  - name: Security Vulnerability (Private)
+    url: mailto:rafi@gmrafi.com.bd?subject=Security%20Vulnerability%20Report
+    about: Report security vulnerabilities privately via email
+  - name: Website
+    url: https://www.gmrafi.com.bd
+    about: Visit the portfolio website
+  - name: LinkedIn
+    url: https://linkedin.com/in/gmrafi
+    about: Connect on LinkedIn for professional inquiries

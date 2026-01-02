@@ -482,13 +482,16 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 
 ## 🤝 Contributing
 
-This is a personal portfolio, but suggestions and improvements are welcome!
+This is a personal portfolio, but suggestions and improvements are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting issues or pull requests.
 
 **Ways to Contribute**:
-1. **Report Issues**: Found a bug? Open an issue on GitHub
-2. **Suggest Features**: Have an idea? Create a feature request
-3. **Code Improvements**: Submit a pull request
-4. **Documentation**: Help improve README or guides
+1. **Report Bugs**: Found a technical issue? [Open a bug report](https://github.com/gmrafi/gmrafi.github.io/issues/new?template=bug_report.md)
+2. **Suggest Features**: Have an enhancement idea? [Submit a feature request](https://github.com/gmrafi/gmrafi.github.io/issues/new?template=feature_request.md)
+3. **Report Content Issues**: Typos or outdated info? [Report content update](https://github.com/gmrafi/gmrafi.github.io/issues/new?template=content_update.md)
+4. **Security Issues**: Found a vulnerability? See [Security Policy](SECURITY.md)
+5. **Code Improvements**: Submit a pull request (see [CONTRIBUTING.md](CONTRIBUTING.md))
+
+**Important**: Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
 
 **Contact**:
 - 📧 Primary: rafi@gmrafi.com.bd
@@ -501,9 +504,9 @@ This is a personal portfolio, but suggestions and improvements are welcome!
 
 ## 📄 Copyright & License
 
-**© 2026 Md Golam Mubasshir Rafi. All Rights Reserved.**
+**© 2024-2026 Md Golam Mubasshir Rafi. Original Content Rights Reserved.**
 
-This website, including all content, design, code, images, and documentation, is the exclusive intellectual property of **Md Golam Mubasshir Rafi**.
+This website, including all original content, design concept, images, and personal information, is the intellectual property of **Md Golam Mubasshir Rafi**. See [LICENSE.md](LICENSE.md) for full terms.
 
 ### Copyright Protection
 
@@ -546,14 +549,14 @@ For permission requests regarding:
 - **Subject**: "Copyright Permission Request - www.gmrafi.com.bd"
 - **Required**: Detailed description of intended use and purpose
 
-### Third-Party Resources
+### Third-Party Open Source Components
 
 The following third-party resources are used under their respective licenses:
-- **Tailwind CSS**: MIT License (CSS framework via CDN)
-- **Font Awesome**: Icons licensed under CC BY 4.0 / Font under SIL OFL 1.1
-- **Google Fonts**: Inter font under Open Font License
+- **Tailwind CSS**: [MIT License](https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE) (CSS framework via CDN)
+- **Font Awesome 6**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (Icons) / [SIL OFL 1.1](https://scripts.sil.org/OFL) (Fonts) / [MIT](https://opensource.org/licenses/MIT) (Code)
+- **Google Fonts (Roboto)**: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-**All original content, design, code, and presentation remain the exclusive property of Md Golam Mubasshir Rafi and may not be copied or reproduced without explicit written permission.**
+See [LICENSE.md](LICENSE.md) for complete details on what you can and cannot use from this project.
 
 ---
 
@@ -569,10 +572,18 @@ The following third-party resources are used under their respective licenses:
 
 ## 📚 Additional Resources
 
+### Documentation
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to this project
+- [Code of Conduct](CODE_OF_CONDUCT.md) - Community standards and behavior expectations
+- [Security Policy](SECURITY.md) - How to report security vulnerabilities
+- [License](LICENSE.md) - Full copyright and licensing terms
 - [CV Update Instructions](CV_INSTRUCTIONS.md)
 - [Responsive Design Testing](RESPONSIVE_DESIGN.md)
 - [Update Summary & Changelog](UPDATE_SUMMARY.md)
+
+### Legal Pages
 - [Privacy Policy](https://www.gmrafi.com.bd/privacy-policy.html)
+- [Copyright Notice](https://www.gmrafi.com.bd/copyright.html)
 
 ---
 

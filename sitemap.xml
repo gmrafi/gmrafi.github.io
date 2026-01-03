@@ -94,6 +94,13 @@
 
     <!-- Static Pages -->
     <url>
+        <loc>https://www.gmrafi.com.bd/copyright.html</loc>
+        <lastmod>2026-01-02</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
         <loc>https://www.gmrafi.com.bd/test.html</loc>
         <lastmod>2026-01-02</lastmod>
         <changefreq>yearly</changefreq>

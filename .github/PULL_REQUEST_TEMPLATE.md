@@ -106,4 +106,4 @@ Fixes #(issue number)
 - [ ] My contribution respects the copyright and intellectual property rights outlined in [LICENSE.md](../../LICENSE.md)
 - [ ] I agree to license my contribution under the same license as this project
 
-**Thank you for contributing to www.gmrafi.com.bd!** 🙏
+**Thank you for contributing to www.gmrafi.com.bd!**

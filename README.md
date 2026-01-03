@@ -598,8 +598,8 @@ See [LICENSE.md](LICENSE.md) for complete details on what you can and cannot use
 
 **Live Sites**
 
-[🌐 www.gmrafi.com.bd](https://www.gmrafi.com.bd) | [🐙 gmrafi.github.io](https://gmrafi.github.io)
+[www.gmrafi.com.bd](https://www.gmrafi.com.bd) | [gmrafi.github.io](https://gmrafi.github.io)
 
-Made with 💙 by Md Golam Mubasshir Rafi
+Made with dedication by Md Golam Mubasshir Rafi
 
 </div>

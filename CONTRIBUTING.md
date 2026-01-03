@@ -253,6 +253,6 @@ If you have questions about contributing, please:
 
 ---
 
-Thank you for helping improve www.gmrafi.com.bd! 🙏
+Thank you for helping improve www.gmrafi.com.bd!
 
 **Last Updated**: January 2, 2026

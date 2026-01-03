@@ -55,3 +55,8 @@ coverage/
 drafts/
 private/
 *.draft.html
+
+# Testing Pages (not ready for production)
+services.html
+hire-me.html
+*.test.html

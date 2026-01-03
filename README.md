@@ -3,7 +3,9 @@
 > A comprehensive academic and professional portfolio showcasing research, publications, projects, and expertise in Business Administration and Finance.
 
 [![Live Site](https://img.shields.io/badge/Live-www.gmrafi.com.bd-0F7A4A?style=for-the-badge)](https://www.gmrafi.com.bd)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare-gmrafi.pages.dev-F38020?style=for-the-badge&logo=cloudflare)](https://gmrafi.pages.dev)
 [![GitHub Pages](https://img.shields.io/badge/GitHub-gmrafi.github.io-4E6AFF?style=for-the-badge&logo=github)](https://gmrafi.github.io)
+[![Vercel](https://img.shields.io/badge/Vercel-gmrafi.vercel.app-000000?style=for-the-badge&logo=vercel)](https://gmrafi.vercel.app)
 [![Copyright](https://img.shields.io/badge/Copyright-All_Rights_Reserved-red?style=for-the-badge)](https://www.gmrafi.com.bd)
 
 ---
@@ -20,23 +22,37 @@ The official domain is now [www.gmrafi.com.bd](https://www.gmrafi.com.bd).
 
 ## 🌐 Live Deployment
 
-This portfolio is deployed on **two domains** for maximum accessibility and redundancy:
+This portfolio is deployed on **four domains** for maximum accessibility, redundancy, and global performance:
 
 ### Primary Domain (BTCL - Bangladesh)
 **🔗 [www.gmrafi.com.bd](https://www.gmrafi.com.bd)**
 - Custom domain registered through BTCL (Bangladesh Telecommunications Company Limited)
-- Managed via Cloudflare CDN for global performance and security
-- Accessible worldwide for all international visitors
+- Hosted on Cloudflare Pages with DNS management via Cloudflare
+- Optimized for global performance with edge network
 - Professional email: `rafi@gmrafi.com.bd`
 
-### Secondary Domain (GitHub Pages - Backup)
+### Secondary Domain (Cloudflare Pages Direct)
+**🔗 [gmrafi.pages.dev](https://gmrafi.pages.dev)**
+- Direct Cloudflare Pages deployment
+- Automatic builds from GitHub repository
+- Fast, reliable, and globally accessible
+- Backup domain with worldwide CDN
+
+### Tertiary Domain (GitHub Pages)
 **🔗 [gmrafi.github.io](https://gmrafi.github.io)**
 - Hosted on GitHub Pages with automatic deployment
 - Free, reliable, and globally accessible
 - Automatic updates on git push to main branch
-- Backup domain with worldwide access
+- Additional backup domain
 
-Both domains serve identical content with automatic synchronization via GitHub repository.
+### Quaternary Domain (Vercel)
+**🔗 [gmrafi.vercel.app](https://gmrafi.vercel.app)**
+- Hosted on Vercel platform
+- Automatic deployment from GitHub repository
+- High-performance hosting with global CDN
+- Alternative domain for redundancy
+
+All domains serve identical content with automatic synchronization via the GitHub repository, ensuring complete integrity and consistency across all deployments.
 
 ---
 
@@ -162,9 +178,10 @@ gmrafi.github.io/
 - **Google Fonts**: Inter font family (300-900 weights)
 
 ### Infrastructure
-- **GitHub Pages**: Secondary hosting (gmrafi.github.io)
-- **Vercel**: Primary deployment platform for custom domain
-- **Cloudflare**: CDN, DNS, DDoS protection, SSL/TLS (in front of Vercel)
+- **Cloudflare Pages**: Primary hosting (www.gmrafi.com.bd via gmrafi.pages.dev)
+- **GitHub Pages**: Secondary backup hosting (gmrafi.github.io)
+- **Vercel**: Alternative deployment option (previously used, still configured)
+- **Cloudflare**: DNS, CDN, DDoS protection, SSL/TLS
 - **BTCL**: Domain registration (.com.bd TLD)
 - **Firebase**: Alternative backup option (configured)
 
@@ -193,51 +210,70 @@ gmrafi.github.io/
 ┌─────────────────────────────────────────────────────────┐
 │                   GitHub Repository                      │
 │              github.com/gmrafi/gmrafi.github.io         │
-└──────────────┬──────────────────────────┬───────────────┘
-               │                          │
-               │ Auto Deploy              │ Auto Deploy
-               ▼                          ▼
-    ┌──────────────────┐      ┌──────────────────────┐
-    │  GitHub Pages    │      │   Vercel Platform    │
-    │  gmrafi.github.io│      │   (Build & Deploy)   │
-    └──────────────────┘      └──────────┬───────────┘
-            │                            │
-            │                            │ Connected via
-            │                            ▼
-            │                  ┌──────────────────────┐
-            │                  │  Cloudflare CDN      │
-            │                  │  www.gmrafi.com.bd   │
-            │                  └──────────────────────┘
-            │                            │
-            │ Worldwide Access           │ Worldwide Access
-            │                            │ (via Cloudflare)
-            ▼                            ▼
-    ┌─────────────────────────────────────────────┐
-    │    End Users (Global - All Countries)       │
-    └─────────────────────────────────────────────┘
+└─────┬─────────────┬─────────────┬─────────────┬─────────┘
+      │             │             │             │
+      │ Auto Deploy │ Auto Deploy │ Auto Deploy │ Auto Deploy
+      ▼             ▼             ▼             ▼
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│GitHub Pages │ │Cloudflare   │ │Cloudflare   │ │  Vercel     │
+│gmrafi.github│ │Pages Direct │ │Pages Custom │ │gmrafi.     │
+│    .io      │ │gmrafi.pages│ │www.gmrafi.  │ │vercel.app   │
+│             │ │    .dev    │ │  .com.bd    │ │             │
+└─────────────┘ └─────────────┘ └──────┬──────┘ └─────────────┘
+      │             │             │             │
+      │             │             │ Connected via│
+      │             │             ▼             │
+      │             │      ┌─────────────┐      │
+      │             │      │Cloudflare   │      │
+      │             │      │   DNS       │      │
+      │             │      │             │      │
+      │             │      └─────────────┘      │
+      │             │             │             │
+Worldwide Access   Worldwide Access   Worldwide Access   Worldwide Access
+      │             │             │             │
+      ▼             ▼             ▼             ▼
+┌─────────────────────────────────────────────────────────┐
+│           End Users (Global - All Countries)            │
+└─────────────────────────────────────────────────────────┘
 ```
 
 **Deployment Flow:**
 1. **Path 1 (GitHub Pages)**: GitHub Repo → Direct Deploy → gmrafi.github.io
-2. **Path 2 (Custom Domain)**: GitHub Repo → Vercel Build/Deploy → Cloudflare CDN → www.gmrafi.com.bd
+2. **Path 2 (Cloudflare Pages Direct)**: GitHub Repo → Cloudflare Pages Build/Deploy → gmrafi.pages.dev
+3. **Path 3 (Custom Domain)**: GitHub Repo → Cloudflare Pages Build/Deploy → Cloudflare DNS → www.gmrafi.com.bd
+4. **Path 4 (Vercel)**: GitHub Repo → Vercel Build/Deploy → gmrafi.vercel.app
 
 ### DNS Configuration
 
 **Primary Domain (www.gmrafi.com.bd)**:
-- Hosting: Vercel Platform
+- Hosting: Cloudflare Pages
 - DNS Provider: Cloudflare
-- A Records: Point to Cloudflare proxy servers (in front of Vercel)
-- CNAME: Proxied through Cloudflare CDN
+- A Records: Point to Cloudflare proxy servers
+- CNAME: Proxied through Cloudflare DNS
 - SSL/TLS: Full (Strict) mode with Universal SSL
-- Flow: Vercel → Cloudflare CDN → End Users
+- Flow: Cloudflare Pages → Cloudflare DNS → End Users
 
-**Secondary Domain (gmrafi.github.io)**:
+**Secondary Domain (gmrafi.pages.dev)**:
+- Hosting: Cloudflare Pages (Direct)
+- DNS Provider: Cloudflare
+- Automatic DNS configuration via Cloudflare
+- SSL/TLS: Automatic Cloudflare SSL
+- Flow: Cloudflare Pages → End Users
+
+**Tertiary Domain (gmrafi.github.io)**:
 - Hosting: GitHub Pages (Direct)
 - DNS Provider: GitHub
 - A Records: GitHub Pages IPs (185.199.108.153, 185.199.109.153, etc.)
 - CNAME: Automatic GitHub Pages configuration
 - SSL/TLS: Automatic GitHub SSL certificate
 - Flow: GitHub Pages → End Users
+
+**Quaternary Domain (gmrafi.vercel.app)**:
+- Hosting: Vercel Platform
+- DNS Provider: Vercel
+- Automatic DNS configuration via Vercel
+- SSL/TLS: Automatic Vercel SSL
+- Flow: Vercel → End Users
 
 ### Deployment Workflow
 
@@ -249,8 +285,9 @@ git push origin main
 
 # Automatic Triggers:
 # 1. GitHub Pages rebuilds (2-3 minutes)
-# 2. Cloudflare cache purges (instant)
-# 3. Both domains updated simultaneously
+# 2. Cloudflare Pages rebuilds (instant via Git integration)
+# 3. Vercel rebuilds (instant via Git integration)
+# 4. All four domains updated simultaneously
 ```
 
 ---
@@ -272,8 +309,9 @@ This section is for Md Golam Mubasshir Rafi to maintain and update the website.
 5. Changes go live automatically within 2-3 minutes on both domains
 
 **Deployment Targets:**
+- Cloudflare Pages: www.gmrafi.com.bd (via gmrafi.pages.dev) and gmrafi.pages.dev (automatic)
 - GitHub Pages: gmrafi.github.io (automatic)
-- Vercel → Cloudflare: www.gmrafi.com.bd (automatic)
+- Vercel: gmrafi.vercel.app (automatic)
 
 ---
 
@@ -574,7 +612,7 @@ See [LICENSE.md](LICENSE.md) for complete details on what you can and cannot use
 
 - **Design & Development**: Md Golam Mubasshir Rafi
 - **Built With**: HTML5, Tailwind CSS, Font Awesome, Google Fonts
-- **Hosting**: GitHub Pages (primary), Cloudflare (CDN)
+- **Hosting**: Cloudflare Pages (primary), GitHub Pages (secondary)
 - **Domain**: BTCL (Bangladesh)
 - **Initialized by**: GitHub Copilot AI Assistant
 
@@ -608,7 +646,7 @@ See [LICENSE.md](LICENSE.md) for complete details on what you can and cannot use
 
 **Live Sites**
 
-[www.gmrafi.com.bd](https://www.gmrafi.com.bd) | [gmrafi.github.io](https://gmrafi.github.io)
+[www.gmrafi.com.bd](https://www.gmrafi.com.bd) | [gmrafi.pages.dev](https://gmrafi.pages.dev) | [gmrafi.github.io](https://gmrafi.github.io) | [gmrafi.vercel.app](https://gmrafi.vercel.app)
 
 Made with dedication by Md Golam Mubasshir Rafi
 

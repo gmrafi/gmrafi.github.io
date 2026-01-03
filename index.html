@@ -887,69 +887,6 @@
             display: none;
         }
 
-        /* Welcome Screen Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes welcomeFadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; visibility: hidden; }
-        }
-
-        @keyframes spinSlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes pulse-border {
-            0%, 100% { 
-                border-color: #4E6AFF;
-                box-shadow: 0 0 0 0 rgba(78, 106, 255, 0.4);
-            }
-            50% { 
-                border-color: #6B8AFF;
-                box-shadow: 0 0 0 4px rgba(78, 106, 255, 0.2);
-            }
-        }
-
-        .animate-pulse-border {
-            animation: pulse-border 2s ease-in-out infinite;
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out;
-        }
-
-        .animate-fade-in-delay {
-            animation: fadeIn 1s ease-out 0.5s both;
-        }
-
-        .animate-fade-in-delay-2 {
-            animation: fadeIn 1s ease-out 1s both;
-        }
-
-        .animate-spin-slow {
-            animation: spinSlow 8s linear infinite;
-        }
-
-        .animation-delay-1000 {
-            animation-delay: 1s;
-        }
-
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-
-        .welcome-fade-out {
-            animation: welcomeFadeOut 1s ease-out forwards;
-        }
-
         /* Blog Section Styles */
         .line-clamp-2 {
             display: -webkit-box;
@@ -973,90 +910,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Welcome Screen -->
-    <div id="welcome-screen" class="fixed inset-0 bg-white z-50 flex items-center justify-center overflow-hidden">
-        <!-- Elegant Animated Background -->
-        <div class="absolute inset-0">
-            <!-- Soft gradient background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-white to-blue-50/20"></div>
-            
-            <!-- Animated orbs for depth -->
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#4E6AFF]/8 rounded-full blur-3xl animate-pulse-slow"></div>
-            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#4E6AFF]/8 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1.2s"></div>
-            
-            <!-- Subtle floating shapes for interest -->
-            <div class="absolute top-1/4 left-1/4 w-32 h-32 border border-[#4E6AFF]/10 rounded-2xl animate-float-slow"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-24 h-24 bg-[#4E6AFF]/5 rounded-full animate-float-medium"></div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="relative z-10 text-center px-6 py-8 max-w-5xl">
-            <!-- Icon Row -->
-            <div class="flex justify-center gap-5 mb-10 animate-fade-in">
-                <div class="w-14 h-14 bg-[#4E6AFF] rounded-xl flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
-                    <i class="fas fa-university text-white text-xl"></i>
-                </div>
-                <div class="w-14 h-14 bg-[#4E6AFF] rounded-xl flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
-                    <i class="fas fa-flask text-white text-xl"></i>
-                </div>
-                <div class="w-14 h-14 bg-[#4E6AFF] rounded-xl flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300">
-                    <i class="fas fa-laptop-code text-white text-xl"></i>
-                </div>
-            </div>
-
-            <!-- Text Content -->
-            <div class="space-y-7">
-                <!-- Welcome Line -->
-                <p class="text-2xl md:text-3xl lg:text-4xl text-gray-500 font-light animate-slide-down" style="font-family: 'Roboto', sans-serif;">
-                    Welcome to the World of
-                </p>
-                
-                <!-- Name - Matching Main Page Typography Exactly -->
-                <div class="animate-fade-in">
-                    <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-gray-600 leading-tight" style="font-family: 'Roboto', sans-serif; font-weight: 900;">
-                        Md Golam Mubasshir
-                        <span class="text-[#4E6AFF]">Rafi</span>
-                    </h1>
-                </div>
-
-                <!-- Decorative Line -->
-                <div class="flex justify-center items-center gap-3 py-4 animate-fade-in-delay">
-                    <div class="h-0.5 w-20 bg-gradient-to-r from-transparent to-[#4E6AFF]/40"></div>
-                    <div class="w-2.5 h-2.5 bg-[#4E6AFF] rounded-full animate-pulse"></div>
-                    <div class="h-0.5 w-28 bg-[#4E6AFF]/40"></div>
-                    <div class="w-2.5 h-2.5 bg-[#4E6AFF] rounded-full animate-pulse" style="animation-delay: 0.3s"></div>
-                    <div class="h-0.5 w-20 bg-gradient-to-l from-transparent to-[#4E6AFF]/40"></div>
-                </div>
-                
-                <!-- Role Badges -->
-                <div class="flex flex-wrap justify-center gap-4 animate-slide-up">
-                    <span class="bg-[#4E6AFF] text-white px-5 py-2.5 rounded-full text-sm md:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                        Student (Business Administration)
-                    </span>
-                    <span class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-5 py-2.5 rounded-full text-sm md:text-base font-semibold shadow-lg hover:bg-[#4E6AFF] hover:text-white transition-all duration-300">
-                        Undergraduate Researcher
-                    </span>
-                    <span class="bg-white text-[#4E6AFF] border-2 border-[#4E6AFF] px-5 py-2.5 rounded-full text-sm md:text-base font-semibold shadow-lg hover:bg-[#4E6AFF] hover:text-white transition-all duration-300">
-                        Web Developer
-                    </span>
-                </div>
-
-                <!-- Focus Areas -->
-                <div class="flex flex-wrap justify-center gap-3 pt-2 animate-fade-in-delay-2">
-                    <span class="px-5 py-2 bg-blue-50/80 text-[#4E6AFF] rounded-lg text-sm font-semibold border border-[#4E6AFF]/20 hover:bg-blue-100 hover:scale-105 transition-all duration-300">
-                        FinTech Research
-                    </span>
-                    <span class="px-5 py-2 bg-blue-50/80 text-[#4E6AFF] rounded-lg text-sm font-semibold border border-[#4E6AFF]/20 hover:bg-blue-100 hover:scale-105 transition-all duration-300">
-                        Data Analytics
-                    </span>
-                    <span class="px-5 py-2 bg-blue-50/80 text-[#4E6AFF] rounded-lg text-sm font-semibold border border-[#4E6AFF]/20 hover:bg-blue-100 hover:scale-105 transition-all duration-300">
-                        Sustainable Development
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50" aria-label="Main Navigation">
@@ -3040,21 +2893,6 @@
 
     <!-- Simple JavaScript -->
     <script>
-        // Welcome Screen Animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const welcomeScreen = document.getElementById('welcome-screen');
-            
-            // Hide welcome screen after 3 seconds
-            setTimeout(function() {
-                welcomeScreen.classList.add('welcome-fade-out');
-                
-                // Remove from DOM after animation completes
-                setTimeout(function() {
-                    welcomeScreen.style.display = 'none';
-                }, 1000);
-            }, 3000);
-        });
-
         // Current year
         document.getElementById('current-year').textContent = new Date().getFullYear();
         

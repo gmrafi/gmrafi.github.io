@@ -8,6 +8,14 @@
 
 ---
 
+## ⚠️ Domain Ownership Release
+
+As of December 26, 2025, **Md Golam Mubasshir Rafi** has released ownership of the previous domain **gmrafi.com**. Md Golam Mubasshir Rafi is no longer the owner or responsible for any content on that site.
+
+The official domain is now [www.gmrafi.com.bd](https://www.gmrafi.com.bd).
+
+---
+
 ## 🌐 Live Deployment
 
 This portfolio is deployed on **two domains** for maximum accessibility and redundancy:

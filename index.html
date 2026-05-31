@@ -1216,56 +1216,101 @@
                     </div>
 
                     <!-- Current Highlights -->
-                    <div class="bg-white p-5 rounded-xl shadow-lg border-2 border-[#4E6AFF] animate-pulse-border">
-                    <!-- Current Highlights -->
-                    <div>
-                        <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <div id="current-highlights" class="bg-white p-5 rounded-xl shadow-lg border-2 border-[#4E6AFF] animate-pulse-border">
+                        <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2 flex-wrap">
                             <i class="fas fa-star text-[#4E6AFF] text-lg animate-pulse"></i>
                             Current Highlights
-                            <span class="inline-flex items-center gap-1.5 text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full animate-pulse">
-                                <span class="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
-                                <span class="w-2 h-2 bg-green-500 rounded-full absolute"></span>
+                            <span class="inline-flex items-center gap-1.5 text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                </span>
                                 Live Feed
                             </span>
                         </h2>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-[#4E6AFF] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i class="fas fa-chart-bar text-white text-lg"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-900 text-base">BD MFS Inclusion Radar (v1.0.0 Alpha)</div>
-                                    <div class="text-sm text-gray-600">Strategic Data Terminal for Fintech Ecosystem Analysis • CFSBR Intelligence • Launched January 2026</div>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-[#4E6AFF] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i class="fas fa-microphone text-white text-lg"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-900 text-base">ICCBM 2025 Presentation</div>
-                                    <div class="text-sm text-gray-600">2nd International Case Conference on Business and Management • BRAC University</div>
+
+                        <div class="space-y-3" id="highlights-visible">
+                            <div class="flex overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-1.5 flex-shrink-0 bg-indigo-500" aria-hidden="true"></div>
+                                <div class="flex items-start gap-3 p-3 flex-1 min-w-0">
+                                    <div class="w-9 h-9 rounded-lg bg-indigo-500/15 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-landmark text-indigo-600"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="font-semibold text-gray-900 text-sm leading-snug">NAPD Research Grant 2025-26</div>
+                                        <div class="text-xs text-gray-600 mt-0.5 leading-relaxed">Deploying National Living Standard Index (MSEI) Digital Infrastructure • Ministry of Public Administration</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-[#0F7A4A] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i class="fas fa-trophy text-white text-lg"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-900 text-base">NASA Space Apps Challenge</div>
-                                    <div class="text-sm text-gray-600">Global Nominee • Regional 1st Runner-Up • 2025</div>
+                            <div class="flex overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-1.5 flex-shrink-0 bg-violet-500" aria-hidden="true"></div>
+                                <div class="flex items-start gap-3 p-3 flex-1 min-w-0">
+                                    <div class="w-9 h-9 rounded-lg bg-violet-500/15 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-chart-line text-violet-600"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="font-semibold text-gray-900 text-sm leading-snug">SUST Research Grant</div>
+                                        <div class="text-xs text-gray-600 mt-0.5 leading-relaxed">Architecting Bayesian Econometric Data Portal for DSE Dividend-Volatility Analysis</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 bg-[#4E6AFF] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <i class="fas fa-users text-white text-lg"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-900 text-base">WordCamp Dhaka 2025</div>
-                                    <div class="text-sm text-gray-600">Volunteer & Contributor</div>
+                            <div class="flex overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-1.5 flex-shrink-0 bg-amber-500" aria-hidden="true"></div>
+                                <div class="flex items-start gap-3 p-3 flex-1 min-w-0">
+                                    <div class="w-9 h-9 rounded-lg bg-amber-500/15 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-chart-bar text-amber-600"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="font-semibold text-gray-900 text-sm leading-snug">BD MFS Inclusion Radar (v1.0.0 Alpha)</div>
+                                        <div class="text-xs text-gray-600 mt-0.5 leading-relaxed">Strategic Data Terminal for Fintech Ecosystem Analysis • CFSBR Intelligence • Launched January 2026</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div id="highlights-more" class="hidden space-y-3 mt-3 pt-3 border-t border-dashed border-gray-200" aria-hidden="true">
+                            <div class="flex overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-1.5 flex-shrink-0 bg-rose-500" aria-hidden="true"></div>
+                                <div class="flex items-start gap-3 p-3 flex-1 min-w-0">
+                                    <div class="w-9 h-9 rounded-lg bg-rose-500/15 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-microphone text-rose-600"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="font-semibold text-gray-900 text-sm leading-snug">ICCBM 2025 Presentation</div>
+                                        <div class="text-xs text-gray-600 mt-0.5 leading-relaxed">2nd International Case Conference on Business and Management • BRAC University</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-1.5 flex-shrink-0 bg-[#0F7A4A]" aria-hidden="true"></div>
+                                <div class="flex items-start gap-3 p-3 flex-1 min-w-0">
+                                    <div class="w-9 h-9 rounded-lg bg-[#0F7A4A]/15 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-trophy text-[#0F7A4A]"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="font-semibold text-gray-900 text-sm leading-snug">NASA Space Apps Challenge</div>
+                                        <div class="text-xs text-gray-600 mt-0.5 leading-relaxed">Global Nominee • Regional 1st Runner-Up • 2025</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <div class="w-1.5 flex-shrink-0 bg-sky-500" aria-hidden="true"></div>
+                                <div class="flex items-start gap-3 p-3 flex-1 min-w-0">
+                                    <div class="w-9 h-9 rounded-lg bg-sky-500/15 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-users text-sky-600"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <div class="font-semibold text-gray-900 text-sm leading-snug">WordCamp Dhaka 2025</div>
+                                        <div class="text-xs text-gray-600 mt-0.5 leading-relaxed">Volunteer &amp; Contributor</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" id="highlights-toggle" class="w-full mt-4 py-2.5 px-4 text-sm font-semibold text-[#4E6AFF] bg-[#4E6AFF]/5 hover:bg-[#4E6AFF]/10 border border-[#4E6AFF]/20 rounded-lg transition-all duration-200 flex items-center justify-center gap-2" aria-expanded="false" aria-controls="highlights-more">
+                            <span id="highlights-toggle-label">View more highlights</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-200" id="highlights-toggle-icon" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1403,13 +1448,19 @@
         </div>
     </section>
 
-    <!-- Publications & Research -->
+    <!-- Research & Publications -->
     <section id="research" class="py-12 bg-gray-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] text-center section-heading">Research & Publications</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#4E6AFF] mb-10 text-center section-heading">Research & Publications</h2>
 
-            <div class="max-w-7xl mx-auto space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="max-w-7xl mx-auto space-y-14">
+                <!-- Sub-Section 1: Scholarly Publications & Presentations -->
+                <div id="scholarly-publications">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-[#4E6AFF]/20 flex items-center gap-2">
+                        <i class="fas fa-book-open text-[#4E6AFF]"></i>
+                        Scholarly Publications &amp; Presentations
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Publication 1 (Newest) -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#4E6AFF] hover:shadow-xl transition-all duration-300" itemscope itemtype="https://schema.org/ScholarlyArticle">
                         <meta itemprop="image" content="https://www.gmrafi.com.bd/photos/rsz_rafi_img_01.jpg" />
@@ -1703,6 +1754,123 @@
                             <a href="https://microeconomicsbd.ssdrf.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-white bg-[#4E6AFF] hover:bg-[#3b4ba8] px-4 py-1.5 rounded-md transition-colors duration-200"><i class="fas fa-external-link-alt mr-1"></i>View Book</a>
                             <a href="https://www.rokomari.com/book/442376/basic-microeconomics" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-white bg-[#0F7A4A] hover:bg-[#0d6a40] px-4 py-1.5 rounded-md transition-colors duration-200"><i class="fas fa-shopping-cart mr-1"></i>Buy from Rokomari</a>
                         </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Sub-Section 2: Funded Research Initiatives & Digital Infrastructure -->
+                <div id="research-platforms">
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-[#0F7A4A]/20 flex items-center gap-2">
+                        <i class="fas fa-flask text-[#0F7A4A]"></i>
+                        Funded Research Initiatives &amp; Digital Infrastructure
+                    </h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Card 1: MSEI-Bangladesh -->
+                <article class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#4E6AFF] hover:shadow-xl transition-all duration-300 card-hover flex flex-col" itemscope itemtype="https://schema.org/Project">
+                    <meta itemprop="headline" content="Adapting the Minimum Survival Expenditure Index (MSEI) for Bangladesh: A Comprehensive Study on Basic Living Standards and Policy Implications" />
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-11 h-11 bg-[#4E6AFF]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-database text-xl text-[#4E6AFF]"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-lg font-bold text-gray-900 leading-tight truncate" itemprop="name">MSEI-Bangladesh</h4>
+                                <p class="text-xs text-gray-500 mt-0.5 line-clamp-2">Living standards index · HIES 2022 policy framework</p>
+                            </div>
+                        </div>
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold rounded-full bg-[#4E6AFF] text-white flex-shrink-0">Active</span>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-gray-600 mb-4">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-user-gear text-[#4E6AFF] mt-0.5 w-4 flex-shrink-0"></i>
+                            <span><strong class="text-gray-800">Role:</strong> Research Assistant · Digital Infrastructure &amp; System Architecture</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-landmark text-[#4E6AFF] mt-0.5 w-4 flex-shrink-0"></i>
+                            <span><strong class="text-gray-800">Grant:</strong> NAPD, Ministry of Public Administration (2025–26)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-handshake text-[#4E6AFF] mt-0.5 w-4 flex-shrink-0"></i>
+                            <span><strong class="text-gray-800">Partners:</strong> SUST Economics · SSDRF · CFSBR</span>
+                        </li>
+                    </ul>
+
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow" itemprop="description">Unified policy terminal, KoBoCollect field ops across 8 divisions (420 households), and dual estimation (Classical CBN + Hierarchical Bayesian).</p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">Data Infrastructure</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">KoBoCollect ODK</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">Hierarchical Bayesian</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">Policy Terminal</span>
+                        <span class="bg-[#0F7A4A]/10 text-[#0F7A4A] px-2.5 py-0.5 rounded-full text-xs font-medium">BDT 7.5L</span>
+                        <button type="button" class="bg-gray-100 text-gray-600 px-2.5 py-0.5 rounded-full text-xs font-medium hover:bg-[#4E6AFF]/10 hover:text-[#4E6AFF] transition-colors cursor-help" title="MSEIᵢ = (ΣEᵢⱼ / PPPᵢ) × 1.1" aria-label="Mathematical framework: MSEI index formula">
+                            <i class="fas fa-calculator mr-1"></i>Formula
+                        </button>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-3 border-t border-gray-100 mt-auto">
+                        <a href="#" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-white bg-[#4E6AFF] hover:bg-[#3b4ba8] rounded-md transition-colors">
+                            <i class="fas fa-globe"></i>View Live Portal
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#4E6AFF] border border-[#4E6AFF] hover:bg-[#4E6AFF] hover:text-white rounded-md transition-colors">
+                            <i class="fas fa-file-lines"></i>Official Circular
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 2: Dividend-Volatility Nexus -->
+                <article class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-[#0F7A4A] hover:shadow-xl transition-all duration-300 card-hover flex flex-col" itemscope itemtype="https://schema.org/Project">
+                    <meta itemprop="headline" content="Unveiling the Dividend-Volatility Nexus in Bangladesh: A Bayesian Econometric Investigation" />
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-11 h-11 bg-[#0F7A4A]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-chart-line text-xl text-[#0F7A4A]"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="text-lg font-bold text-gray-900 leading-tight truncate" itemprop="name">Dividend-Volatility Nexus</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Bayesian econometrics · Dhaka Stock Exchange</p>
+                            </div>
+                        </div>
+                        <span class="inline-block px-2 py-0.5 text-xs font-semibold rounded-full bg-[#0F7A4A] text-white flex-shrink-0">Active</span>
+                    </div>
+
+                    <ul class="space-y-2 text-xs sm:text-sm text-gray-600 mb-4">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-user-gear text-[#0F7A4A] mt-0.5 w-4 flex-shrink-0"></i>
+                            <span><strong class="text-gray-800">Role:</strong> Research Assistant · Web &amp; Data Infrastructure</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-university text-[#0F7A4A] mt-0.5 w-4 flex-shrink-0"></i>
+                            <span><strong class="text-gray-800">Grant:</strong> SUST Research Centre · PRG-2 (01287/8756)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-user-tie text-[#0F7A4A] mt-0.5 w-4 flex-shrink-0"></i>
+                            <span><strong class="text-gray-800">PI:</strong> Prof. Munshi Naser Ibne Afzal · Co-I: Prof. Tasmina Chowdhury Tania</span>
+                        </li>
+                    </ul>
+
+                    <p class="text-sm text-gray-600 mb-4 leading-relaxed flex-grow" itemprop="description">Academic portal for 10-year DSE high-frequency data (RV, DIV, SIZE, LEV) with MCMC econometrics and corporate finance frameworks.</p>
+
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">React + Vite</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">Recharts</span>
+                        <span class="bg-[#4E6AFF]/10 text-[#4E6AFF] px-2.5 py-0.5 rounded-full text-xs font-medium">Bayesian MCMC</span>
+                        <span class="bg-[#0F7A4A]/10 text-[#0F7A4A] px-2.5 py-0.5 rounded-full text-xs font-medium">DSE Data</span>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-3 border-t border-gray-100 mt-auto">
+                        <a href="#" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-white bg-[#4E6AFF] hover:bg-[#3b4ba8] rounded-md transition-colors">
+                            <i class="fas fa-diagram-project"></i>Explore Framework
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-[#4E6AFF] border border-[#4E6AFF] hover:bg-[#4E6AFF] hover:text-white rounded-md transition-colors">
+                            <i class="fas fa-users"></i>Research Team
+                        </a>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-[#0F7A4A] bg-[#0F7A4A]/10 rounded-md">
+                            <i class="fas fa-file-pen"></i>Manuscript in progress
+                        </span>
+                    </div>
+                </article>
                     </div>
                 </div>
             </div>
@@ -2320,6 +2488,24 @@
                         </div>
                     </div>
 
+                    <!-- Shahjalal University of Science and Technology (SUST) -->
+                    <div class="bg-white p-5 rounded-2xl shadow-lg hover:shadow-2xl border-2 border-gray-100 hover:border-[#4E6AFF] transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex flex-col items-center text-center h-full">
+                            <div class="w-36 h-36 mb-4 flex items-center justify-center bg-white rounded-xl p-2 border border-gray-100">
+                                <div class="w-full h-full rounded-lg bg-[#4E6AFF]/10 flex items-center justify-center">
+                                    <span class="text-[#4E6AFF] font-bold text-2xl">SUST</span>
+                                </div>
+                            </div>
+                            <h3 class="text-base font-bold text-gray-900 mb-2 leading-snug min-h-[3rem] flex items-center">Shahjalal University of Science and Technology</h3>
+                            <div class="flex items-center justify-center gap-1.5 text-xs text-white bg-[#4E6AFF] px-3 py-1.5 rounded-full font-semibold mb-3 shadow-sm">
+                                <i class="fas fa-university"></i>
+                                <span>Research Grant Partner</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed flex-grow">SUST Research Centre partner supporting Promotional Research Grant-2 projects on econometric analysis of Dhaka Stock Exchange dividend-volatility dynamics.</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mt-2">Actively serving as Research Assistant handling digital frameworks for ongoing government and university-funded empirical grants.</p>
+                        </div>
+                    </div>
+
                     <!-- Sylhet Sustainable Development Research Firm -->
                     <div class="bg-white p-5 rounded-2xl shadow-lg hover:shadow-2xl border-2 border-gray-100 hover:border-[#0F7A4A] transition-all duration-300 transform hover:-translate-y-1">
                         <div class="flex flex-col items-center text-center h-full">
@@ -2331,7 +2517,8 @@
                                 <i class="fas fa-code"></i>
                                 <span>Web Developer & Tech Associate</span>
                             </div>
-                            <p class="text-sm text-gray-600 leading-relaxed flex-grow">Technical management of <strong>organizational platforms</strong>, <strong>academic journals</strong>, and regional <strong>sustainable development</strong> initiatives in Sylhet.</p>
+                            <p class="text-sm text-gray-600 leading-relaxed flex-grow">Technical management of <strong>organizational platforms</strong>, <strong>academic journals</strong>, and regional <strong>sustainable development</strong> initiatives in Sylhet. Implementation partner for NAPD-funded national policy research infrastructure and MSEI-Bangladesh platform.</p>
+                            <p class="text-sm text-gray-600 leading-relaxed mt-2">Actively serving as Research Assistant handling digital frameworks for ongoing government and university-funded empirical grants.</p>
                         </div>
                     </div>
 
@@ -3669,6 +3856,26 @@
             const closeButton = document.getElementById('close-banner');
             if (closeButton) {
                 closeButton.addEventListener('click', hideConstructionBanner);
+            }
+
+            // Current Highlights: expand / collapse
+            const highlightsToggle = document.getElementById('highlights-toggle');
+            const highlightsMore = document.getElementById('highlights-more');
+            const highlightsLabel = document.getElementById('highlights-toggle-label');
+            const highlightsIcon = document.getElementById('highlights-toggle-icon');
+            if (highlightsToggle && highlightsMore) {
+                highlightsToggle.addEventListener('click', function () {
+                    const isOpen = !highlightsMore.classList.contains('hidden');
+                    highlightsMore.classList.toggle('hidden', isOpen);
+                    highlightsMore.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+                    highlightsToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+                    if (highlightsLabel) {
+                        highlightsLabel.textContent = isOpen ? 'View more highlights' : 'Show less';
+                    }
+                    if (highlightsIcon) {
+                        highlightsIcon.classList.toggle('rotate-180', !isOpen);
+                    }
+                });
             }
         });
 

@@ -60,3 +60,7 @@ private/
 services.html
 hire-me.html
 *.test.html
+
+# Local Dev
+local-server.cjs
+

@@ -1,16 +1,7 @@
 {
-  "version": 2,
-  "public": true,
-  "github": {
-    "silent": true
-  },
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
